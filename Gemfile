@@ -64,7 +64,6 @@ gem 'htmlentities', '~> 4.3', '>= 4.3.4'
 gem 'bitmask_attributes'
 gem 'intl-tel-input' # cute phone inputs
 gem 'phony_rails'    # and backend validations for them
-gem 'dotenv-rails'
 gem 'dotenv'
 gem 'rack-tracker'
 gem 'whenever', :require => false
