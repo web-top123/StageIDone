@@ -1,0 +1,5 @@
+ja:
+  recaptcha:
+    errors:
+      verification_failed: "Certification failed"
+      recaptcha_unreachable: "Connection failed"

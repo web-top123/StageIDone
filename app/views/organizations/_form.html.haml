@@ -1,0 +1,11 @@
+= form_for(organization, html: {class: 'settings-form', id: 'organization-name-form'}) do |f|
+  - if organization.errors.any?
+    %ul.list-errors
+      - organization.errors.full_messages.each do |msg|
+        %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name, placeholder: 'e.g. Acme Inc'
+
+  .actions= f.submit 'Save Changes', class: 'button'

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+entry_one:
+  hash_id: abc
+  body: Done one thing
+  user: user_one
+  team: team_one
+  status: done
+  occurred_on: <%= Date.current %>
+
+entry_two:
+  hash_id: def
+  body: Done two things
+  user: user_two
+  team: team_two
+  status: done
+  occurred_on: <%= Date.current %>

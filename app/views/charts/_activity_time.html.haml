@@ -1,0 +1,32 @@
+- range = ((end_date - start_date) + 1).to_i
+- differential = (range * 10) / 300
+- col_well_width = 10
+- col_width = col_well_width * (0.5 + ((differential - 1) * 0.1))
+- col_offset = ((col_well_width - col_width) * 0.5)
+
+%div.activity-time{role: 'chart'}
+  %svg{role: 'img', viewBox: "0 0 #{ range * 10 } #{ 64 * differential }"}
+    - bar_height = 48 * differential
+    - scale = scale_for_frequency(entries, start_date, end_date)
+    - range.times do |i|
+      - d = (start_date + i.days).to_date
+      %g.day
+        - x_val = (col_well_width * i)
+        - entries_for_day = entries.for_day(d)
+        - dones_count = entries_for_day.for_status('done').size
+        - dones_height = (dones_count * bar_height / scale)
+        - goals_count = entries_for_day.for_status('goal').size
+        - goals_height = (goals_count * bar_height / scale)
+        - blocked_count = entries_for_day.for_status('blocked').size
+        - blocked_height = (blocked_count * bar_height / scale)
+
+        %rect.bar-well{height: bar_height, width: col_width, x: x_val + col_offset}
+        %rect.bar-done{height: dones_height, y: (bar_height -                                dones_height), width: col_width, x: x_val + col_offset}
+        %rect.bar-goal{height: goals_height, y: (bar_height - goals_height - dones_height), width: col_width, x: x_val + col_offset}
+        %rect.bar-blocked{height: blocked_height, y: (bar_height - blocked_height - goals_height - dones_height), width: col_width, x: x_val + col_offset}
+
+        %text.label{x: 3, y: bar_height + (9 * differential), 'text-anchor' => 'left', 'font-size' => 7 * differential}
+          #{ d.strftime('%B %e, %Y') }:
+          #{ pluralize(dones_count,'completed entry') };
+          #{ pluralize(goals_count,'goal') } set;
+          #{ pluralize(blocked_count,'blocked entry') }

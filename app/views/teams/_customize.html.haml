@@ -1,0 +1,29 @@
+= form_for team, url: customize_team_path(team), html: {class: 'settings-form'} do |f|
+  .field
+    = f.label :prompt_done, 'Prompt for completed entries'
+    = f.text_field :prompt_done
+
+  .field
+    = f.label :prompt_goal, 'Prompt for goals'
+    = f.text_field :prompt_goal
+
+  .field
+    = f.label :prompt_blocked, 'Prompt for blocked entries'
+    = f.text_field :prompt_blocked
+
+  .field
+    %label{for: 'team_enable_expandable_entries_box'}
+      = f.check_box :enable_expandable_entries_box
+      Allow longer daily entries?
+
+  .field
+    %label{for: 'team_enable_entry_timestamps'}
+      = f.check_box :enable_entry_timestamps
+      Show timestamp on entries?
+
+  .field
+    %label{for: 'team_carry_over_goals'}
+      = f.check_box :carry_over_goals
+      Carry over goals?
+
+  .actions= f.submit 'Save Changes', class: 'button'

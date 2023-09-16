@@ -1,0 +1,210 @@
+// 20170104095457
+// https://se.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6ImU5MGViYjFjLTA2ZWQtNDBmZS05N2I5LTM5MjQ3YjFhMjljZSIsInMiOiI0OTlmNDNiMGQ2IiwiYyI6InRhbmtiIn0=
+
+{
+  "stripped-signature": "",
+  "Received-Spf": "None (protection.outlook.com: schneider-electric.com does not designate permitted sender hosts)",
+  "From": "PAUL CHARLES <Daniel.Charles@schneider-electric.com>",
+  "X-Envelope-From": "<Daniel.Charles@schneider-electric.com>",
+  "X-Ms-Tnef-Correlator": "",
+  "To": "\"dcharles-work@entry.idonethis.com\" <dcharles-work@entry.idonethis.com>",
+  "Thread-Topic": "What'd you get done today? - dcharles work - December 29",
+  "Spamdiagnosticmetadata": "NSPM",
+  "X-Microsoft-Exchange-Diagnostics": "1;HE1PR04MB1177;7:37gzdZO1h1/ADdSjpmP+p5iFeOHiTL4GxV04gcJ3VtZxR+p4BE9kfjpdtPocGrtDMVqtjiqlEipbFM9TG6MzH9iWal6mIxQb1rZo6FAu1qHlyTq3RTNb2qd7xmjlF/75yXvaYYSez8+Zi2d/zJr1W+7XhfwJX+MFA2v2F7qyywA/WaIg63ZldNsqUNCt9qXJlj0cjAb0a1nCYM6EurlVHJiL5PA1WYU6Pivs9a0wDKoC6h63SzltTJHzWQxhbKMEIlCwMuVnMQAJF7MKw4C92D4eWrd417EK9wU3lN6YoAYGS68U8Vvf2emyn7u2crUUTNPNSJVZvK0rofHLiANcW/+1HLxg1j6uQxgJJcoiREWtDDBh1pmJ2yBT0Z8ibEKLqKWmNK8I+GcytHQxX2CD0TLycLjt4foKnE1RQd1/xMJKpeVTSQFA5PBA8Wa2artZMcWhFbmHjIcExX4yQxDOug==",
+  "Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=schneiderelectric.onmicrosoft.com; s=selector1-schneiderelectric-com02c; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version; bh=r+0x7UpH9Nerclo8fAffDj5PsrzW8LxO0wZPRiPV2Ss=; b=YMDLGi2zNPKOPCIA9PInGWY/YepVrkupzqCXI1zKGeLFh6z6/WPLb+1sBa6OWqZwG28YGA7Q4+MHFCawbryZFkxQVL5TN8WJoiorTHvoy43xPdFfNh4gVpea1PFurEd1NAsQailtJRy2RhGcj7OqynhqocM7iY6KAmKvO7GQ7Pg=",
+  "X-Ms-Exchange-Crosstenant-Fromentityheader": "Hosted",
+  "Accept-Language": "en-US",
+  "X-Ms-Exchange-Crosstenant-Originalarrivaltime": "03 Jan 2017 16:33:18.2561 (UTC)",
+  "subject": "RE: What'd you get done today? - dcharles work - December 29",
+  "stripped-html": "<html xmlnsU0003Aw=\"urn:schemas-microsoft-com:office:word\" xmlnsU0003Ao=\"urn:schemas-microsoft-com:office:office\" xmlnsU0003Am=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns=\"http://www.w3.org/TR/REC-html40\" xmlnsU0003Av=\"urn:schemas-microsoft-com:vml\"><head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">\n<meta content=\"Microsoft Word 15 (filtered medium)\" name=\"Generator\">\n</head>\n<body lang=\"EN-US\" bgcolor=\"#FBFAF9\" vlink=\"purple\" link=\"blue\">\n<div class=\"WordSection1\">\n<p class=\"MsoNormal\"><span style='font-size:11.0pt;font-family:\"Calibri\",sans-serif'>Vacation<oU0003Ap></oU0003Ap></span></p>\n<p class=\"MsoNormal\"><a name=\"_MailEndCompose\"><span style='font-size:11.0pt;font-family:\"Calibri\",sans-serif'><oU0003Ap>&#160;</oU0003Ap></span></a></p>\n<span style=\"mso-bookmark:_MailEndCompose\"></span>\n<div>\n</div>\n<p class=\"MsoNormal\"><oU0003Ap>&#160;</oU0003Ap></p>\n<p style=\"text-align:center;line-height:11.25pt\" align=\"center\" class=\"MsoNormal\">\n<span style='font-size:7.5pt;font-family:\"Helvetica\",sans-serif;color:#FBFAF9'>Take 30 seconds to do a quick status update for your team.<oU0003Ap></oU0003Ap></span></p>\n<div>\n<div>\n<div>\n<table cellpadding=\"0\" width=\"100%\" style=\"width:100.0%\" border=\"0\" class=\"MsoNormalTable\">\n<tbody>\n<tr>\n<td style=\"padding:.75pt .75pt .75pt .75pt\" valign=\"top\">\n<h1 style=\"margin:0in;margin-bottom:.0001pt;line-height:28.5pt\"><span style='font-family:\"Helvetica\",sans-serif;color:#3E4036'>What'd you get done today?<oU0003Ap></oU0003Ap></span></h1>\n</td>\n<td style=\"padding:.75pt .75pt .75pt .75pt;box-sizing: border-box;display:table-cell\" valign=\"bottom\">\n<p style=\"margin:0in;margin-bottom:.0001pt;text-align:right;line-height:16.5pt;box-sizing: border-box\" align=\"right\" class=\"salutation\">\n<span style='font-size:9.0pt;font-family:\"Helvetica\",sans-serif;color:#767771'>Thursday, 29 December 2016<oU0003Ap></oU0003Ap></span></p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<div>\n<div>\n<div style=\"margin-bottom:15.0pt;box-sizing: border-box\">\n<p style=\"margin:0in;margin-bottom:.0001pt;line-height:19.5pt;background:white\"><strong><span style='font-size:13.0pt;font-family:\"Helvetica\",sans-serif;color:#3E4036'>Take 30 seconds to write out what you got done today.</span></strong><span style='font-size:13.0pt;font-family:\"Helvetica\",sans-serif;color:#767771'>\n You can do that by <a href=\"http://email.entry.idonethis.com/c/eJwVjrFqxDAQRL_G7mwk7a4lFS4Own1ASJMqSNoVEvjsiy3Cka-PAjPNg3kMr5YN8lhXcgsFiDmoSPCFkGPGoJKzpEg78DSgQqsSapLJOfETGlkmb72dyPisvdJaGZwfoW5jWcksQQiM8pgX5Zgxes3KUN_jkt24raW15wC3wdx7orQwVz52aaVeczoeHbbeAJAtRjAB_QD3nwHeft2nLi8-Ir9_fKf6pBen8Vw57FW2OZVwbnL1v1cqu1SWc5JNUjtr-vf-AcNXR_4\">\n<span style=\"color:#767771;text-decoration:none\">clicking here</span></a> and adding a few entries. Or you can just reply to this email: list a few accomplishments for the day and your teammates will see what you've been up to.<oU0003Ap></oU0003Ap></span></p>\n</div>\n<div>\n<p style=\"line-height:16.5pt;background:white\" class=\"MsoNormal\"><span style='font-size:10.5pt;font-family:\"Helvetica\",sans-serif;color:#3E4036'><a href=\"http://email.entry.idonethis.com/c/eJwVjrFqxDAQRL_G7mwk7a4lFS4Own1ASJMqSNoVEvjsiy3Cka-PAjPNg3kMr5YN8lhXcgsFiDmoSPCFkGPGoJKzpEg78DSgQqsSapLJOfETGlkmb72dyPisvdJaGZwfoW5jWcksQQiM8pgX5Zgxes3KUN_jkt24raW15wC3wdx7orQwVz52aaVeczoeHbbeAJAtRjAB_QD3nwHeft2nLi8-Ir9_fKf6pBen8Vw57FW2OZVwbnL1v1cqu1SWc5JNUjtr-vf-AcNXR_4\"><span style=\"color:white;border:none windowtext 1.0pt;padding:0in;background:#E94B35;text-decoration:none\">Check-in\n on <strong><span style='font-family:\"Helvetica\",sans-serif'>I Done This</span></strong></span></a>\n<oU0003Ap></oU0003Ap></span></p>\n</div>\n<div style=\"border:none;border-top:solid #FBFAF9 1.0pt;padding:15.0pt 0in 0in 0in;margin-bottom:15.0pt;box-sizing: border-box\">\n<p style=\"line-height:16.5pt;background:white\" class=\"MsoNormal\"><strong><span style='font-size:10.5pt;font-family:\"Helvetica\",sans-serif;color:#3E4036'>Three months ago</span></strong><span style='font-size:10.5pt;font-family:\"Helvetica\",sans-serif;color:#3E4036'>\n<oU0003Ap></oU0003Ap></span></p>\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;background:white\">\n<span style='font-size:10.5pt;font-family:\"Helvetica\",sans-serif;color:#767771'>This is what you got done on this day three months ago, Friday, September 30, 2016<oU0003Ap></oU0003Ap></span></p>\n<table cellpadding=\"0\" style=\"box-sizing: border-box\" border=\"0\" class=\"MsoNormalTable\">\n<tbody>\n<tr style=\"box-sizing: border-box\">\n<td style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\" valign=\"top\">\n<p style=\"line-height:16.5pt\" class=\"MsoNormal\"><span style='font-size:10.5pt;font-family:\"Helvetica\",sans-serif;color:#3E4036'><img src=\"https://beta.idonethis.com/assets/emails/icon-done-24x24-6830fb7e2d654e44c23274496c81ef442e528e916c81550a6f358c85a84026bd.png\" alt=\"done\" border=\"0\" id=\"_x0000_i1025\"><oU0003Ap></oU0003Ap></span></p>\n</td>\n<td style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\" valign=\"top\">\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\n<span style='font-size:10.5pt;font-family:\"Helvetica\",sans-serif;color:#767771'>- Training.<oU0003Ap></oU0003Ap></span></p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<div>\n<p style=\"margin:0in;margin-bottom:.0001pt;text-align:center;line-height:16.5pt\" align=\"center\" class=\"centered\">\n<span style='font-size:10.0pt;font-family:\"Helvetica\",sans-serif;color:#767771'>You&#8217;re receiving this because you're a member of\n<a href=\"http://email.entry.idonethis.com/c/eJwVjsGKxCAQRL8muRla7Y568LCX_Y1B2xYFJzMk_j_rQtXlQT2qRFcMlr1H8iclm2uCTPaFtuaKCdg7AtLeBtoQ0AGjJlHeS1Bo5FTBBafIhKoDaA0Gj3fqY29RDAgB6kJFkAFP7dkYEllerGz3Educ383-bOZ3JctMRy-fS2brz8Gf94JzNVlbHWZrEob9jiVdXcbBLd1DnnXq4XZJL3IrGcLz7vw__gMXeT-C\">\n<span style=\"color:#478CFE;text-decoration:none\">dcharles work</span></a>. Turn it\n<a href=\"http://email.entry.idonethis.com/c/eJwVT8uOxCAM-5r21opHaODQw172N0ZAgkCCzgiY_19WsmXZjhSZbiQFtJfb2Mt4HZIXwegX6BQSeBEtGmGk1c5sIABFBGn4sJbdAYqvw6HDwyiXpBNSCgVn86Xu-U5MgVERGs9CaiVIXckFTMjEJHCvd57zs-mfTf0uBJ7-LPR-eOYyzvhuK5yLXuuEELTy4JZt3AL3kctnLAdorV36fcY3jNhL4FfnVh5aN3u_yT-F6xmz75XHmjBifris9uDKcfYS_1_9ATzRUHk\">\n<span style=\"color:#478CFE;text-decoration:none\">off</span></a>.<oU0003Ap></oU0003Ap></span></p>\n<p style=\"margin:0in;margin-bottom:.0001pt;text-align:center;line-height:16.5pt;box-sizing: border-box\" align=\"center\" class=\"centered\">\n<span style='font-size:10.0pt;font-family:\"Helvetica\",sans-serif;color:#767771'><a href=\"http://email.entry.idonethis.com/c/eJwVjrsOwyAMAL8m2Yh4OcDA0KW_URljCySaVgn_r6bSTacbruZQra9rzxB3QFcEdQH38k6KeNQUA2gw0SVYvPZBkzfAKkZOylveVQopKLBJTNLGaOu3N_axtkxOLKLYgHUPNYL2spdKjqKTaK2sI7c5v4t7LPZ5U3ji1uvn4Nn6tdHnfcv1zBWPzmOjhufg6564qB3cK5-KB9M8O_3jH7RkO7Q\"><span style=\"color:#478CFE;text-decoration:none\"><img src=\"https://beta.idonethis.com/assets/emails/we-love-progress-3d6a0197aaa34e4b59a3090e22dec296adae3b639d4b846fd531b85a09592732.png\" alt=\"We love progress\" border=\"0\" id=\"_x0000_i1026\"></span></a><oU0003Ap></oU0003Ap></span></p>\n</div>\n</div>\n<p style=\"line-height:16.5pt\" class=\"MsoNormal\"><span style='font-size:10.5pt;font-family:\"Helvetica\",sans-serif;color:#3E4036'><img src=\"http://email.entry.idonethis.com/o/eJwVzFEKwyAMANDTrH-WqInRj55lxBipYDtwuz_b_h-vHdwCtm0clBNJrF2gUnxi7LWjgGYmIJ9joQcCMih6MpezFYfBkitc2FEo3RfwHgLul4y5nQebEPxJl1R9ZyUpDLH3VEMGbts6mtzD5q6nrGnv3__W87bRbDmbpp81dNfX9QUePy9Y\" border=\"0\" id=\"_x0000_i1027\"><br>\n______________________________________________________________________<br>\nThis email has been scanned by the Symantec Email Security.cloud service.<br>\n______________________________________________________________________<oU0003Ap></oU0003Ap></span></p>\n</div>\n\n\n</body></html>",
+  "Thread-Index": "AQHSYi/WU6+iLUQIHEi501kGvYIRBKEm+cfA",
+  "from": "PAUL CHARLES <Daniel.Charles@schneider-electric.com>",
+  "Content-Language": "en-US",
+  "X-Originatororg": "schneider-electric.com",
+  "In-Reply-To": "<5865a3bfa0b53_43fbf4a0c8750518395@470c415e-88e9-42e6-9797-529f19011024.mail>",
+  "Date": "Tue, 3 Jan 2017 16:33:18 +0000",
+  "Message-Id": "<HE1PR04MB117815C12DC3F771AC7ABA93B56E0@HE1PR04MB1178.eurprd04.prod.outlook.com>",
+  "body-plain": "Vacation\r\n\r\nFrom: dcharles-work@entry.idonethis.com [mailto:dcharles-work@entry.idonethis.com]\r\nSent: Thursday, December 29, 2016 4:01 PM\r\nTo: PAUL CHARLES <Daniel.Charles@schneider-electric.com>\r\nSubject: What'd you get done today? - dcharles work - December 29\r\n\r\nTake 30 seconds to do a quick status update for your team.\r\nWhat'd you get done today?\r\n\r\n\r\nThursday, 29 December 2016\r\n\r\n\r\nTake 30 seconds to write out what you got done today. You can do that by clicking here<http://email.entry.idonethis.com/c/eJwVjrFqxDAQRL_G7mwk7a4lFS4Own1ASJMqSNoVEvjsiy3Cka-PAjPNg3kMr5YN8lhXcgsFiDmoSPCFkGPGoJKzpEg78DSgQqsSapLJOfETGlkmb72dyPisvdJaGZwfoW5jWcksQQiM8pgX5Zgxes3KUN_jkt24raW15wC3wdx7orQwVz52aaVeczoeHbbeAJAtRjAB_QD3nwHeft2nLi8-Ir9_fKf6pBen8Vw57FW2OZVwbnL1v1cqu1SWc5JNUjtr-vf-AcNXR_4> and adding a few entries. Or you can just reply to this email: list a few accomplishments for the day and your teammates will see what you've been up to.\r\nCheck-in on I Done This<http://email.entry.idonethis.com/c/eJwVjrFqxDAQRL_G7mwk7a4lFS4Own1ASJMqSNoVEvjsiy3Cka-PAjPNg3kMr5YN8lhXcgsFiDmoSPCFkGPGoJKzpEg78DSgQqsSapLJOfETGlkmb72dyPisvdJaGZwfoW5jWcksQQiM8pgX5Zgxes3KUN_jkt24raW15wC3wdx7orQwVz52aaVeczoeHbbeAJAtRjAB_QD3nwHeft2nLi8-Ir9_fKf6pBen8Vw57FW2OZVwbnL1v1cqu1SWc5JNUjtr-vf-AcNXR_4>\r\nThree months ago\r\n\r\nThis is what you got done on this day three months ago, Friday, September 30, 2016\r\n[done]\r\n\r\n\r\n- Training.\r\n\r\n\r\nYou’re receiving this because you're a member of dcharles work<http://email.entry.idonethis.com/c/eJwVjsGKxCAQRL8muRla7Y568LCX_Y1B2xYFJzMk_j_rQtXlQT2qRFcMlr1H8iclm2uCTPaFtuaKCdg7AtLeBtoQ0AGjJlHeS1Bo5FTBBafIhKoDaA0Gj3fqY29RDAgB6kJFkAFP7dkYEllerGz3Educ383-bOZ3JctMRy-fS2brz8Gf94JzNVlbHWZrEob9jiVdXcbBLd1DnnXq4XZJL3IrGcLz7vw__gMXeT-C>. Turn it off<http://email.entry.idonethis.com/c/eJwVT8uOxCAM-5r21opHaODQw172N0ZAgkCCzgiY_19WsmXZjhSZbiQFtJfb2Mt4HZIXwegX6BQSeBEtGmGk1c5sIABFBGn4sJbdAYqvw6HDwyiXpBNSCgVn86Xu-U5MgVERGs9CaiVIXckFTMjEJHCvd57zs-mfTf0uBJ7-LPR-eOYyzvhuK5yLXuuEELTy4JZt3AL3kctnLAdorV36fcY3jNhL4FfnVh5aN3u_yT-F6xmz75XHmjBifris9uDKcfYS_1_9ATzRUHk>.\r\n\r\n[We love progress]<http://email.entry.idonethis.com/c/eJwVjrsOwyAMAL8m2Yh4OcDA0KW_URljCySaVgn_r6bSTacbruZQra9rzxB3QFcEdQH38k6KeNQUA2gw0SVYvPZBkzfAKkZOylveVQopKLBJTNLGaOu3N_axtkxOLKLYgHUPNYL2spdKjqKTaK2sI7c5v4t7LPZ5U3ji1uvn4Nn6tdHnfcv1zBWPzmOjhufg6564qB3cK5-KB9M8O_3jH7RkO7Q>\r\n[http://email.entry.idonethis.com/o/eJwVzFEKwyAMANDTrH-WqInRj55lxBipYDtwuz_b_h-vHdwCtm0clBNJrF2gUnxi7LWjgGYmIJ9joQcCMih6MpezFYfBkitc2FEo3RfwHgLul4y5nQebEPxJl1R9ZyUpDLH3VEMGbts6mtzD5q6nrGnv3__W87bRbDmbpp81dNfX9QUePy9Y]\r\n______________________________________________________________________\r\nThis email has been scanned by the Symantec Email Security.cloud service.\r\n______________________________________________________________________\r\n",
+  "Mime-Version": "1.0",
+  "Received": "from HE1PR04MB1178.eurprd04.prod.outlook.com ([10.162.249.140]) by HE1PR04MB1178.eurprd04.prod.outlook.com ([10.162.249.140]) with mapi id 15.01.0817.009; Tue, 3 Jan 2017 16:33:18 +0000",
+  "X-Ms-Exchange-Transport-Crosstenantheadersstamped": "HE1PR04MB1177",
+  "content-id-map": {
+    
+  },
+  "recipients": "dcharles-work@entry.idonethis.com",
+  "Authentication-Results": "spf=none (sender IP is ) smtp.mailfrom=Daniel.Charles@schneider-electric.com; ",
+  "X-Ms-Exchange-Crosstenant-Id": "6e51e1ad-c54b-4b39-b598-0ffe9ae68fef",
+  "X-Forefront-Prvs": "01762B0D64",
+  "X-Exchange-Antispam-Report-Test": "UriScan:(12768514187064)(21748063052155)(187560716670831);",
+  "X-Microsoft-Antispam-Prvs": "<HE1PR04MB11770165B57F07D3BA2829F8B56E0@HE1PR04MB1177.eurprd04.prod.outlook.com>",
+  "message-headers": [
+    [
+      "X-Mailgun-Incoming",
+      "Yes"
+    ],
+    [
+      "X-Envelope-From",
+      "<Daniel.Charles@schneider-electric.com>"
+    ],
+    [
+      "Received",
+      "from EUR01-HE1-obe.outbound.protection.outlook.com (mail-he1eur01on0102.outbound.protection.outlook.com [104.47.0.102]) by mxa.mailgun.org with ESMTP id 586bd250.7fe83855b298-smtp-in-n02; Tue, 03 Jan 2017 16:33:20 -0000 (UTC)"
+    ],
+    [
+      "Dkim-Signature",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=schneiderelectric.onmicrosoft.com; s=selector1-schneiderelectric-com02c; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version; bh=r+0x7UpH9Nerclo8fAffDj5PsrzW8LxO0wZPRiPV2Ss=; b=YMDLGi2zNPKOPCIA9PInGWY/YepVrkupzqCXI1zKGeLFh6z6/WPLb+1sBa6OWqZwG28YGA7Q4+MHFCawbryZFkxQVL5TN8WJoiorTHvoy43xPdFfNh4gVpea1PFurEd1NAsQailtJRy2RhGcj7OqynhqocM7iY6KAmKvO7GQ7Pg="
+    ],
+    [
+      "Received",
+      "from HE1PR04MB1178.eurprd04.prod.outlook.com (10.162.249.140) by HE1PR04MB1177.eurprd04.prod.outlook.com (10.162.249.14) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.817.10; Tue, 3 Jan 2017 16:33:18 +0000"
+    ],
+    [
+      "Received",
+      "from HE1PR04MB1178.eurprd04.prod.outlook.com ([10.162.249.140]) by HE1PR04MB1178.eurprd04.prod.outlook.com ([10.162.249.140]) with mapi id 15.01.0817.009; Tue, 3 Jan 2017 16:33:18 +0000"
+    ],
+    [
+      "From",
+      "PAUL CHARLES <Daniel.Charles@schneider-electric.com>"
+    ],
+    [
+      "To",
+      "\"dcharles-work@entry.idonethis.com\" <dcharles-work@entry.idonethis.com>"
+    ],
+    [
+      "Subject",
+      "RE: What'd you get done today? - dcharles work - December 29"
+    ],
+    [
+      "Thread-Topic",
+      "What'd you get done today? - dcharles work - December 29"
+    ],
+    [
+      "Thread-Index",
+      "AQHSYi/WU6+iLUQIHEi501kGvYIRBKEm+cfA"
+    ],
+    [
+      "Date",
+      "Tue, 3 Jan 2017 16:33:18 +0000"
+    ],
+    [
+      "Message-Id",
+      "<HE1PR04MB117815C12DC3F771AC7ABA93B56E0@HE1PR04MB1178.eurprd04.prod.outlook.com>"
+    ],
+    [
+      "References",
+      "<5865a3bfa0b53_43fbf4a0c8750518395@470c415e-88e9-42e6-9797-529f19011024.mail>"
+    ],
+    [
+      "In-Reply-To",
+      "<5865a3bfa0b53_43fbf4a0c8750518395@470c415e-88e9-42e6-9797-529f19011024.mail>"
+    ],
+    [
+      "Accept-Language",
+      "en-US"
+    ],
+    [
+      "Content-Language",
+      "en-US"
+    ],
+    [
+      "X-Ms-Has-Attach",
+      ""
+    ],
+    [
+      "X-Ms-Tnef-Correlator",
+      ""
+    ],
+    [
+      "Authentication-Results",
+      "spf=none (sender IP is ) smtp.mailfrom=Daniel.Charles@schneider-electric.com; "
+    ],
+    [
+      "X-Ms-Office365-Filtering-Correlation-Id",
+      "6d44d145-e4aa-47a0-f8ab-08d433f6398e"
+    ],
+    [
+      "X-Microsoft-Antispam",
+      "UriScan:;BCL:0;PCL:0;RULEID:(22001);SRVR:HE1PR04MB1177;"
+    ],
+    [
+      "X-Microsoft-Exchange-Diagnostics",
+      "1;HE1PR04MB1177;7:37gzdZO1h1/ADdSjpmP+p5iFeOHiTL4GxV04gcJ3VtZxR+p4BE9kfjpdtPocGrtDMVqtjiqlEipbFM9TG6MzH9iWal6mIxQb1rZo6FAu1qHlyTq3RTNb2qd7xmjlF/75yXvaYYSez8+Zi2d/zJr1W+7XhfwJX+MFA2v2F7qyywA/WaIg63ZldNsqUNCt9qXJlj0cjAb0a1nCYM6EurlVHJiL5PA1WYU6Pivs9a0wDKoC6h63SzltTJHzWQxhbKMEIlCwMuVnMQAJF7MKw4C92D4eWrd417EK9wU3lN6YoAYGS68U8Vvf2emyn7u2crUUTNPNSJVZvK0rofHLiANcW/+1HLxg1j6uQxgJJcoiREWtDDBh1pmJ2yBT0Z8ibEKLqKWmNK8I+GcytHQxX2CD0TLycLjt4foKnE1RQd1/xMJKpeVTSQFA5PBA8Wa2artZMcWhFbmHjIcExX4yQxDOug=="
+    ],
+    [
+      "X-Microsoft-Antispam-Prvs",
+      "<HE1PR04MB11770165B57F07D3BA2829F8B56E0@HE1PR04MB1177.eurprd04.prod.outlook.com>"
+    ],
+    [
+      "X-Exchange-Antispam-Report-Test",
+      "UriScan:(12768514187064)(21748063052155)(187560716670831);"
+    ],
+    [
+      "X-Exchange-Antispam-Report-Cfa-Test",
+      "BCL:0;PCL:0;RULEID:(6040375)(601004)(2401047)(5005006)(8121501046)(3002001)(10201501046)(6055026)(6041248)(20161123562025)(20161123555025)(20161123564025)(20161123560025)(6072148)(6047074);SRVR:HE1PR04MB1177;BCL:0;PCL:0;RULEID:;SRVR:HE1PR04MB1177;"
+    ],
+    [
+      "X-Forefront-Prvs",
+      "01762B0D64"
+    ],
+    [
+      "X-Forefront-Antispam-Report",
+      "SFV:NSPM;SFS:(10019020)(7916002)(39850400002)(39840400002)(39410400002)(39860400002)(39450400003)(199003)(377454003)(189002)(606005)(106356001)(9686002)(99286003)(102836003)(790700001)(97736004)(25786008)(8936002)(122556002)(2501003)(733005)(3660700001)(38730400001)(6506006)(229853002)(6436002)(107886002)(81156014)(81166006)(2906002)(2351001)(19618635001)(3280700002)(189998001)(77096006)(68736007)(6916009)(2950100002)(8676002)(110136003)(7066003)(5660300001)(101416001)(2900100001)(76176999)(7696004)(105586002)(54356999)(50986999)(106116001)(5640700003)(92566002)(55016002)(33656002)(450100001)(7906003)(74316002)(86362001)(7099028);DIR:OUT;SFP:1102;SCL:1;SRVR:HE1PR04MB1177;H:HE1PR04MB1178.eurprd04.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;A:1;MX:1;LANG:en;"
+    ],
+    [
+      "Received-Spf",
+      "None (protection.outlook.com: schneider-electric.com does not designate permitted sender hosts)"
+    ],
+    [
+      "Spamdiagnosticoutput",
+      "1:99"
+    ],
+    [
+      "Spamdiagnosticmetadata",
+      "NSPM"
+    ],
+    [
+      "Content-Type",
+      "multipart/alternative; boundary=\"_000_HE1PR04MB117815C12DC3F771AC7ABA93B56E0HE1PR04MB1178eurp_\""
+    ],
+    [
+      "Mime-Version",
+      "1.0"
+    ],
+    [
+      "X-Originatororg",
+      "schneider-electric.com"
+    ],
+    [
+      "X-Ms-Exchange-Crosstenant-Originalarrivaltime",
+      "03 Jan 2017 16:33:18.2561 (UTC)"
+    ],
+    [
+      "X-Ms-Exchange-Crosstenant-Fromentityheader",
+      "Hosted"
+    ],
+    [
+      "X-Ms-Exchange-Crosstenant-Id",
+      "6e51e1ad-c54b-4b39-b598-0ffe9ae68fef"
+    ],
+    [
+      "X-Ms-Exchange-Transport-Crosstenantheadersstamped",
+      "HE1PR04MB1177"
+    ]
+  ],
+  "stripped-text": "Vacation",
+  "Spamdiagnosticoutput": "1:99",
+  "sender": "Daniel.Charles@schneider-electric.com",
+  "X-Mailgun-Incoming": "Yes",
+  "X-Microsoft-Antispam": "UriScan:;BCL:0;PCL:0;RULEID:(22001);SRVR:HE1PR04MB1177;",
+  "attachments": [
+    
+  ],
+  "body-html": "<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns=\"http://www.w3.org/TR/REC-html40\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Word 15 (filtered medium)\">\r\n<!--[if !mso]><style>v\\:* {behavior:url(#default#VML);}\r\no\\:* {behavior:url(#default#VML);}\r\nw\\:* {behavior:url(#default#VML);}\r\n.shape {behavior:url(#default#VML);}\r\n</style><![endif]--><style><!--\r\n/* Font Definitions */\r\n@font-face\r\n\t{font-family:Helvetica;\r\n\tpanose-1:2 11 6 4 2 2 2 2 2 4;}\r\n@font-face\r\n\t{font-family:\"Cambria Math\";\r\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\r\n@font-face\r\n\t{font-family:Calibri;\r\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\r\n/* Style Definitions */\r\np.MsoNormal, li.MsoNormal, div.MsoNormal\r\n\t{margin:0in;\r\n\tmargin-bottom:.0001pt;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nh1\r\n\t{mso-style-priority:9;\r\n\tmso-style-link:\"Heading 1 Char\";\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:24.0pt;\r\n\tfont-family:\"Times New Roman\",serif;\r\n\tfont-weight:bold;}\r\na:link, span.MsoHyperlink\r\n\t{mso-style-priority:99;\r\n\tcolor:blue;\r\n\ttext-decoration:underline;}\r\na:visited, span.MsoHyperlinkFollowed\r\n\t{mso-style-priority:99;\r\n\tcolor:purple;\r\n\ttext-decoration:underline;}\r\np\r\n\t{mso-style-priority:99;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\np.msonormal0, li.msonormal0, div.msonormal0\r\n\t{mso-style-name:msonormal;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nspan.Heading1Char\r\n\t{mso-style-name:\"Heading 1 Char\";\r\n\tmso-style-priority:9;\r\n\tmso-style-link:\"Heading 1\";\r\n\tfont-family:\"Calibri Light\",sans-serif;\r\n\tcolor:#2E74B5;}\r\np.salutation, li.salutation, div.salutation\r\n\t{mso-style-name:salutation;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\np.centered, li.centered, div.centered\r\n\t{mso-style-name:centered;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nspan.EmailStyle23\r\n\t{mso-style-type:personal-reply;\r\n\tfont-family:\"Calibri\",sans-serif;\r\n\tcolor:windowtext;}\r\n.MsoChpDefault\r\n\t{mso-style-type:export-only;\r\n\tfont-size:10.0pt;}\r\n@page WordSection1\r\n\t{size:8.5in 11.0in;\r\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\r\ndiv.WordSection1\r\n\t{page:WordSection1;}\r\n--></style><!--[if gte mso 9]><xml>\r\n<o:shapedefaults v:ext=\"edit\" spidmax=\"1026\" />\r\n</xml><![endif]--><!--[if gte mso 9]><xml>\r\n<o:shapelayout v:ext=\"edit\">\r\n<o:idmap v:ext=\"edit\" data=\"1\" />\r\n</o:shapelayout></xml><![endif]-->\r\n</head>\r\n<body bgcolor=\"#FBFAF9\" lang=\"EN-US\" link=\"blue\" vlink=\"purple\">\r\n<div class=\"WordSection1\">\r\n<p class=\"MsoNormal\"><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\">Vacation<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><a name=\"_MailEndCompose\"><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\"><o:p>&nbsp;</o:p></span></a></p>\r\n<span style=\"mso-bookmark:_MailEndCompose\"></span>\r\n<div>\r\n<div style=\"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in 0in 0in\">\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\">From:</span></b><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\"> dcharles-work@entry.idonethis.com [mailto:dcharles-work@entry.idonethis.com]\r\n<br>\r\n<b>Sent:</b> Thursday, December 29, 2016 4:01 PM<br>\r\n<b>To:</b> PAUL CHARLES &lt;Daniel.Charles@schneider-electric.com&gt;<br>\r\n<b>Subject:</b> What'd you get done today? - dcharles work - December 29<o:p></o:p></span></p>\r\n</div>\r\n</div>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"MsoNormal\" align=\"center\" style=\"text-align:center;line-height:11.25pt\">\r\n<span style=\"font-size:7.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#FBFAF9\">Take 30 seconds to do a quick status update for your team.<o:p></o:p></span></p>\r\n<div>\r\n<div>\r\n<div>\r\n<table class=\"MsoNormalTable\" border=\"0\" cellpadding=\"0\" width=\"100%\" style=\"width:100.0%\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" style=\"padding:.75pt .75pt .75pt .75pt\">\r\n<h1 style=\"margin:0in;margin-bottom:.0001pt;line-height:28.5pt\"><span style=\"font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">What'd you get done today?<o:p></o:p></span></h1>\r\n</td>\r\n<td valign=\"bottom\" style=\"padding:.75pt .75pt .75pt .75pt;box-sizing: border-box;display:table-cell\">\r\n<p class=\"salutation\" align=\"right\" style=\"margin:0in;margin-bottom:.0001pt;text-align:right;line-height:16.5pt;box-sizing: border-box\">\r\n<span style=\"font-size:9.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">Thursday, 29 December 2016<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div>\r\n<div>\r\n<div style=\"margin-bottom:15.0pt;box-sizing: border-box\">\r\n<p style=\"margin:0in;margin-bottom:.0001pt;line-height:19.5pt;background:white\"><strong><span style=\"font-size:13.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">Take 30 seconds to write out what you got done today.</span></strong><span style=\"font-size:13.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">\r\n You can do that by <a href=\"http://email.entry.idonethis.com/c/eJwVjrFqxDAQRL_G7mwk7a4lFS4Own1ASJMqSNoVEvjsiy3Cka-PAjPNg3kMr5YN8lhXcgsFiDmoSPCFkGPGoJKzpEg78DSgQqsSapLJOfETGlkmb72dyPisvdJaGZwfoW5jWcksQQiM8pgX5Zgxes3KUN_jkt24raW15wC3wdx7orQwVz52aaVeczoeHbbeAJAtRjAB_QD3nwHeft2nLi8-Ir9_fKf6pBen8Vw57FW2OZVwbnL1v1cqu1SWc5JNUjtr-vf-AcNXR_4\">\r\n<span style=\"color:#767771;text-decoration:none\">clicking here</span></a> and adding a few entries. Or you can just reply to this email: list a few accomplishments for the day and your teammates will see what you've been up to.<o:p></o:p></span></p>\r\n</div>\r\n<div>\r\n<p class=\"MsoNormal\" style=\"line-height:16.5pt;background:white\"><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\"><a href=\"http://email.entry.idonethis.com/c/eJwVjrFqxDAQRL_G7mwk7a4lFS4Own1ASJMqSNoVEvjsiy3Cka-PAjPNg3kMr5YN8lhXcgsFiDmoSPCFkGPGoJKzpEg78DSgQqsSapLJOfETGlkmb72dyPisvdJaGZwfoW5jWcksQQiM8pgX5Zgxes3KUN_jkt24raW15wC3wdx7orQwVz52aaVeczoeHbbeAJAtRjAB_QD3nwHeft2nLi8-Ir9_fKf6pBen8Vw57FW2OZVwbnL1v1cqu1SWc5JNUjtr-vf-AcNXR_4\"><span style=\"color:white;border:none windowtext 1.0pt;padding:0in;background:#E94B35;text-decoration:none\">Check-in\r\n on <strong><span style=\"font-family:&quot;Helvetica&quot;,sans-serif\">I Done This</span></strong></span></a>\r\n<o:p></o:p></span></p>\r\n</div>\r\n<div style=\"border:none;border-top:solid #FBFAF9 1.0pt;padding:15.0pt 0in 0in 0in;margin-bottom:15.0pt;box-sizing: border-box\">\r\n<p class=\"MsoNormal\" style=\"line-height:16.5pt;background:white\"><strong><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">Three months ago</span></strong><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">\r\n<o:p></o:p></span></p>\r\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;background:white\">\r\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">This is what you got done on this day three months ago, Friday, September 30, 2016<o:p></o:p></span></p>\r\n<table class=\"MsoNormalTable\" border=\"0\" cellpadding=\"0\" style=\"box-sizing: border-box\">\r\n<tbody>\r\n<tr style=\"box-sizing: border-box\">\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\r\n<p class=\"MsoNormal\" style=\"line-height:16.5pt\"><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\"><img border=\"0\" id=\"_x0000_i1025\" src=\"https://beta.idonethis.com/assets/emails/icon-done-24x24-6830fb7e2d654e44c23274496c81ef442e528e916c81550a6f358c85a84026bd.png\" alt=\"done\"><o:p></o:p></span></p>\r\n</td>\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\r\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\r\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">- Training.<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>\r\n<div>\r\n<p class=\"centered\" align=\"center\" style=\"margin:0in;margin-bottom:.0001pt;text-align:center;line-height:16.5pt\">\r\n<span style=\"font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">You’re receiving this because you're a member of\r\n<a href=\"http://email.entry.idonethis.com/c/eJwVjsGKxCAQRL8muRla7Y568LCX_Y1B2xYFJzMk_j_rQtXlQT2qRFcMlr1H8iclm2uCTPaFtuaKCdg7AtLeBtoQ0AGjJlHeS1Bo5FTBBafIhKoDaA0Gj3fqY29RDAgB6kJFkAFP7dkYEllerGz3Educ383-bOZ3JctMRy-fS2brz8Gf94JzNVlbHWZrEob9jiVdXcbBLd1DnnXq4XZJL3IrGcLz7vw__gMXeT-C\">\r\n<span style=\"color:#478CFE;text-decoration:none\">dcharles work</span></a>. Turn it\r\n<a href=\"http://email.entry.idonethis.com/c/eJwVT8uOxCAM-5r21opHaODQw172N0ZAgkCCzgiY_19WsmXZjhSZbiQFtJfb2Mt4HZIXwegX6BQSeBEtGmGk1c5sIABFBGn4sJbdAYqvw6HDwyiXpBNSCgVn86Xu-U5MgVERGs9CaiVIXckFTMjEJHCvd57zs-mfTf0uBJ7-LPR-eOYyzvhuK5yLXuuEELTy4JZt3AL3kctnLAdorV36fcY3jNhL4FfnVh5aN3u_yT-F6xmz75XHmjBifris9uDKcfYS_1_9ATzRUHk\">\r\n<span style=\"color:#478CFE;text-decoration:none\">off</span></a>.<o:p></o:p></span></p>\r\n<p class=\"centered\" align=\"center\" style=\"margin:0in;margin-bottom:.0001pt;text-align:center;line-height:16.5pt;box-sizing: border-box\">\r\n<span style=\"font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\"><a href=\"http://email.entry.idonethis.com/c/eJwVjrsOwyAMAL8m2Yh4OcDA0KW_URljCySaVgn_r6bSTacbruZQra9rzxB3QFcEdQH38k6KeNQUA2gw0SVYvPZBkzfAKkZOylveVQopKLBJTNLGaOu3N_axtkxOLKLYgHUPNYL2spdKjqKTaK2sI7c5v4t7LPZ5U3ji1uvn4Nn6tdHnfcv1zBWPzmOjhufg6564qB3cK5-KB9M8O_3jH7RkO7Q\"><span style=\"color:#478CFE;text-decoration:none\"><img border=\"0\" id=\"_x0000_i1026\" src=\"https://beta.idonethis.com/assets/emails/we-love-progress-3d6a0197aaa34e4b59a3090e22dec296adae3b639d4b846fd531b85a09592732.png\" alt=\"We love progress\"></span></a><o:p></o:p></span></p>\r\n</div>\r\n</div>\r\n<p class=\"MsoNormal\" style=\"line-height:16.5pt\"><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\"><img border=\"0\" id=\"_x0000_i1027\" src=\"http://email.entry.idonethis.com/o/eJwVzFEKwyAMANDTrH-WqInRj55lxBipYDtwuz_b_h-vHdwCtm0clBNJrF2gUnxi7LWjgGYmIJ9joQcCMih6MpezFYfBkitc2FEo3RfwHgLul4y5nQebEPxJl1R9ZyUpDLH3VEMGbts6mtzD5q6nrGnv3__W87bRbDmbpp81dNfX9QUePy9Y\"><br>\r\n______________________________________________________________________<br>\r\nThis email has been scanned by the Symantec Email Security.cloud service.<br>\r\n______________________________________________________________________<o:p></o:p></span></p>\r\n</div>\r\n</body>\r\n</html>\r\n",
+  "References": "<5865a3bfa0b53_43fbf4a0c8750518395@470c415e-88e9-42e6-9797-529f19011024.mail>",
+  "X-Ms-Office365-Filtering-Correlation-Id": "6d44d145-e4aa-47a0-f8ab-08d433f6398e",
+  "X-Forefront-Antispam-Report": "SFV:NSPM;SFS:(10019020)(7916002)(39850400002)(39840400002)(39410400002)(39860400002)(39450400003)(199003)(377454003)(189002)(606005)(106356001)(9686002)(99286003)(102836003)(790700001)(97736004)(25786008)(8936002)(122556002)(2501003)(733005)(3660700001)(38730400001)(6506006)(229853002)(6436002)(107886002)(81156014)(81166006)(2906002)(2351001)(19618635001)(3280700002)(189998001)(77096006)(68736007)(6916009)(2950100002)(8676002)(110136003)(7066003)(5660300001)(101416001)(2900100001)(76176999)(7696004)(105586002)(54356999)(50986999)(106116001)(5640700003)(92566002)(55016002)(33656002)(450100001)(7906003)(74316002)(86362001)(7099028);DIR:OUT;SFP:1102;SCL:1;SRVR:HE1PR04MB1177;H:HE1PR04MB1178.eurprd04.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;A:1;MX:1;LANG:en;",
+  "X-Ms-Has-Attach": "",
+  "Content-Type": "multipart/alternative; boundary=\"_000_HE1PR04MB117815C12DC3F771AC7ABA93B56E0HE1PR04MB1178eurp_\"",
+  "X-Exchange-Antispam-Report-Cfa-Test": "BCL:0;PCL:0;RULEID:(6040375)(601004)(2401047)(5005006)(8121501046)(3002001)(10201501046)(6055026)(6041248)(20161123562025)(20161123555025)(20161123564025)(20161123560025)(6072148)(6047074);SRVR:HE1PR04MB1177;BCL:0;PCL:0;RULEID:;SRVR:HE1PR04MB1177;",
+  "Subject": "RE: What'd you get done today? - dcharles work - December 29"
+}

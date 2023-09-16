@@ -1,0 +1,14 @@
+- if organization.stripe_customer.invoices.any?
+  %ol.list-settings-items
+    - organization.stripe_customer.invoices.each do |invoice|
+      %li.list-settings-item
+        .content
+          %strong #{Time.zone.at(invoice.date).strftime("%Y %B %d")}
+          %span
+            - if invoice.lines.any? && invoice.lines.first.respond_to?(:quantity)
+              #{invoice.lines.first.quantity}
+              x
+              #{invoice.lines.first.plan.name}
+            $#{ "%.2f" % (invoice.amount_due / 100) }
+        %nav.actions
+          = link_to 'Download', '/todo?f=download_invoice', class: 'button utility'

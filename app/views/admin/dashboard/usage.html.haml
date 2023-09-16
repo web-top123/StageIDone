@@ -1,0 +1,27 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Dashboard", '/admin'
+    = link_to "Usage metrics", '/admin/dashboard/usage'
+
+.wrapper{role: 'layout'}
+  %nav.admin-subnav
+    = link_to "Acquisition", "/admin/dashboard/acquisition"
+    = link_to "Usage", "/admin/dashboard/usage"
+    = link_to "Migration", "/admin/dashboard/migration"
+
+  %div
+    = line_chart @graph_data
+
+  %table.admin-data
+    %tr
+      %td &nbsp;
+      %th Entries
+      %th Likes
+      %th Comments
+
+    - @weeks.each do |week|
+      %tr
+        %th #{ week[:monday].strftime("%m/%d/%Y") }
+        %td #{ week[:entries] }
+        %td #{ week[:comments] }
+        %td #{ week[:likes] }

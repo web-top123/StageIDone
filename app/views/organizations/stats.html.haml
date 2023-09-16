@@ -1,0 +1,153 @@
+- content_for :current_page do
+  = link_to "Reports", stats_organization_path(@organization)
+
+- content_for :header do
+  = render partial: 'organizations/header', locals: { organization: @organization }
+
+#datepicker{:style => "display:none"}
+  %div.calendar{role: 'input'}
+
+#export{:style => "display:none"}
+  %div.modal-export= render partial: 'organizations/export', locals: { organization: @organization, start_date: @start_date, end_date: @end_date }
+
+- cache "/o/#{ @organization.hash_id }/#{ @organization.entries.maximum(:updated_at).try(:utc).try(:to_s, :number) }/stats/#{ @start_date }/#{ @end_date }" do
+  %main.application-main
+    %div.wrapper-small{role: 'layout'}
+      %header.header-standard
+        %h2.left #{ @organization.name } Stats, #{ @start_date.strftime('%B %e') }&mdash;#{ @end_date.strftime('%B %e') }
+
+        %nav.date-switcher
+          %a.date-switcher_calendar{'data-bind' => 'datePicker', "data-tipped-options" => "inline: 'datepicker'", 'data-current_date' => calendar_month_team_path(@organization.teams.first, date: @end_date)} cal
+          = link_to "7", stats_organization_path(@organization, date: @end_date, range: 7), class: "date-switcher_range #{ @range == 7 ? 'current' : nil }"
+          = link_to "30", stats_organization_path(@organization, date: @end_date, range: 30), class: "date-switcher_range #{ @range == 30 ? 'current' : nil }"
+          = link_to "60", stats_organization_path(@organization, date: @end_date, range: 60), class: "date-switcher_range #{ @range == 60 ? 'current' : nil }"
+          = link_to "90", stats_organization_path(@organization, date: @end_date, range: 90), class: "date-switcher_range #{ @range == 90 ? 'current' : nil }"
+
+        %nav.header-misc-nav
+          %a{'data-bind' => 'exportToggle', "data-tipped-options" => "inline: 'export'"} Export
+
+
+      -if @range >= 30 # only show chart for 30 days or more
+        %section.section-stats
+          %header.header-stats
+            %h3 Organization activity
+
+          = render partial: 'charts/activity_time', locals: { entries: @entries, start_date: @start_date, end_date: @end_date }
+
+      - if @entries.size > 10
+        - if @organization.teams.count > 4
+          %section.section-stats
+            %header.header-stats
+              %h3 Most active teams
+
+            %ol.top-users{role: 'chart'}
+              - @most_active_teams.first(5).each do |team|
+                %li.top-teams_item
+                  .top-teams_item_header
+                    = link_to team do
+                      %strong= team.name
+
+                  .top-teams_item_content
+                    %div.number{role: 'chart'}
+                      %big= team.entry_count
+                      %label entries
+                    %div.number{role: 'chart'}
+                      %big= team.like_count
+                      %label likes
+                    %div.number{role: 'chart'}
+                      %big= team.comment_count
+                      %label comments
+
+        %section.section-stats
+          %header.header-stats
+            %h3 Most active users
+
+          %ol.top-users{role: 'chart'}
+            - @most_active_users.first(5).each do |user|
+              %li.top-users_item
+                .top-users_item_header
+                  = link_to [@organization, user] do
+                    = render partial: 'users/portrait', locals: { user: user, portrait_size: nil }
+                    %strong= user.first_name_or_something_else_identifying
+
+                .top-users_item_content
+                  %div.number{role: 'chart'}
+                    %big= user.entry_count
+                    %label entries
+                  %div.number{role: 'chart'}
+                    %big= user.like_count
+                    %label likes
+                  %div.number{role: 'chart'}
+                    %big= user.comment_count
+                    %label comments
+
+      %section.section-stats
+        %header.header-stats
+          %h3 Wall of Fame
+
+        %div.wall-of-fame{role: 'chart'}
+          %ul.wall-of-fame_items
+            %li.wall-of-fame_item
+              %div
+                %label Beautiful Dreamer
+                %big
+                  = render partial: 'users/portrait', locals: { user: @dreamer, portrait_size: 'huge' }
+                  = @dreamer.full_name_or_something_else_identifying
+                %small sets the most goals
+
+            %li.wall-of-fame_item
+              %div
+                %label Loquacious
+                %big
+                  = render partial: 'users/portrait', locals: { user: @loquacious, portrait_size: 'huge' }
+                  = @loquacious.full_name_or_something_else_identifying
+                %small most verbose entries
+
+            %li.wall-of-fame_item
+              %div
+                %label On the Hop
+                %big
+                  = render partial: 'users/portrait', locals: { user: @busiest, portrait_size: 'huge' }
+                  = @busiest.full_name_or_something_else_identifying
+                %small most completed entries
+
+      %section.section-stats          
+        %header.header-stats
+          %h3 Entries
+        %ul
+          - @entries.group_by(&:occurred_on).each do |date, entries_for_date|
+            %li.stats-user-entry-item
+              %label= date.strftime('%B %e')
+              %ul
+                - entries_for_date.group_by(&:user).each do |user, entries_for_user|
+                  %li.stats-user-entry-item-user
+                    .stats-user-entry-item-user-avatar
+                      = link_to [@organization, user] do
+                        = render partial: 'users/portrait', locals: { user: user, portrait_size: nil }
+                        %strong= user.first_name_or_something_else_identifying
+                    %ul
+                      - entries_for_user.group_by(&:team).each do |team, user_entries_for_team|
+                        %li
+                          %strong=link_to team.name, [team]
+                        %ul
+                          - user_entries_for_team.each do |entry|
+                            - likes = entry.reactions.is_like.chronologically.to_a
+                            - comments = entry.reactions.is_comment.chronologically.to_a
+                            %li.entry-brief
+                              .entry-status
+                                .disc.icon.status.small.completed{class: entry.status, title: "#{ entry.status } for #{ entry.occurred_on}"}= entry.status
+                              .entry-content
+                                .entry-body
+                                  - if entry.team.enable_entry_timestamps?
+                                    %em
+                                      = entry.created_at.strftime("%H:%M")
+                                  = raw EntryParser.auto_link(entry)
+                              %ul.entry-reactions
+                                -if likes.any?
+                                  %li.entry-likes
+                                    Liked by
+                                    = likes.map { |l| link_to(l.user.first_name_or_something_else_identifying, [l.reactable.team.organization, l.user]) }.join(', ').html_safe
+                                %li.entry-comments{style: comments.any? ? 'display:block' : 'display:none'}
+                                  %ol.list-comments
+                                    - comments.each do |comment|
+                                      %li.list-comments-item= render partial: 'reactions/comment', locals: {comment: comment, entry_org: entry.team.organization}

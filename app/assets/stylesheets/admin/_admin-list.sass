@@ -1,0 +1,32 @@
+.admin-list
+
+.admin-list_item
+  border-top: 1px solid $super-faint
+  padding: 0.5rem 0
+
+  big
+    display: block
+    font-weight: 500
+    font-size: ms(1)
+    margin: 0 0 0.125rem
+
+  small, dl
+    color: $grey
+    font-size: ms(-1)
+    font-weight: 400
+    font-family: $mono
+
+  dl
+    dt, dd
+      display: inline-block
+      overflow: hidden
+
+    dd:after
+      content: ' · '
+      color: $faint
+
+    dd:last-child:after
+      content: ''
+
+    dt
+      color: $silver

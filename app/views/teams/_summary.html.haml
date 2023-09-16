@@ -1,0 +1,25 @@
+- active_users = team.active_users.to_a
+%div.team-summary
+  %div.team-summary_options
+    %h3= link_to truncate(team.name, length: 13), team
+    - if team.private?
+      %a <strong>Private</strong>
+    - if policy(team).settings?
+      = link_to "Settings", [:settings, team]
+
+  %div.team-summary_content
+    %ul.list-users-portraits
+      - if active_users.length < 9
+        - active_users.each do |user|
+          %li.list-users-portraits-item
+            = link_to [team.organization, user] do
+              = render partial: 'users/portrait', locals: { user: user, portrait_size: 'large' }
+        - (8 - active_users.length).times do
+          %li.list-users-portraits-item
+            %div.square.portrait.placeholder.large
+
+      - else
+        - active_users.each do |user|
+          %li.list-users-portraits-item
+            = link_to [team.organization, user] do
+              = render partial: 'users/portrait', locals: { user: user, portrait_size: nil }

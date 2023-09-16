@@ -1,0 +1,192 @@
+.entry-brief
+  padding-left: 2rem
+  padding-bottom: 0.125rem
+
+  .entry-status
+    float: left
+    margin-left: -1.5rem
+    padding: 0.5rem 0 0
+
+    .disc.icon.status.small.primary
+      margin-left: -0.25rem
+
+    .disc.icon.status.small.secondary
+      margin-top: -0.875rem
+      margin-left: 0.25rem
+
+  .entry-content
+    padding-top: 0.125rem
+    .entry-body
+      display: inline
+
+      a
+        color: $red
+
+        &:hover
+          text-decoration: underline
+
+    .entry-options
+      font-size: ms(-1)
+      display: block
+      opacity: 0.75
+
+      a
+        color: $grey
+        font-weight: 400
+        text-decoration: underline
+        display: inline-block
+        margin-left: 0.125rem
+        &:hover
+          color: $red
+          cursor: pointer
+
+        &:first-child
+          margin-left: 0
+
+  &:hover
+    .entry-content
+      .entry-options
+        opacity: 1
+
+  .modal-open
+    overflow: hidden
+
+  .modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1050
+    display: none
+    overflow: hidden
+    -webkit-overflow-scrolling: touch
+    outline: 0
+    &.fade .modal-dialog
+      -webkit-transition: -webkit-transform .3s ease-out
+      -o-transition: -o-transform .3s ease-out
+      transition: transform .3s ease-out
+      -webkit-transform: translate(0, -25%)
+      -ms-transform: translate(0, -25%)
+      -o-transform: translate(0, -25%)
+      transform: translate(0, -25%)
+    &.in .modal-dialog
+      -webkit-transform: translate(0, 0)
+      -ms-transform: translate(0, 0)
+      -o-transform: translate(0, 0)
+      transform: translate(0, 0)
+
+  .modal-open .modal
+    overflow-x: hidden
+    overflow-y: auto
+
+  .modal-dialog
+    position: relative
+    width: auto
+    margin: 10px
+
+  .modal-content
+    position: relative
+    background-color: #fff
+    -webkit-background-clip: padding-box
+    background-clip: padding-box
+    border: 1px solid #999
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    border-radius: 6px
+    outline: 0
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
+
+  .modal-backdrop
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1040
+    background-color: #000
+    &.fade
+      filter: alpha(opacity = 0)
+      opacity: 0
+    &.in
+      filter: alpha(opacity = 50)
+      opacity: .5
+
+  .modal-header
+    padding: 15px
+    border-bottom: 1px solid #e5e5e5
+    .close
+      margin-top: -2px
+
+  .modal-title
+    margin: 0
+    line-height: 1.42857143
+
+  .modal-body
+    position: relative
+    padding: 15px
+
+  .modal-footer
+    padding: 15px
+    text-align: right
+    border-top: 1px solid #e5e5e5
+    .btn + .btn
+      margin-bottom: 0
+      margin-left: 5px
+    .btn-group .btn + .btn
+      margin-left: -1px
+    .btn-block + .btn-block
+      margin-left: 0
+
+  .modal-scrollbar-measure
+    position: absolute
+    top: -9999px
+    width: 50px
+    height: 50px
+    overflow: scroll
+
+  @media (min-width: 768px)
+    .modal-dialog
+      width: 600px
+      margin: 30px auto
+    .modal-content
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+    .modal-sm
+      width: 300px
+
+  @media (min-width: 992px)
+    .modal-lg
+      width: 900px
+
+.entry_count 
+  position: absolute
+  top: 0
+  right: 0
+  background: #e94b35
+  padding: 2px
+  height: 32px
+  width: 32px
+  border-radius: 50%
+  font-size: 13px
+  line-height: 23px
+  text-align: center
+  z-index: 9999
+  transform: translate(10px, -10px)
+  border: 2px solid #fff
+  text-indent: 0
+  color: $white
+
+.portrait.square
+  overflow: visible
+
+li.list-users-portraits-item.heard
+  padding-top: 10px
+
+.entry_count 
+  .sup 
+    position: absolute
+    top: -5px
+    right: 5px
+    font-weight: 900
+    font-size: 13px

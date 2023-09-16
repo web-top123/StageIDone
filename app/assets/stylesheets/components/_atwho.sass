@@ -1,0 +1,56 @@
+.atwho-view
+  position: absolute
+  top: 0
+  left: 0
+  display: none
+  margin-top: 1rem
+  background: $white
+  color: $black
+  border: 3px solid rgba($black,0.81)
+  border-radius: 2px
+  min-width: 8rem
+  z-index: 11110 !important
+
+  .atwho-header
+    padding: 5px
+    margin: 5px
+    cursor: pointer
+    color: $blue
+    font-weight: bold
+    .small
+      color: $blue
+      float: right
+      padding-top: 2px
+      margin-right: -5px
+      font-size: 0.9em
+      font-weight: normal
+    &:hover
+      cursor: default
+
+  .cur
+    background: $blue
+    color: $white
+    small
+      color: $white
+
+  strong
+    color: $blue
+  .cur strong
+    color: $white
+    font: bold
+
+  ul
+    list-style: none
+    padding: 0
+    margin: auto
+    max-height: 200px
+    overflow-y: auto
+    li
+      font-size: ms(-1)
+      display: block
+      padding: 0.175rem 0.325rem 0.25rem
+      cursor: pointer
+  small
+    font-size: 0.9em
+    color: $grey
+    font-weight: normal

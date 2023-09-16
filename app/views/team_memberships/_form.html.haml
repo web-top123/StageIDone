@@ -1,0 +1,87 @@
+- # TODO: partialize the form elements!
+= form_for([team_membership.team, team_membership], html: {class: 'settings-form'}) do |f|
+  - if team_membership.frozen_digest_days? && team_membership.frozen_reminder_days?
+    %div.pill-red
+      Inactivity caused your emails to decrease to send once a week.
+      Reset #{link_to 'back', unthrottle_emails_team_team_membership_path({ team_id: team_membership.team.hash_id, id: team_membership.id }), method: 'patch' }
+  .field
+    = f.check_box :is_email_send_active
+    = f.label :is_email_send_active, 'Continue notifying me with Digest & Reminder Email even when my account activity is low.'
+  .field
+    = f.check_box :assign_task_reminder_status
+    = f.label :assign_task_reminder_status, 'Notify me when a new task is assigned to me.'
+  .field
+    = f.label :reminder_days, 'Send me reminders on'
+
+    %div.week{role: 'input', 'data-bind' => 'team_membership[reminder_days]', 'data-mailer' => "reminder"}
+      %ol.days
+        %li.day
+          %div{'data-value' => 'sunday', role: 'inputOption'} Su
+          = f.hidden_field :reminder_sunday
+        %li.day
+          %div{'data-value' => 'monday', role: 'inputOption'} M
+          = f. hidden_field :reminder_monday
+        %li.day
+          %div{'data-value' => 'tuesday', role: 'inputOption'} Tu
+          = f. hidden_field :reminder_tuesday
+        %li.day
+          %div{'data-value' => 'wednesday', role: 'inputOption'} W
+          = f. hidden_field :reminder_wednesday
+        %li.day
+          %div{'data-value' => 'thursday', role: 'inputOption'} Th
+          = f. hidden_field :reminder_thursday
+        %li.day
+          %div{'data-value' => 'friday', role: 'inputOption'} F
+          = f. hidden_field :reminder_friday
+        %li.day
+          %div{'data-value' => 'saturday', role: 'inputOption'} Sa
+          = f. hidden_field :reminder_saturday
+
+    = f.label :digest_days, 'Send me digests on'
+    %div.week{role: 'input', 'data-bind' => 'team_membership[digest_days]', 'data-mailer' => "digest"}
+      %ol.days
+        %li.day
+          %div{'data-value' => 'sunday', role: 'inputOption'} Su
+          = f.hidden_field :digest_sunday
+        %li.day
+          %div{'data-value' => 'monday', role: 'inputOption'} M
+          = f.hidden_field :digest_monday
+        %li.day
+          %div{'data-value' => 'tuesday', role: 'inputOption'} Tu
+          = f.hidden_field :digest_tuesday
+        %li.day
+          %div{'data-value' => 'wednesday', role: 'inputOption'} W
+          = f.hidden_field :digest_wednesday
+        %li.day
+          %div{'data-value' => 'thursday', role: 'inputOption'} Th
+          = f.hidden_field :digest_thursday
+        %li.day
+          %div{'data-value' => 'friday', role: 'inputOption'} F
+          = f.hidden_field :digest_friday
+        %li.day
+          %div{'data-value' => 'saturday', role: 'inputOption'} Sa
+          = f.hidden_field :digest_saturday
+
+  .field.clocks
+    .clock
+      = f.label :email_digest_seconds_since_midnight, 'Send digests at'
+      = f.hidden_field :email_digest_seconds_since_midnight
+
+      %div.time{role: 'input', 'data-bind' => 'team_membership[email_digest_seconds_since_midnight]'}
+        %div.clock
+          %input{type: 'tel', 'data-bind' => 'hours', placeholder: '00'}
+          \:
+          %input{type: 'tel', 'data-bind' => 'minutes', placeholder: '00'}
+        %div.ampm{'data-bind' => 'ampm', 'data-value' => 'am'} am
+    .clock
+      = f.label :email_reminder_seconds_since_midnight, 'Send reminders at'
+      = f.hidden_field :email_reminder_seconds_since_midnight
+
+      %div.time{role: 'input', 'data-bind' => 'team_membership[email_reminder_seconds_since_midnight]'}
+        %div.clock
+          %input{type: 'tel', 'data-bind' => 'hours', placeholder: '00'}
+          \:
+          %input{type: 'tel', 'data-bind' => 'minutes', placeholder: '00'}
+        %div.ampm{'data-bind' => 'ampm', 'data-value' => 'am'} am
+
+  .actions= f.submit 'Save Changes', class: 'button'

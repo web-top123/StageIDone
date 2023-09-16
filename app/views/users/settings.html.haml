@@ -1,0 +1,90 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Account settings", [:settings, :user]
+
+%main.settings-main
+  %div.wrapper-small{role: 'layout'}
+    %section.section-settings
+      %header.header-settings
+        %h2 Account
+
+        :markdown
+          Enable your personal log to track tasks and progress privately. Perfect for keeping track of chores, exercise, reading, _et cetera_.
+
+      %div= render partial: 'form', locals: { user: @user }
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Portrait
+
+        :markdown
+          Teams with smiley, up-to-date portraits work smarter, harder, faster, and better. Really! It's true!
+
+      %div= render partial: 'personalize', locals: { user: @user }
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Password
+
+        :markdown
+          Enter your old password, a new password, and click 'Save changes'.
+
+      %div= render partial: 'change_password', locals: { user: @user }
+
+    - if @user.active_organizations.any? || @user.active_teams.any?
+      %section.section-settings
+        %header.header-settings
+          %h2 Memberships
+
+        %div
+          - if @user.active_organizations.any?
+            %h3 Organizations
+            %ul.list-inline
+              - @user.active_organizations.each do |organization|
+                %li= link_to organization.name? ? organization.name : 'My Organization', organization
+
+          - if @user.active_teams.any?
+            %h3 Teams
+            %ul.list-inline
+              - @user.active_teams.includes(:organization).each do |team|
+                - next if !@user.show_personal_team && team.personal?
+                %li= link_to "#{ team.name } (#{ team.organization.name? ? team.organization.name : 'My Organization' rescue 'Personal' })", team
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Integrations
+
+      %div= render 'integrations/list'
+
+    %section.section-settings
+      %header.header-settings
+        %h2 API Token
+
+        :markdown
+          Warning: Any person or service that has this token has access to your I Done This account just like you do and can do the same things you can, e.g. post entries on your behalf.
+
+          To get started with the API, check out the 
+          #{link_to 'documentation', 'https://i-done-this.readme.io/docs', target: '_blank'}.
+
+      %div= render 'users/api_token', locals: { user: @user }
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Alternate Emails
+
+        :markdown
+          Enter an alternate email address and an email will be sent to it for you to verify.
+
+          Alternate emails allow you to email entries from any of your alternate emails and we'll know that the email is from you and assign the entries to your team.
+
+      %div= render 'alternate_emails/list'
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Logout
+
+      %div
+        :markdown
+          All done? Come back soon &mdash; we'll miss you!
+
+        .actions= link_to 'Logout', logout_path, method: :post, class: 'button'

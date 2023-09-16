@@ -1,0 +1,62 @@
+.comment-form
+  overflow: hidden
+  clear: both
+  padding: 0.25rem 0.25rem 0.25rem 1.75rem
+
+  .user
+    float: left
+    margin-left: -1.5rem
+
+  .field
+    display: block
+
+    textarea
+      display: block
+      margin: 0
+      font-size: ms(-1)
+      line-height: 1.4
+      padding: 0.075rem 0.175rem
+      width: 100%
+      resize: none
+      overflow: hidden
+      word-wrap: break-word
+
+      &:focus
+        border-color: $white
+        background-color: $white
+
+  .comment-hint
+    font-size: ms(-1)
+    color: $grey
+    font-weight: 400
+    display: none
+    a
+      color: $black
+      text-decoration: underline
+      font-weight: 400
+      &:hover
+        cursor: pointer
+        color: $red
+
+  .action
+    display: none
+
+.emoji-picker-icon
+  top: 5px !important
+  right: 6px !important
+
+.emoji-wysiwyg-editor
+  resize: none !important
+  display: block
+  margin: 0
+  font-size: ms(-1)
+  line-height: 1.4
+  padding: 0.075rem 0.175rem
+  width: 100%
+  resize: none
+  overflow: hidden
+  word-wrap: break-word
+
+  &:focus
+    border-color: $white
+    background-color: $white

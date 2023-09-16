@@ -1,0 +1,44 @@
+# machine:
+#   ruby:
+#     version:
+#       2.3.0
+#   pre:
+#     - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
+#   environment:
+#     COVERAGE_REPORTER: code_climate
+#     CODECLIMATE_REPO_TOKEN: e6a0482170447b75ca54c2fab0156374082b3d57d85a0394f55eaaff02ff33b1
+#     SLACK_API_KEY: somekey
+#     SLACK_API_SECRET: somesecret
+#     SLACK_APP_VERIFICATION_TOKEN: abc
+#     IDT_SLACK_AUTH_ID: abc
+#     IDT_SLACK_AUTH_SECRET: def
+#     MAILGUN_API_KEY: mailgunkey
+#     MAILGUN_INBOUND_EMAIL_API_KEY: mailgunkey
+#     STRIPE_SECRET_KEY: stripesecret
+#     STRIPE_PUBLIC_KEY: stripepublic
+#     SALESFORCE_USERNAME: joe@dirt.com
+#     SALESFORCE_PASSWORD: password
+#     SALESFORCE_SECURITY_TOKEN: abc
+#     SALESFORCE_CLIENT_ID: def
+#     SALESFORCE_CLIENT_SECRET: ghi
+
+# database:
+#   override:
+#     - bundle exec rake db:create db:schema:load db:seed --trace
+
+# deployment:
+#   staging:
+#     branch: staging
+#     commands:
+#       - git fetch origin --unshallow
+#       - git push -f git@heroku.com:idt-two-staging.git $CIRCLE_SHA1:master
+#       - heroku run rake db:migrate --app idt-two-staging
+#       #- heroku rake db:seed --app idt-two-staging
+#       - heroku restart --app idt-two-staging
+#   production:
+#     branch: master
+#     commands:
+#       - git fetch origin --unshallow
+#       - git push git@heroku.com:idt-two.git $CIRCLE_SHA1:master
+#       - heroku run rake db:migrate --app idt-two
+#       - heroku restart --app idt-two

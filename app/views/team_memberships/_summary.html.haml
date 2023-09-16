@@ -1,0 +1,68 @@
+/ %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
+/ %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"}
+%script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+
+- team = team_membership.team
+- user = team_membership.user
+- team_members = team_membership.team.users
+
+%div.membership-summary
+  %div.membership-summary_portrait
+    = link_to [team.organization, user] do
+      = render partial: 'users/portrait', locals: { user: user, portrait_size: 'large' }
+
+  %div.membership-summary_content
+    %h3.membership-summary_content_name
+      = link_to user.full_name_or_something_else_identifying, [team.organization, user]
+
+    %p.membership-summary_content_subtitle
+      - if team_membership.persisted? && team_membership.active?
+        Member since #{ team_membership.created_at.strftime('%B %e, %Y') }
+
+  .membership-summary_role
+    - if policy(team_membership).update?
+      - if team_membership.persisted? && team_membership.active?
+        - if (@team.owner_id == user.id)
+          = "Owner"
+        - else
+          = "Member"
+      - else
+        = link_to "Add to team", [team, team_membership], class: 'button utility', method: 'post'
+
+  .membership-summary_role
+    - if policy(team_membership).update?
+      - if team_membership.persisted? && team_membership.active?
+        / = link_to "Remove from team", [team, team_membership], class: 'button utility', method: 'delete'
+
+        - if (@team.owner_id == @current_user.id)
+          - if (@team.owner_id != user.id)
+            = link_to "Remove from team","#",class: 'button utility',id: "myModal-#{user.id}", class: "modal-link"
+        -elsif ( @team.users.pluck(:email_address).include?(user.email_address) if user == @current_user)
+          = link_to "Remove from team","#",class: 'button utility',id: "myModal-#{user.id}", class: "modal-link"
+
+      - else
+        = link_to "Add to team", [team, team_membership], class: 'button utility', method: 'post'
+
+  .modal.fade{:role => "dialog", :id => "myModal-#{user.id}"}
+    .modal-dialog
+      .modal-content
+        .modal-body
+          = link_to "Delete all task", team_team_membership_path(team, team_membership,key:"delete"), class: 'button utility', method: 'delete'
+          %br
+          = link_to "transfer the tasks", "#", class: 'button utility modal-link-1', id: "myModal-1-#{user.id}"
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :type => "button" ,class: "myModal-close",id: "myModal-#{user.id}"} Close
+
+  .modal.fade{:role => "dialog", :id => "myModal-1-#{user.id}"}
+    .modal-dialog
+      .modal-content
+        .modal-body
+          = form_tag team_team_membership_path(team, team_membership,key:"transfer"), method: :delete, id: "contact_form", class: "contact_form" do
+            - team_members.each do |team_member|
+              - if team_member.id != user.id
+                = radio_button_tag :user_id,team_member.id
+                = team_member.full_name + " ( " + team_member.email_address + " )"
+                %br
+            .modal-footer
+              %button.btn.btn-default{"data-dismiss" => "modal", :type => "button" ,class: "myModal-1-close",id: "myModal-1-#{user.id}"} Close
+              = submit_tag("Send", class: "btn btn-default" ,id: "submitForm")

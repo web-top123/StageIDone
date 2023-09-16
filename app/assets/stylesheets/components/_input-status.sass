@@ -1,0 +1,40 @@
+.status[role='input']
+  position: relative
+  .square.small.icon
+    background-color: $very-faint
+    width: 1.675rem
+    height: 1.675rem
+    font-size: ms(-2)
+    background-size: 0.625rem auto
+
+  .status-current
+    .square.small.icon
+
+    &:hover
+      cursor: pointer
+      .square.small.icon
+        background-color: $faint
+        background-image: url(asset-path('icon-down-grey.svg'))
+
+
+  .status-options
+    display: none
+    position: absolute
+    z-index: 99
+
+    .square.small.icon
+      &:hover
+        cursor: pointer
+        background-color: $faint
+
+    [data-value='done']
+    [data-value='goal']
+    [data-value='blocked']
+
+  &.active
+    .status-current
+      .square.small.icon
+        background-color: $faint
+        background-image: url(asset-path('icon-down-grey.svg'))
+    .status-options
+      display: block

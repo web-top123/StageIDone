@@ -1,0 +1,34 @@
+.date-switcher
+  display: block
+  float: right
+  border: 1px solid $very-faint
+  margin: 2px 1rem 0 0
+
+  a
+    float: left
+    display: block
+    width: 1.7rem
+    height: 1.7rem
+    text-align: center
+    &:hover, &.current
+      background-color: $super-faint
+      cursor: pointer
+      color: $blue
+
+.date-switcher_calendar
+  text-indent: -9999px
+  border-bottom: 0
+  background-repeat: no-repeat
+  background-color: transparent
+  background-position: center center
+  background-size: auto 1rem
+  background-image: url(asset-path('icon-calendar-grey.svg'))
+  &:hover
+    background-image: url(asset-path('icon-calendar-blue.svg'))
+
+.date-switcher_next, .date-switcher_previous, .date-switcher_range
+  font-weight: 500
+  font-family: $mono
+  font-size: 0.8em
+  line-height: 1.875rem
+  vertical-align: baseline

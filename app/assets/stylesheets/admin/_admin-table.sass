@@ -1,0 +1,24 @@
+.admin-table
+  font-family: $mono
+
+  tr
+    border-bottom: 1px solid $super-faint
+
+    label
+      display: block
+      padding: 0.5rem 0.5rem 0.5rem 0
+      color: $grey
+
+    td, th, input, label, input[type='text'], input[type='password'], input[type='email']
+      font-size: ms(-1)
+      font-weight: 400
+      font-family: $mono
+      text-align: left
+
+    input[type='text'], input[type='password'], input[type='email']
+      padding: 0.25rem 0.5rem 0.125rem
+
+      &.extra
+        width: 100%
+        min-width: 24rem
+        max-width: none

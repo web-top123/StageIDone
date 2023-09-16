@@ -1,0 +1,27 @@
+- content_for :current_page do
+  = link_to "Search: '#{ @query }'", search_team_path(@team, q: @query)
+
+- content_for :header do
+  = render partial: 'teams/header', locals: { team: @team }
+
+- content_for :sidebar do
+  = render partial: 'teams/sidebar', locals: { team: @team, current_page: 'search' }
+
+%main.application-main
+  %div.wrapper-tiny{role: 'layout'}
+    %header.header-standard
+      %h2.left Search for &ldquo;#{ @query }&rdquo;
+      %nav.header-search
+        %form{method: 'get', action: search_team_path(@team)}
+          %input{type: 'text', name: 'q', value: @query, placeholder: raw('Search entries&hellip;')}
+          %input{type: 'submit', value: 'Go'}
+
+    %section.section-standard
+      - if @entries.for_period((Date.current - 29.days), Date.current).many?
+        = render partial: 'charts/activity_time_brief', locals: { entries: @entries, start_date: (Date.current - 29.days), end_date: Date.current }
+
+      %ol.list-entries.activity-stream
+        - @entries.each do |entry|
+          - next if entry.completed_same_day?
+          - if entry.user.present?
+            %li.list-entries-item= render partial: 'entries/stream', locals: { entry: entry }

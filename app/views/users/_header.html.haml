@@ -1,0 +1,9 @@
+%div.breadcrumbs
+  - if organization.present?
+    = link_to organization.name, organization
+    = link_to user.full_name, [organization, user]
+  - else
+    = link_to user.full_name, [:settings, :user]
+
+  - if content_for? :current_page
+    = yield :current_page

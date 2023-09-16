@@ -1,0 +1,99 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Users", [:admin, :users]
+
+    - if params[:filter_field].present? && params[:filter_value]
+      = link_to "#{ params[:filter_field] }: #{ params[:filter_value] }", admin_users_path(filter_field: params[:filter_field], filter_value: params[:filter_value])
+
+    = link_to @user.full_name_or_something_else_identifying, [:admin, @user]
+
+.wrapper-small{role: 'layout'}
+  .admin-pane
+    %header.admin-show_header
+      %h1= @user.full_name_or_something_else_identifying
+
+    %nav.admin-nav
+      = link_to "Log in as #{ @user.first_name_or_something_else_identifying }", log_in_as_user_admin_user_path(@user), method: 'post', class: 'button utility'
+      = link_to "Send password reset", send_reset_admin_user_path(@user), method: 'post', class: 'button utility'
+      - if !@user.verified?
+        = link_to "Verify email", verify_email_admin_user_path(@user), method: 'post', class: 'button utility'
+      - if @user.deleted?
+        = link_to 'Restore user', restore_admin_user_path(@user), method: 'put', class: 'button utility'
+      - else
+        = link_to 'Soft Delete', admin_user_path(@user), method: 'delete', data: { confirm: 'Are you sure you want to delete this user?' }, class: 'button utility'
+      = link_to 'Permanently Delete', hard_delete_admin_user_path(@user), method: 'delete', data: { confirm: 'Are you sure you want to HARD delete this user?' }, class: 'button utility'
+
+    %main.admin-show_main
+      = form_for [:admin, @user] do |f|
+        %table.admin-table
+          %tr
+            %th= f.label :id
+            %td= f.text_field :id, readonly: true
+          %tr
+            %th= f.label :email_address
+            %td= f.email_field :email_address
+          %tr
+            %th= f.label :full_name
+            %td= f.text_field :full_name
+          %tr
+            %th= f.label :go_by_name, 'Goes by'
+            %td= f.text_field :go_by_name
+          %tr
+            %th= f.label :time_zone
+            %td= f.text_field :time_zone
+          %tr
+            %th= f.label :show_personal_team
+            %td= f.check_box :show_personal_team
+          %tr
+            %th= f.label :api_token
+            %td= f.text_field :api_token, readonly: true
+          %tr
+            %th
+              %label Alternate Emails
+            %td= @user.alternate_emails.map(&:email_address).join(', ')
+          %tr
+            %th= f.label :migrated_from_legacy_at
+            %td= f.text_field :migrated_from_legacy_at, readonly: true
+          %tr
+            %th= f.label :deleted_at
+            %td= f.text_field :deleted_at, readonly: true
+          %tr
+            %th= f.label :autojoin_domain
+            %td= f.text_field :autojoin_domain, readonly: true
+          %tr
+            %th= f.label :verified_at
+            %td= f.text_field :verified_at, readonly: true
+          %tr
+            %th= f.label :last_seen_at
+            %td= f.text_field :last_seen_at, readonly: true
+          %tr
+            %th
+              %label Total entries
+            %td
+              %input{readonly: true, type: 'text', value: @user.entries.count}
+          %tr
+            %th
+              %label Current Organizations
+            %td= @user.organization_memberships.active.map(&:organization).compact.map { |organization| link_to(organization.name_or_something_else_identifying, [:admin, organization]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Removed from Organizations
+            %td= @user.organization_memberships.removed.map(&:organization).compact.map { |organization| link_to(organization.name_or_something_else_identifying, [:admin, organization]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Deleted from Organizations
+            %td= @user.organization_memberships.only_deleted.map(&:organization).compact.map { |organization| link_to(organization.name_or_something_else_identifying, [:admin, organization]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Current Teams
+            %td= @user.team_memberships.active.map(&:team).compact.map { |team| link_to(team.name, [:admin,team]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Removed from Teams
+            %td= @user.team_memberships.removed.map(&:team).compact.map { |team| link_to(team.name, [:admin,team]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Deleted from Teams
+            %td= @user.team_memberships.only_deleted.map(&:team).compact.map { |team| link_to(team.name, [:admin,team]) }.join(', ').html_safe
+        %nav.actions= f.submit 'Save changes', class: 'button'
+

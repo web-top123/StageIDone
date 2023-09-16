@@ -1,0 +1,123 @@
+- content_for :header do
+  %nav.nav-exit
+    - if @organization.stripe_subscription_status == 'active'
+      = link_to [:settings, @organization], title: 'back' do
+        %div.square.icon.light.close.small close
+    - else
+      = link_to :back do
+        %div.square.icon.light.close.small close
+
+.modal-content-large
+  .modal-header
+    - if @organization.billable_card_on_file?
+      %h1 Change the #{@organization.plan_interval} #{@organization.plan_name} plan for <strong>#{ @organization.name_or_something_else_identifying }</strong>
+    -else
+      %h1 Choose a plan for <strong>#{ @organization.name_or_something_else_identifying }</strong>
+
+  %div.upgrade-plans
+    
+    %section.upgrade-plan
+      %div
+        = form_tag organization_upgrade_billing_path(@organization), method: :get do
+          = hidden_field_tag :plan, 'small'
+          %big.upgrade-plan_name.orange Standard
+          %p.upgrade-plan_price
+            %label
+              = radio_button_tag :interval, 'yearly', (@organization.plan_interval.nil? || @organization.plan_interval == 'yearly')
+              %small
+                %strong Annually
+                #{ format_cents AppSetting.plan_price_in_cents_per_user(:small,:yearly)} per user 
+            %br
+            %label
+              = radio_button_tag :interval, 'monthly', @organization.plan_interval == 'monthly'            
+              %small
+                %strong Monthly
+                #{ format_cents AppSetting.plan_price_in_cents_per_user(:small,:monthly) } per user
+
+          %p.upgrade-plan_note MOST POPULAR
+
+          %ul.upgrade-plan_features
+            / %li
+            /   %strong Unlimited
+            /   team members
+            %li
+              Three
+              %strong free
+              integrations
+            %li
+              Email support
+
+          %nav= submit_tag "Choose Standard", class: 'button button-orange enthusiastic'
+
+    %section.upgrade-plan
+      %div
+        = form_tag organization_upgrade_billing_path(@organization), method: :get do
+          = hidden_field_tag :plan, 'medium'
+          %big.upgrade-plan_name.purple Plus
+          %p.upgrade-plan_price
+            %label
+              = radio_button_tag :interval, 'yearly', (@organization.plan_interval.nil? || @organization.plan_interval == 'yearly')
+              %small
+                %strong Annually
+                #{ format_cents AppSetting.plan_price_in_cents_per_user(:medium,:yearly) } per user 
+            %br
+            %label
+              = radio_button_tag :interval, 'monthly', @organization.plan_interval == 'monthly'
+              %small
+                %strong Monthly
+                #{ format_cents AppSetting.plan_price_in_cents_per_user(:medium,:monthly) } per user
+          / %p.upgrade-plan_note Most popular
+
+          %ul.upgrade-plan_features
+            %li
+              %strong Unlimited
+              searchable archive
+            %li
+              %strong Unlimited
+              integrations
+            %li
+              %strong 24/7
+              support
+
+          %nav= submit_tag "Choose Plus", class: 'button button-purple enthusiastic'
+
+    %section.upgrade-plan
+      %div
+        = form_tag organization_upgrade_billing_path(@organization), method: :get do
+          = hidden_field_tag :plan, 'large'
+          %big.upgrade-plan_name.blue Enterprise
+          %p.upgrade-plan_price
+            %label
+              = radio_button_tag :interval, 'yearly', (@organization.plan_interval.nil? || @organization.plan_interval == 'yearly')
+              %small
+                %strong Annually
+                #{ format_cents AppSetting.plan_price_in_cents_per_user(:large,:yearly) } per user 
+            %br
+            %label
+              = radio_button_tag :interval, 'monthly', @organization.plan_interval == 'monthly'            
+              %small
+                %strong Monthly
+                #{ format_cents AppSetting.plan_price_in_cents_per_user(:large,:monthly) } per user
+
+          / %p.upgrade-plan_note Fully-featured
+
+          %ul.upgrade-plan_features
+            %li
+              %strong Enterprise
+              reporting features
+            %li
+              %strong SAML
+              single sign-on
+            %li
+              %strong Bank-grade
+              security
+            %li
+              %strong Priority 24/7
+              support
+
+          %nav= submit_tag "Choose Enterprise", class: 'button button-blue enthusiastic'
+
+  - if (@organization.days_left_in_trial > 1)
+    .modal-footer.centered
+      :markdown
+        Don't worry — you won't be charged until your free trial has elapsed in #{ pluralize(@organization.days_left_in_trial,'day') }.

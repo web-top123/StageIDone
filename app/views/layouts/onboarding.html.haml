@@ -1,0 +1,14 @@
+!!!
+%html
+  %head= render 'layouts/head'
+
+  %body.context-super-faint
+    =# render 'tracking/google_tag_manager'
+
+    %div.centered{role: 'layout'}
+      - if content_for? :header
+        %div.application-header= yield :header
+
+      = yield
+
+    =# render partial: 'tracking/snippets'

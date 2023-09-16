@@ -1,0 +1,86 @@
+.entry-form
+  padding-left: 2rem
+  padding-bottom: 0.075rem
+
+  .entry-status
+    float: left
+    margin-left: -2rem
+
+  .entry-content
+    .entry-body
+      textarea
+        display: block
+        width: 100%
+        resize: none
+        overflow: hidden
+        word-wrap: break-word
+        padding: 0 0.25rem
+        margin: 0
+        border-width: 1px
+        &:focus
+
+    .entry-hint
+      font-size: ms(-1)
+      color: $grey
+      font-weight: 400
+      display: none
+      a
+        color: $black
+        text-decoration: underline
+        font-weight: 400
+        &:hover
+          cursor: pointer
+          color: $red
+
+  .field_with_errors
+    input
+      border-color: lighten($red,40%)
+      background-color: lighten($red,40%)
+
+
+.status[role='input']
+  .status-current
+  .status-options
+    display: none
+
+.list-users-portraits-item.heard
+  cursor: pointer
+
+.loader 
+  position: fixed 
+  top: 0 
+  left: 0 
+  right: 0 
+  bottom: 0 
+  background: rgba(0, 0, 0, 0.38) 
+  z-index: 999999 
+  display: flex 
+  align-items: center 
+  justify-content: center 
+  .circle 
+    background: radial-gradient(#e94b35, #f2f2f0)
+    width: 100px 
+    height: 100px 
+    border-radius: 50% 
+    animation: rot 1s linear infinite 
+    display: flex 
+    align-items: center 
+    justify-content: center 
+    position: unset 
+    & > div 
+      background: var(--black) 
+      height: 90px 
+      width: 90px 
+      border-radius: 50% 
+    p 
+      animation: none 
+  p 
+    position: absolute 
+    color: #fff 
+    font-size: 1rem 
+
+#loader 
+  display: none 
+
+.active-user
+  border: 2px solid #3e4036

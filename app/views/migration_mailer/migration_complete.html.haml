@@ -1,0 +1,34 @@
+.top-note Upgrade to the new version of <strong>I Done This</strong> is #{ @success ? 'complete' : 'delayed' }.
+
+.content
+  .header
+    .main-wrap
+      %table
+        %tr
+          %td
+            %h1= @success ? 'Upgrade complete' : 'Upgrade delayed'
+
+  .main
+    .main-wrap
+
+      - if @success
+
+        .important-text
+          %p Your organization has been upgraded to the latest version of <strong>I Done this</strong>.
+
+        .call-to-action
+          %a.call-to-action_button{href: "https://#{ Rails.env.production? ? 'beta.idonethis.com' : 'localhost:5000' }/"} Log in
+
+        %p As always, let us know if you have any questions by replying to this email or calling us at 1·800·508·9177.
+
+      - else
+
+        .important-text
+          %p Unfortunately your migration has been delayed. We will let you know when it is complete.
+
+          %p As always, let us know if you have any questions by replying to this email or calling us at 1·800·508·9177.
+
+  .footer
+    %p.centered
+      = link_to root_url do
+        = image_tag "emails/we-love-progress.png", class: 'strapline', alt: 'We love progress'

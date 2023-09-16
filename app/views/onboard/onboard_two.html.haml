@@ -1,0 +1,21 @@
+.wrapper-small{role: 'layout'}
+  .onboard-content
+    %header.onboard-header
+      %h1 Invite to <strong>#{ @team.name }</strong>
+
+  .invitations-panel
+    = form_for "/onboard/two", html: { method: 'patch' } do |f|
+      %input{type: 'hidden', name: 'invitations[email_addresses]', 'data-bind' => 'emailAddresses'}
+
+      .invitations-panel_omnifield
+        %input{type: 'email', placeholder: 'Enter email address', 'data-bind' => 'potentialInvitee'}
+
+      .invitations-panel_potential-invitations
+        %ul.invitations-panel_potential-invitations_list
+        %div.empty
+          :markdown
+            Invite team-mates and collaborators by entering email addresses above (one at a time and then press `enter`).
+
+      .invitations-panel_actions
+        .other-option= link_to raw("I don't want to invite anybody yet"), '/onboard/exit', method: 'patch'
+        %input.button{type: 'submit', value: 'Invite', 'data-verb' => 'Invite'}

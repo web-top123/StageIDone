@@ -1,0 +1,9 @@
+- user_portrait = user.portrait
+%div.square.portrait{style: "background-color:#{ user.profile_color }; background-image:url(#{ user_portrait.thumbnail.url })", class: user_portrait.present? ? portrait_size : "#{ portrait_size } blank", 'data-action' => 'listUserEntries', 'data-user_id' => user.id, 'data-team_id' => team.hash_id, 'data-date' => date, 'title' => user.first_name}
+  = user.full_name_or_something_else_identifying.first
+  
+  - if user_team_entries_count.any?
+    - user_team_entries_count.each do |entry_count| 
+      - if entry_count[:user_id] == user.id && entry_count[:user_entries_count] != 0
+        %div{class: 'entry_count'}
+          = entry_count[:user_entries_count]

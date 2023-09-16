@@ -1,0 +1,123 @@
+.square
+  background: $white
+  width: 2rem
+  height: 2rem
+  line-height: 1
+  font-size: ms(-1)
+  font-weight: 600
+  text-align: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  -ms-grid-row-align: center
+  align-items: center
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  overflow: hidden
+  position: relative
+
+  &.small
+    width: 1.325rem
+    height: 1.325rem
+    font-size: ms(-2)
+    background-size: 0.675rem auto
+
+    &.back
+      background-size: 0.5rem auto
+
+    &.close
+      background-size: 1rem auto
+
+  &.large
+    width: 3rem
+    height: 3rem
+    font-size: ms(0)
+
+  &.huge
+    width: 5rem
+    height: 5rem
+    font-size: ms(0)
+
+a.square
+  &:hover
+    background-color: $red
+    color: $white
+
+a:hover, a.active
+  .square.icon.header.light
+    &.menu
+      background-image: url(asset-path('icon-menu-red.svg'))
+
+.square.icon
+  background-color: $grey
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 0.8rem auto
+  text-indent: -9999px
+  overflow: hidden
+
+  &.new
+    background-image: url(asset-path('icon-plus-white.svg'))
+
+  &.transparent
+    background-color: transparent
+
+    &.new
+      background-size: 0.9rem auto
+      background-image: url(asset-path('icon-plus-grey.svg'))
+
+    &.gear
+      background-size: 1.25rem auto
+      background-image: url(asset-path('icon-gear-grey.svg'))
+
+    &.integrations
+      background-size: 1.325rem auto
+      background-image: url(asset-path('icon-integrations-grey.svg'))
+
+  &.light
+    background-color: transparent
+
+    &.menu
+      background-image: url(asset-path('icon-menu-grey.svg'))
+
+    &.close
+      background-image: url(asset-path('icon-close-grey.svg'))
+
+    &.back
+      background-image: url(asset-path('icon-back-grey.svg'))
+
+    &.goal
+      background-image: url(asset-path('icon-goal-grey.svg'))
+
+    &.done
+      background-image: url(asset-path('icon-done-grey.svg'))
+
+    &.blocked
+      background-image: url(asset-path('icon-blocked-grey.svg'))
+
+a.square.icon
+  background-color: $grey
+  opacity: 0.3
+  &:hover
+    background-color: $grey
+    opacity: 0.5
+
+.square.portrait
+  text-indent: -9999px
+  background-size: cover
+
+  &.placeholder
+    text-indent: 0
+    background-color: $super-faint
+
+  &.blank
+    text-indent: 0
+    color: $white
+
+  &:hover
+    background-image: none !important
+    text-indent: 0
+    color: $white

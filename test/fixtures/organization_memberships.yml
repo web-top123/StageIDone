@@ -1,0 +1,14 @@
+user_one_org_one:
+  user: user_one
+  organization: org_one
+  role: 'owner'
+
+user_four_trial_organization:
+  user: user_four
+  organization: trial_organization
+  role: 'owner'
+
+user_five_trial_organization:
+  user: user_five
+  organization: trial_organization
+  role: 'member'

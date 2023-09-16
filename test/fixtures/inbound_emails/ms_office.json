@@ -1,0 +1,172 @@
+// 20170104103839
+// https://si.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6IjNiM2E3MjM2LWQyMTEtNGIzZS04YTgwLTk4NjhmYTRjOGJkNiIsInMiOiIwNDFiM2RhZjk2IiwiYyI6InNhaWFkIn0=
+
+{
+  "X-Env-Sender": "mreside@els.edu",
+  "Received": "from ELS-EXG-MAILDB.els.berlitz.com ([::1]) by ELS-EXG-FE01.els.berlitz.com ([::1]) with mapi id 14.03.0339.000; Tue, 3 Jan 2017 09:36:28 -0500",
+  "stripped-signature": "",
+  "From": "\"Reside, MaryAnne\" <mreside@els.edu>",
+  "Return-Path": "<mreside@els.edu>",
+  "recipients": "mreside-personal@entry.idonethis.com",
+  "Subject": "RE: What'd you get done today? - mreside personal - January 3",
+  "X-Ms-Tnef-Correlator": "",
+  "To": "\"mreside-personal@entry.idonethis.com\"\t<mreside-personal@entry.idonethis.com>",
+  "Thread-Topic": "What'd you get done today? - mreside personal - January 3",
+  "X-Brightmail-Tracker": "H4sIAAAAAAAAA+NgFnrPIsWRWlGSWpSXmKPExsVy4KjVBd2327I  jDI5uN7W48WkWqwOjx4PuO0wBjFGsmXlJ+RUJrBlbe+eyFnxJrLi19gdjA+ORhC5GLg4hgdmM  EsdfXmPrYuTkYBPQklgwYyYLiC0iECTRsmwrmC0s4Cax4OkFqLi7xPf+90D1HEC2kcT1bimQM  IuAisS/80fBxvAKhEoc+DeJGcQWEgiXWLx4EitIOadAhMTCydEgYUYBMYnvp9YwgdjMAuISt5  7MB7MlBAQkluw5zwxhi0q8fPyPFcKWkzh8bw8bRH2exM6v3VCrBCVOznzCMoFRcBaSUbOQlM1  CUjYL6ApmAU2J9bv0IUoUJaZ0P2SHsDUkWufMZUcWX8DIvopRozi1qCy1SNfIRC+pKDM9oyQ3  MTNH19DQSC83tbg4MT01JzGpWC85P3cTIzAi6hkYGHcwLpzudYhRkoNJSZQ3miE7QogvKT+lM  iOxOCO+qDQntfgQowwHh5IEb/9WoJxgUWp6akVaZg4wNmHSEhw8SiK8rSBp3uKCxNzizHSI1C  lGRSlx3lsgCQGQREZpHlwbLB1cYpSVEuZlZGBgEOIpSC3KzSxBlX/FKM7BqCTMuwhkCk9mXgn  c9FdAi5mAFm8PAFtckoiQkmpgNLqavuUIU5Yh1/Y5xxQNi1pOXI66mbhe/W21fyCbNUf/oriv  OrcXXq2+4xEo6p+yknOuzX1d06MiKxM1XJkNg9cx3gkyWPvWomz5jGSbBpPDj6fO657Nm7N2w  tbA5pb3bu/CDklNutux++KSurIfO3c+qG9d2MG+3XsJC9s+0bfbGdOFxXYVKrEUZyQaajEXFS  cCAMJSzVECAwAA",
+  "content-id-map": {
+    
+  },
+  "X-Viruschecked": "Checked",
+  "stripped-text": "Tues, Jan 3, 2017:  more of the same to start the New year – expect a list from SK to change Tiers.  Continuing to input data for Canada University of Windsor; meet with SK to see about any new directions for 2017? (will be out the next 2 days)\r\n\r\nCheck-in on I Done This<http://email.entry.idonethis.com/c/eJwNjrsOgzAMAL8GNlAeNk6GDF36G5UdGxEJ2grS_y_S3XLTaSENoGMrmBZhtyRigBfEVQRdJFelAkUKAziGYFjFT4mIJwiYpmShTplAydbMhDIf3PZxK2LitQZFpOx8WqJQciqaIQuj43EvW-_fIT6G8LwR6zw3_bytb-2a6-e4Y7_1gWGNuKBf03iW47Srqd03tl-z6e8PKIk3lQ>\r\nOne week ago\r\n\r\nThis is what you got done on this day one week ago, Tuesday, December 27, 2016\r\n\r\n\r\nTues, Dec 27:  Day off!\r\n\r\n\r\n\r\nSix months ago\r\n\r\n\r\n\r\nThis is what you got done on this day six months ago, Monday, June 27, 2016\r\n\r\n\r\n\r\nMon, June 27: profile updates, misc updates as they come in; organize and clean up in prep for out of office\r\n\r\n\r\n<http://email.entry.idonethis.com/c/eJwNzT0OwyAMQOHThI2IHxPjgaFLr1Fh7ChISVsl9P6N9KZveVJQAojpJeWFq1syVoAXxJU5uYiucQOMGCZwFYKmxt5mxGohpGyzhmYJQVBXqph4PmrfzVYyEqFSksqZGYgor-IDMYv3gGD2so3xneJjCs871lHnLp-3jq1fc_scN5qzHKdeXfS-637NKr8_2XUzSw>",
+  "X-Msg-Ref": "server-11.tower-108.messagelabs.com!1483454189!93099735!1",
+  "X-Starscan-Received": "",
+  "subject": "RE: What'd you get done today? - mreside personal - January 3",
+  "stripped-html": "<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns=\"http://www.w3.org/TR/REC-html40\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"Generator\" content=\"Microsoft Word 15 (filtered medium)\">\n<style><!--\n/* Font Definitions */\n@font-face\n\t{font-family:Helvetica;\n\tpanose-1:2 11 6 4 2 2 2 2 2 4;}\n@font-face\n\t{font-family:\"Cambria Math\";\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n@font-face\n\t{font-family:Calibri;\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n/* Style Definitions */\np.MsoNormal, li.MsoNormal, div.MsoNormal\n\t{margin:0in;\n\tmargin-bottom:.0001pt;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\",serif;}\nh1\n\t{mso-style-priority:9;\n\tmso-style-link:\"Heading 1 Char\";\n\tmso-margin-top-alt:auto;\n\tmargin-right:0in;\n\tmso-margin-bottom-alt:auto;\n\tmargin-left:0in;\n\tfont-size:24.0pt;\n\tfont-family:\"Times New Roman\",serif;\n\tfont-weight:bold;}\na:link, span.MsoHyperlink\n\t{mso-style-priority:99;\n\tcolor:blue;\n\ttext-decoration:underline;}\na:visited, span.MsoHyperlinkFollowed\n\t{mso-style-priority:99;\n\tcolor:purple;\n\ttext-decoration:underline;}\np\n\t{mso-style-priority:99;\n\tmso-margin-top-alt:auto;\n\tmargin-right:0in;\n\tmso-margin-bottom-alt:auto;\n\tmargin-left:0in;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\",serif;}\np.msonormal0, li.msonormal0, div.msonormal0\n\t{mso-style-name:msonormal;\n\tmso-margin-top-alt:auto;\n\tmargin-right:0in;\n\tmso-margin-bottom-alt:auto;\n\tmargin-left:0in;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\",serif;}\nspan.Heading1Char\n\t{mso-style-name:\"Heading 1 Char\";\n\tmso-style-priority:9;\n\tmso-style-link:\"Heading 1\";\n\tfont-family:\"Calibri Light\",sans-serif;\n\tcolor:#2E74B5;}\np.salutation, li.salutation, div.salutation\n\t{mso-style-name:salutation;\n\tmso-margin-top-alt:auto;\n\tmargin-right:0in;\n\tmso-margin-bottom-alt:auto;\n\tmargin-left:0in;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\",serif;}\np.centered, li.centered, div.centered\n\t{mso-style-name:centered;\n\tmso-margin-top-alt:auto;\n\tmargin-right:0in;\n\tmso-margin-bottom-alt:auto;\n\tmargin-left:0in;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\",serif;}\nspan.EmailStyle23\n\t{mso-style-type:personal-reply;\n\tfont-family:\"Calibri\",sans-serif;\n\tcolor:windowtext;}\n.MsoChpDefault\n\t{mso-style-type:export-only;\n\tfont-size:10.0pt;}\n@page WordSection1\n\t{size:8.5in 11.0in;\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\ndiv.WordSection1\n\t{page:WordSection1;}\n--></style><!--[if gte mso 9]><xml>\n<o:shapedefaults v:ext=\"edit\" spidmax=\"1026\" />\n</xml><![endif]--><!--[if gte mso 9]><xml>\n<o:shapelayout v:ext=\"edit\">\n<o:idmap v:ext=\"edit\" data=\"1\" />\n</o:shapelayout></xml><![endif]-->\n</head>\n<body bgcolor=\"#FBFAF9\" lang=\"EN-US\" link=\"blue\" vlink=\"purple\" style=\"-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: none;box-sizing: border-box\">\n<div class=\"WordSection1\">\n<p class=\"MsoNormal\"><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\">Tues, Jan 3, 2017: &nbsp;more of the same to start the New year – expect a list from SK to change Tiers.&nbsp; Continuing to input data for Canada University of Windsor; meet with SK\n to see about any new directions for 2017? (will be out the next 2 days)<o:p></o:p></span></p>\n<p class=\"MsoNormal\"><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\"><o:p>&nbsp;</o:p></span></p>\n<div>\n<div>\n<div>\n<div>\n<p class=\"MsoNormal\" style=\"line-height:16.5pt;background:white\"><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\"><a href=\"http://email.entry.idonethis.com/c/eJwNjrsOgzAMAL8GNlAeNk6GDF36G5UdGxEJ2grS_y_S3XLTaSENoGMrmBZhtyRigBfEVQRdJFelAkUKAziGYFjFT4mIJwiYpmShTplAydbMhDIf3PZxK2LitQZFpOx8WqJQciqaIQuj43EvW-_fIT6G8LwR6zw3_bytb-2a6-e4Y7_1gWGNuKBf03iW47Srqd03tl-z6e8PKIk3lQ\"><span style=\"color:white;border:none windowtext 1.0pt;padding:0in;background:#E94B35;text-decoration:none\">Check-in\n on <strong><span style=\"font-family:&quot;Helvetica&quot;,sans-serif\">I Done This</span></strong></span></a>\n<o:p></o:p></span></p>\n</div>\n<div style=\"border:none;border-top:solid #FBFAF9 1.0pt;padding:15.0pt 0in 0in 0in;margin-bottom:15.0pt;box-sizing: border-box\">\n<p class=\"MsoNormal\" style=\"line-height:16.5pt;background:white\"><strong><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">One week ago</span></strong><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">\n<o:p></o:p></span></p>\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;background:white\">\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">This is what you got done on this day one week ago, Tuesday, December 27, 2016<o:p></o:p></span></p>\n<table class=\"MsoNormalTable\" border=\"0\" cellpadding=\"0\" style=\"box-sizing: border-box\">\n<tbody>\n<tr style=\"box-sizing: border-box\">\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">Tues, Dec 27:&nbsp; Day off!<o:p></o:p></span></p>\n</td>\n</tr>\n<tr style=\"box-sizing: border-box\">\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">Six months ago<o:p></o:p></span></p>\n</td>\n</tr>\n<tr style=\"box-sizing: border-box\">\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">This is what you got done on this day six months ago, Monday, June 27, 2016<o:p></o:p></span></p>\n</td>\n</tr>\n<tr style=\"box-sizing: border-box\">\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">Mon, June 27: profile updates, misc updates as they come in; organize and clean up in prep for out of office<o:p></o:p></span></p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<div>\n<p class=\"centered\" align=\"center\" style=\"margin:0in;margin-bottom:.0001pt;text-align:center;line-height:16.5pt\">\n<span style=\"font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\"><a href=\"http://email.entry.idonethis.com/c/eJwNzT0OwyAMQOHThI2IHxPjgaFLr1Fh7ChISVsl9P6N9KZveVJQAojpJeWFq1syVoAXxJU5uYiucQOMGCZwFYKmxt5mxGohpGyzhmYJQVBXqph4PmrfzVYyEqFSksqZGYgor-IDMYv3gGD2so3xneJjCs871lHnLp-3jq1fc_scN5qzHKdeXfS-637NKr8_2XUzSw\"></a><o:p></o:p></span></p>\n</div>\n</div>\n<p class=\"MsoNormal\" style=\"line-height:16.5pt\"><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\"><o:p>&nbsp;</o:p></span></p>\n</div>\n</body>\n</html>\n",
+  "Thread-Index": "AQHSZcFZfnhBvGpni0WCBR3txMS6+aEm0XNA",
+  "from": "\"Reside, MaryAnne\" <mreside@els.edu>",
+  "sender": "mreside@els.edu",
+  "Content-Language": "en-US",
+  "X-Starscan-Version": "9.1.1; banners=-,-,-",
+  "X-Mailgun-Incoming": "Yes",
+  "Accept-Language": "en-US",
+  "Date": "Tue, 3 Jan 2017 14:36:27 +0000",
+  "attachments": [
+    
+  ],
+  "body-html": "<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns=\"http://www.w3.org/TR/REC-html40\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Word 15 (filtered medium)\">\r\n<style><!--\r\n/* Font Definitions */\r\n@font-face\r\n\t{font-family:Helvetica;\r\n\tpanose-1:2 11 6 4 2 2 2 2 2 4;}\r\n@font-face\r\n\t{font-family:\"Cambria Math\";\r\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\r\n@font-face\r\n\t{font-family:Calibri;\r\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\r\n/* Style Definitions */\r\np.MsoNormal, li.MsoNormal, div.MsoNormal\r\n\t{margin:0in;\r\n\tmargin-bottom:.0001pt;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nh1\r\n\t{mso-style-priority:9;\r\n\tmso-style-link:\"Heading 1 Char\";\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:24.0pt;\r\n\tfont-family:\"Times New Roman\",serif;\r\n\tfont-weight:bold;}\r\na:link, span.MsoHyperlink\r\n\t{mso-style-priority:99;\r\n\tcolor:blue;\r\n\ttext-decoration:underline;}\r\na:visited, span.MsoHyperlinkFollowed\r\n\t{mso-style-priority:99;\r\n\tcolor:purple;\r\n\ttext-decoration:underline;}\r\np\r\n\t{mso-style-priority:99;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\np.msonormal0, li.msonormal0, div.msonormal0\r\n\t{mso-style-name:msonormal;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nspan.Heading1Char\r\n\t{mso-style-name:\"Heading 1 Char\";\r\n\tmso-style-priority:9;\r\n\tmso-style-link:\"Heading 1\";\r\n\tfont-family:\"Calibri Light\",sans-serif;\r\n\tcolor:#2E74B5;}\r\np.salutation, li.salutation, div.salutation\r\n\t{mso-style-name:salutation;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\np.centered, li.centered, div.centered\r\n\t{mso-style-name:centered;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nspan.EmailStyle23\r\n\t{mso-style-type:personal-reply;\r\n\tfont-family:\"Calibri\",sans-serif;\r\n\tcolor:windowtext;}\r\n.MsoChpDefault\r\n\t{mso-style-type:export-only;\r\n\tfont-size:10.0pt;}\r\n@page WordSection1\r\n\t{size:8.5in 11.0in;\r\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\r\ndiv.WordSection1\r\n\t{page:WordSection1;}\r\n--></style><!--[if gte mso 9]><xml>\r\n<o:shapedefaults v:ext=\"edit\" spidmax=\"1026\" />\r\n</xml><![endif]--><!--[if gte mso 9]><xml>\r\n<o:shapelayout v:ext=\"edit\">\r\n<o:idmap v:ext=\"edit\" data=\"1\" />\r\n</o:shapelayout></xml><![endif]-->\r\n</head>\r\n<body bgcolor=\"#FBFAF9\" lang=\"EN-US\" link=\"blue\" vlink=\"purple\" style=\"-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: none;box-sizing: border-box\">\r\n<div class=\"WordSection1\">\r\n<p class=\"MsoNormal\"><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\">Tues, Jan 3, 2017: &nbsp;more of the same to start the New year – expect a list from SK to change Tiers.&nbsp; Continuing to input data for Canada University of Windsor; meet with SK\r\n to see about any new directions for 2017? (will be out the next 2 days)<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif\"><o:p>&nbsp;</o:p></span></p>\r\n<div>\r\n<div>\r\n<div>\r\n<div>\r\n<p class=\"MsoNormal\" style=\"line-height:16.5pt;background:white\"><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\"><a href=\"http://email.entry.idonethis.com/c/eJwNjrsOgzAMAL8GNlAeNk6GDF36G5UdGxEJ2grS_y_S3XLTaSENoGMrmBZhtyRigBfEVQRdJFelAkUKAziGYFjFT4mIJwiYpmShTplAydbMhDIf3PZxK2LitQZFpOx8WqJQciqaIQuj43EvW-_fIT6G8LwR6zw3_bytb-2a6-e4Y7_1gWGNuKBf03iW47Srqd03tl-z6e8PKIk3lQ\"><span style=\"color:white;border:none windowtext 1.0pt;padding:0in;background:#E94B35;text-decoration:none\">Check-in\r\n on <strong><span style=\"font-family:&quot;Helvetica&quot;,sans-serif\">I Done This</span></strong></span></a>\r\n<o:p></o:p></span></p>\r\n</div>\r\n<div style=\"border:none;border-top:solid #FBFAF9 1.0pt;padding:15.0pt 0in 0in 0in;margin-bottom:15.0pt;box-sizing: border-box\">\r\n<p class=\"MsoNormal\" style=\"line-height:16.5pt;background:white\"><strong><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">One week ago</span></strong><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\">\r\n<o:p></o:p></span></p>\r\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;background:white\">\r\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">This is what you got done on this day one week ago, Tuesday, December 27, 2016<o:p></o:p></span></p>\r\n<table class=\"MsoNormalTable\" border=\"0\" cellpadding=\"0\" style=\"box-sizing: border-box\">\r\n<tbody>\r\n<tr style=\"box-sizing: border-box\">\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\r\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\r\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">Tues, Dec 27:&nbsp; Day off!<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n<tr style=\"box-sizing: border-box\">\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\r\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\r\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">Six months ago<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n<tr style=\"box-sizing: border-box\">\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\r\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\r\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">This is what you got done on this day six months ago, Monday, June 27, 2016<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n<tr style=\"box-sizing: border-box\">\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\"></td>\r\n<td valign=\"top\" style=\"padding:1.5pt 1.5pt 1.5pt 1.5pt;box-sizing: border-box\">\r\n<p style=\"mso-margin-top-alt:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:0in;line-height:16.5pt;box-sizing: border-box\">\r\n<span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\">Mon, June 27: profile updates, misc updates as they come in; organize and clean up in prep for out of office<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>\r\n<div>\r\n<p class=\"centered\" align=\"center\" style=\"margin:0in;margin-bottom:.0001pt;text-align:center;line-height:16.5pt\">\r\n<span style=\"font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#767771\"><a href=\"http://email.entry.idonethis.com/c/eJwNzT0OwyAMQOHThI2IHxPjgaFLr1Fh7ChISVsl9P6N9KZveVJQAojpJeWFq1syVoAXxJU5uYiucQOMGCZwFYKmxt5mxGohpGyzhmYJQVBXqph4PmrfzVYyEqFSksqZGYgor-IDMYv3gGD2so3xneJjCs871lHnLp-3jq1fc_scN5qzHKdeXfS-637NKr8_2XUzSw\"></a><o:p></o:p></span></p>\r\n</div>\r\n</div>\r\n<p class=\"MsoNormal\" style=\"line-height:16.5pt\"><span style=\"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#3E4036\"><o:p>&nbsp;</o:p></span></p>\r\n</div>\r\n</body>\r\n</html>\r\n",
+  "message-headers": [
+    [
+      "X-Mailgun-Incoming",
+      "Yes"
+    ],
+    [
+      "X-Envelope-From",
+      "<mreside@els.edu>"
+    ],
+    [
+      "Received",
+      "from mail1.bemta12.messagelabs.com (mail1.bemta12.messagelabs.com [216.82.251.7]) by mxa.mailgun.org with ESMTP id 586bb6ef.7ff4cc183b28-in01; Tue, 03 Jan 2017 14:36:31 -0000 (UTC)"
+    ],
+    [
+      "Return-Path",
+      "<mreside@els.edu>"
+    ],
+    [
+      "Received",
+      "from [216.82.250.51] by server-7.bemta-12.messagelabs.com id EB/23-17725-EE6BB685; Tue, 03 Jan 2017 14:36:30 +0000"
+    ],
+    [
+      "X-Brightmail-Tracker",
+      "H4sIAAAAAAAAA+NgFnrPIsWRWlGSWpSXmKPExsVy4KjVBd2327I  jDI5uN7W48WkWqwOjx4PuO0wBjFGsmXlJ+RUJrBlbe+eyFnxJrLi19gdjA+ORhC5GLg4hgdmM  EsdfXmPrYuTkYBPQklgwYyYLiC0iECTRsmwrmC0s4Cax4OkFqLi7xPf+90D1HEC2kcT1bimQM  IuAisS/80fBxvAKhEoc+DeJGcQWEgiXWLx4EitIOadAhMTCydEgYUYBMYnvp9YwgdjMAuISt5  7MB7MlBAQkluw5zwxhi0q8fPyPFcKWkzh8bw8bRH2exM6v3VCrBCVOznzCMoFRcBaSUbOQlM1  CUjYL6ApmAU2J9bv0IUoUJaZ0P2SHsDUkWufMZUcWX8DIvopRozi1qCy1SNfIRC+pKDM9oyQ3  MTNH19DQSC83tbg4MT01JzGpWC85P3cTIzAi6hkYGHcwLpzudYhRkoNJSZQ3miE7QogvKT+lM  iOxOCO+qDQntfgQowwHh5IEb/9WoJxgUWp6akVaZg4wNmHSEhw8SiK8rSBp3uKCxNzizHSI1C  lGRSlx3lsgCQGQREZpHlwbLB1cYpSVEuZlZGBgEOIpSC3KzSxBlX/FKM7BqCTMuwhkCk9mXgn  c9FdAi5mAFm8PAFtckoiQkmpgNLqavuUIU5Yh1/Y5xxQNi1pOXI66mbhe/W21fyCbNUf/oriv  OrcXXq2+4xEo6p+yknOuzX1d06MiKxM1XJkNg9cx3gkyWPvWomz5jGSbBpPDj6fO657Nm7N2w  tbA5pb3bu/CDklNutux++KSurIfO3c+qG9d2MG+3XsJC9s+0bfbGdOFxXYVKrEUZyQaajEXFS  cCAMJSzVECAwAA"
+    ],
+    [
+      "X-Env-Sender",
+      "mreside@els.edu"
+    ],
+    [
+      "X-Msg-Ref",
+      "server-11.tower-108.messagelabs.com!1483454189!93099735!1"
+    ],
+    [
+      "X-Originating-Ip",
+      "[192.197.58.208]"
+    ],
+    [
+      "X-Starscan-Received",
+      ""
+    ],
+    [
+      "X-Starscan-Version",
+      "9.1.1; banners=-,-,-"
+    ],
+    [
+      "X-Viruschecked",
+      "Checked"
+    ],
+    [
+      "Received",
+      "(qmail 9728 invoked from network); 3 Jan 2017 14:36:29 -0000"
+    ],
+    [
+      "Received",
+      "from 208.58.197.192.static.dbsintl.net (HELO ELS-EXG-FE01.els.berlitz.com) (192.197.58.208)  by server-11.tower-108.messagelabs.com with AES256-SHA256 encrypted SMTP; 3 Jan 2017 14:36:29 -0000"
+    ],
+    [
+      "Received",
+      "from ELS-EXG-MAILDB.els.berlitz.com ([::1]) by ELS-EXG-FE01.els.berlitz.com ([::1]) with mapi id 14.03.0339.000; Tue, 3 Jan 2017 09:36:28 -0500"
+    ],
+    [
+      "From",
+      "\"Reside, MaryAnne\" <mreside@els.edu>"
+    ],
+    [
+      "To",
+      "\"mreside-personal@entry.idonethis.com\"\t<mreside-personal@entry.idonethis.com>"
+    ],
+    [
+      "Subject",
+      "RE: What'd you get done today? - mreside personal - January 3"
+    ],
+    [
+      "Thread-Topic",
+      "What'd you get done today? - mreside personal - January 3"
+    ],
+    [
+      "Thread-Index",
+      "AQHSZcFZfnhBvGpni0WCBR3txMS6+aEm0XNA"
+    ],
+    [
+      "Date",
+      "Tue, 3 Jan 2017 14:36:27 +0000"
+    ],
+    [
+      "Message-Id",
+      "<D3318FE4DA8EC2488D8346539432FFD5775EEA45@ELS-EXG-MAILDB.els.berlitz.com>"
+    ],
+    [
+      "References",
+      "<586ba0687a44_43fbb50370cbc47372@a42e5cb1-877a-4258-8e2c-974d7ef9a75b.mail>"
+    ],
+    [
+      "In-Reply-To",
+      "<586ba0687a44_43fbb50370cbc47372@a42e5cb1-877a-4258-8e2c-974d7ef9a75b.mail>"
+    ],
+    [
+      "Accept-Language",
+      "en-US"
+    ],
+    [
+      "Content-Language",
+      "en-US"
+    ],
+    [
+      "X-Ms-Has-Attach",
+      ""
+    ],
+    [
+      "X-Ms-Tnef-Correlator",
+      ""
+    ],
+    [
+      "X-Originating-Ip",
+      "[10.21.1.20]"
+    ],
+    [
+      "Content-Type",
+      "multipart/alternative; boundary=\"_000_D3318FE4DA8EC2488D8346539432FFD5775EEA45ELSEXGMAILDBels_\""
+    ],
+    [
+      "Mime-Version",
+      "1.0"
+    ]
+  ],
+  "References": "<586ba0687a44_43fbb50370cbc47372@a42e5cb1-877a-4258-8e2c-974d7ef9a75b.mail>",
+  "X-Ms-Has-Attach": "",
+  "In-Reply-To": "<586ba0687a44_43fbb50370cbc47372@a42e5cb1-877a-4258-8e2c-974d7ef9a75b.mail>",
+  "X-Envelope-From": "<mreside@els.edu>",
+  "Message-Id": "<D3318FE4DA8EC2488D8346539432FFD5775EEA45@ELS-EXG-MAILDB.els.berlitz.com>",
+  "Content-Type": "multipart/alternative; boundary=\"_000_D3318FE4DA8EC2488D8346539432FFD5775EEA45ELSEXGMAILDBels_\"",
+  "body-plain": "Tues, Jan 3, 2017:  more of the same to start the New year – expect a list from SK to change Tiers.  Continuing to input data for Canada University of Windsor; meet with SK to see about any new directions for 2017? (will be out the next 2 days)\r\n\r\nCheck-in on I Done This<http://email.entry.idonethis.com/c/eJwNjrsOgzAMAL8GNlAeNk6GDF36G5UdGxEJ2grS_y_S3XLTaSENoGMrmBZhtyRigBfEVQRdJFelAkUKAziGYFjFT4mIJwiYpmShTplAydbMhDIf3PZxK2LitQZFpOx8WqJQciqaIQuj43EvW-_fIT6G8LwR6zw3_bytb-2a6-e4Y7_1gWGNuKBf03iW47Srqd03tl-z6e8PKIk3lQ>\r\nOne week ago\r\n\r\nThis is what you got done on this day one week ago, Tuesday, December 27, 2016\r\n\r\n\r\nTues, Dec 27:  Day off!\r\n\r\n\r\n\r\nSix months ago\r\n\r\n\r\n\r\nThis is what you got done on this day six months ago, Monday, June 27, 2016\r\n\r\n\r\n\r\nMon, June 27: profile updates, misc updates as they come in; organize and clean up in prep for out of office\r\n\r\n\r\n<http://email.entry.idonethis.com/c/eJwNzT0OwyAMQOHThI2IHxPjgaFLr1Fh7ChISVsl9P6N9KZveVJQAojpJeWFq1syVoAXxJU5uYiucQOMGCZwFYKmxt5mxGohpGyzhmYJQVBXqph4PmrfzVYyEqFSksqZGYgor-IDMYv3gGD2so3xneJjCs871lHnLp-3jq1fc_scN5qzHKdeXfS-637NKr8_2XUzSw>\r\n\r\n",
+  "X-Originating-Ip": "[10.21.1.20]",
+  "Mime-Version": "1.0"
+}

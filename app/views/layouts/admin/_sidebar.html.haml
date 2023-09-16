@@ -1,0 +1,9 @@
+%nav.sidebar-nav
+  %h2= link_to "Admin", "/admin"
+  = link_to 'Organizations', [:admin, :organizations]
+  = link_to 'Teams', [:admin, :teams]
+  = link_to 'Users', [:admin, :users]
+  = link_to "App settings", [:admin, :app_settings]
+  = link_to "Intercom Queue", [:admin, :intercom_queues]
+  = link_to "Sidekiq", [:admin, :sidekiq_web]
+  

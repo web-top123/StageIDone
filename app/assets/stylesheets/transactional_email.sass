@@ -1,0 +1,274 @@
+@import 'modules/*'
+
+*
+  margin: 0
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: 400
+  box-sizing: border-box
+  font-size: 14px
+
+body
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: none
+  width: 100% !important
+  height: 100%
+  line-height: 22px
+
+table td
+  vertical-align: top
+
+body
+  color: $black
+  background-color: $super-faint
+
+h1, h2, h3
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+  color: $black
+  margin: 40px 0 0
+  line-height: 1.2em
+  font-weight: 400
+
+h1
+  font-size: 32px
+  font-weight: 800
+  line-height: 38px
+
+h2
+  font-size: 18px
+  line-height: 22px
+  font-weight: 800
+  border-bottom: 1px solid $super-faint
+  padding: 0 0 15px
+  margin: 15px 0
+
+h3
+  font-size: 18px
+  line-height: 22px
+
+h4
+  font-size: 14px
+  font-weight: 600
+
+p, ul, ol
+  color: $grey
+  margin-bottom: 10px
+  font-weight: 400
+
+  &.centered
+    text-align: center
+
+strong
+  font-weight: 800
+  font-size: 1em
+
+p li, ul li, ol li
+  margin-left: 5px
+  list-style-position: inside
+
+a
+  color: $red
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.alpha
+  margin-top: 0 !important
+  padding-top: 0 !important
+
+.omega
+  margin-bottom: 0 !important
+  padding-bottom: 0 !important
+
+.body-wrap
+  background-color: $super-faint
+  width: 100%
+
+.container
+  display: block !important
+  max-width: 600px !important
+  margin: 0 auto !important
+  clear: both !important
+
+.content
+  max-width: 600px
+  margin: 0 auto
+  display: block
+  padding: 20px
+
+.main
+  background-color: $white
+  border-radius: 10px
+
+.main-wrap
+  display: block
+  padding: 30px
+  clear: both
+
+.content-block
+  display: block
+  margin-bottom: 20px
+  clear: both
+
+.padded-block
+  padding: 20px 0
+
+.delineate-top
+  border-top: 1px solid $super-faint
+
+.top-note
+  font-size: 10px
+  line-height: 15px
+  width: 100%
+  text-align: center
+  color: $super-faint
+
+.header
+  width: 100%
+  margin-bottom: 0
+  clear: both
+  overflow: hidden
+
+  h1
+    margin: 0
+    text-align: left
+
+  .salutation
+    color: $grey
+    font-size: 12px
+    text-align: right
+    margin: 0
+
+  table
+    width: 100%
+    display: table
+    td
+      display: table-cell
+      &:last-child
+        vertical-align: bottom
+
+.footer
+  width: 100%
+  clear: both
+  color: $grey
+  padding: 20px
+
+  p
+    color: $grey
+    font-size: 13px
+
+  a
+    color: $blue
+    font-size: 13px
+
+.strapline
+  display: block
+  margin: 15px auto
+  width: 256px
+  height: auto
+  max-width: 90%
+  opacity: 0.925
+
+.call-to-action
+  width: 100%
+  clear: both
+  padding: 15px 0
+
+  a.call-to-action_button
+    background: $red
+    border: 0
+    border-radius: 3px
+    padding: 15px
+    text-align: center
+    width: 90%
+    max-width: 256px
+    display: block
+    margin: 0 auto
+    color: $white
+
+.important-text
+  margin: 0 0 20px
+
+  p, a
+    font-weight: 400
+
+  p, a, strong
+    color: $grey
+    font-size: 17px
+    line-height: 26px
+
+  strong
+    color: $black
+    font-weight: 800
+
+.entries
+  .entry-row
+    img
+      display: block
+      margin: 0
+
+    td
+      padding: 2px
+      font-weight: 400
+
+      em
+        color: $silver
+        font-style: normal
+  .reaction-row
+    td
+      padding: 2px
+      font-weight: 400
+      color: $grey
+
+    table.reactions
+      border-collapse: collapse 
+      border-spacing: 0px
+
+      td
+        width: 36px
+        height: 36px
+        text-align: center
+        vertical-align: middle
+        border: 1px solid
+
+        &.grey
+          border-color: $light-grey
+          &.count
+            background-color: $light-grey
+          a
+            color: $dark-grey
+            font-weight: bold
+
+        &.blue
+          border-color: $dark-blue
+          &.count
+            background-color: $light-blue
+          a
+            color: $dark-blue
+            font-weight: bold
+
+        &.spacer
+          border: none
+          width: 4px
+
+        img
+          margin-left: auto
+          margin-right: auto
+          display: block
+          &.icon-like
+            margin-top: 2px
+          &.icon-comment
+            margin-top: 4px
+
+.comments
+  .comment-row
+    td
+      padding: 2px
+      font-weight: 400
+      color: $grey
+    &.comment-row-active
+      td
+        color: $black
+
+@media only screen and (max-width: 640px)
+  body
+    padding: 0 !important

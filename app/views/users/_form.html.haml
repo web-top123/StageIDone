@@ -1,0 +1,36 @@
+= form_for user, html: {class: 'settings-form', id: 'edit-user-details'} do |f|
+  - if user.errors.any?
+    %ul.list-errors
+      - user.errors.full_messages.each do |msg|
+        %li= msg
+
+  .field
+    = f.label :full_name
+    = f.text_field :full_name, placeholder: "#{ %w(John Jane).sample } Smith"
+
+  .field
+    %label{for: 'user_email_address'}
+      Email address
+
+      - if @user.verified?
+        <span class='pill-green'>verified</span>
+      - else
+        <span class='pill-red'>not verified</span>
+
+    = f.email_field :email_address, placeholder: 'Email address'
+
+  .field.tel
+    %label{for: 'user_phone_number'}
+      Phone number
+      
+    = f.phone_field :phone_number, class: 'tel_input'
+
+  .field
+    = f.check_box :show_personal_team
+    = f.label :show_personal_team, 'Enable personal progress log'
+
+  .field
+    = f.label :time_zone
+    = f.time_zone_select :time_zone
+
+  .actions= f.submit 'Save Changes', class: 'button'

@@ -1,0 +1,31 @@
+= form_for(team, html: {class: 'settings-form'}) do |f|
+  - if team.errors.any?
+    %ul.list-errors
+      - team.errors.full_messages.each do |msg|
+        %li= msg
+
+  - if team.owner_id == @current_user.id
+    .field
+      = f.label :name
+      = f.text_field :name, placeholder: 'e.g. Dev Team'
+
+    - if !team.personal?
+      .field
+        %label{for: 'team_public'}
+          = f.check_box :public
+          Visible team?
+
+    .actions= f.submit 'Save Changes', class: 'button'
+
+  - else
+    .field
+      = f.label :name
+      = f.text_field :name, placeholder: 'e.g. Dev Team', :disabled => "disabled",:style => "cursor: not-allowed;"
+    - if !team.personal?
+      .field
+        %label{for: 'team_public'}
+          = f.check_box :public, :disabled => "disabled"
+          Visible team?
+
+    .actions= f.submit 'Save Changes', class: 'button', :disabled => "disabled"
+

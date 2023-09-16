@@ -1,0 +1,29 @@
+- if @user
+  .modal-content-small
+    %header.modal-header
+      %h1 Check your email
+
+    %article
+      :markdown
+        We sent an email to **#{ @user.email_address }** with a link that will allow you to reset your password.
+
+- else
+  .modal-content-small
+    %header.modal-header
+      %h1 Reset password
+
+    = form_tag reset_password_users_path, class: 'modal-form', method: :post do
+      - if @email_address.present?
+        %ul.list-errors
+          %li We couldn't find an account associated with the email address <code>#{ @email_address }</code>.
+
+      .field
+        = label_tag :email_address, 'What is the email associated with your account?'
+        = text_field_tag :email_address, nil, placeholder: 'benji@idonethis.com'
+
+      .actions.actions-modal= submit_tag "Reset password", class: 'button'
+
+    %footer.modal-footer
+      %div.or-other-option
+        :markdown
+          or [go back and log in](/login).

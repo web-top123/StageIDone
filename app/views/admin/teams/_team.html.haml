@@ -1,0 +1,16 @@
+%li.admin-list_item.admin-list-users_item
+  = link_to admin_team_path(team, @filter_params) do
+    %big= team.name
+    %dl
+      %dt Members
+      %dd= team.users.count
+      %dt Created
+      %dd= team.created_at.strftime("%b %d '%y")
+      %dt Organization
+      %dd
+        - if team.personal?
+          Personal
+        - else
+          = ('%-8.8s' % team.organization.name).gsub(' ', '·')
+      %dt Entries
+      %dd= team.entries.count

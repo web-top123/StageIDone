@@ -1,0 +1,15 @@
+%footer.application-footer
+  %div{:role => "wrapper"}
+    .clearfix
+      .application-footer_copyright
+        %p © 2022 I Done This . all rights reserved
+        %nav.footer-nav-left
+          = link_to('Privacy', "https://home.idonethis.com//privacy", target: "_blank")
+          = link_to('Terms', "https://home.idonethis.com//terms", target: "_blank")
+      %nav.application-footer_nav
+        = link_to('Privacy', "https://home.idonethis.com//pricing", target: "_blank")
+        = link_to('Product Tour', "https://home.idonethis.com//tour", target: "_blank")
+        = link_to('Blog', "http://blog.idonethis.com", target: "_blank")
+        = link_to('Customer', "https://home.idonethis.com/customers", target: "_blank")
+        = link_to('Help', "http://help.idonethis.com/", target: "_blank")
+        = link_to('About', about_path)

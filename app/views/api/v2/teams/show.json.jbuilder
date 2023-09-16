@@ -1,0 +1,2 @@
+# json.(@team,:name,:created_at,:updated_at,:slug,:organization_id,:prompt_done,:prompt_goal,:prompt_blocked,:public,:hash_id,:enable_expandable_entries_box,:enable_entry_timestamps,:carry_over_goals)
+json.team @team

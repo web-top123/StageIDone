@@ -1,0 +1,8 @@
+- if current_user.organizations_that_need_billing_reminder.any?
+  - current_user.organizations_that_need_billing_reminder.each do |org|
+    %div.application-flash.upgrade
+      %p The <strong>#{ org.name }</strong> organization's trial ends in #{ pluralize(org.days_left_in_trial,'day') } and doesn't have a payment method on file.
+      = form_tag organization_upgrade_billing_path(org), method: :get do
+        = hidden_field_tag :plan, 'small'
+        = hidden_field_tag :interval, 'monthly'
+        %nav= submit_tag "Add a payment method", class: 'button flash'

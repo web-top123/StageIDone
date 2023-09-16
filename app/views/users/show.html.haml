@@ -1,0 +1,22 @@
+- content_for :header do
+  = render partial: 'users/header', locals: { user: @user, organization: @organization }
+
+- cache "/o/#{ @organization.hash_id }/u/#{ @user.hash_id }/#{ @user.entries.maximum(:updated_at).try(:utc).try(:to_s, :number) }/#{ Date.current }" do
+  %main.application-main
+    %div.wrapper-tiny{role: 'layout'}
+      %header.header-profile
+        = render partial: 'users/portrait', locals: { user: @user, portrait_size: 'huge' }
+        %h2= @user.full_name
+        - if @user.deleted?
+          %p.header-profile_note (removed on #{ @user.deleted_at.strftime("%b %e '%y") })
+
+      %section.section-standard
+        - if @entries.for_period((Date.current - 29.days), Date.current).many?
+          // = render partial: 'charts/activity_time_brief', locals: { entries: @entries, start_date: (Date.current - 29.days), end_date: Date.current }
+
+        %ol.list-entries.activity-stream
+          - @entries.includes(:team, :user).each do |entry|
+            - next if entry.completed_same_day?
+            %li.list-entries-item= render partial: 'entries/stream', locals: { entry: entry }
+
+        = paginate @entries

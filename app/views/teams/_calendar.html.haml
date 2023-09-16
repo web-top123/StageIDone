@@ -1,0 +1,42 @@
+- previous_month = (date - 1.month)
+- next_month = (date + 1.month)
+
+%header.calendar_header
+  %nav.calendar_header_previous
+    %a{'data-action' => 'goToPreviousMonth'} <
+  %div.calendar_header_current= date.strftime('%B %Y')
+  %nav.calendar_header_next
+    %a{'data-action' => 'goToNextMonth'} >
+
+%div.calendar_body{'data-value' => date, 'data-next_month' => calendar_month_team_path(team, date: next_month), 'data-previous_month' => calendar_month_team_path(team, date: previous_month)}
+  %header.calendar_body_header
+    %div.day.weekend
+      %label S
+    %div.day
+      %label M
+    %div.day
+      %label T
+    %div.day
+      %label W
+    %div.day
+      %label T
+    %div.day
+      %label F
+    %div.day.weekend
+      %label S
+
+  %main.calendar_body_main
+    - cur_day = date.beginning_of_month
+    - month_ending = date.end_of_month
+
+    - cur_day.wday.times do
+      %div.day.blank &nbsp;
+
+    - while cur_day <= month_ending do
+      %div.day{class: (cur_day.saturday? or cur_day.sunday?) ? 'weekend' : nil}
+        %a{'data-action' => 'pickDate', 'data-value' => cur_day}
+          .card{class: "#{ (cur_day == date) ? 'current' : nil } #{ (cur_day == Date.current) ? 'today' : nil }"}
+            %label= cur_day.strftime('%e')
+
+
+      - cur_day = cur_day + 1

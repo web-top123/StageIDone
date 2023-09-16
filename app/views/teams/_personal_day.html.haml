@@ -1,0 +1,21 @@
+%section.section-standard.section-entries
+  %ol.list-entries.sortable
+    - team_organization = team.organization
+    - current_user_entries = current_user.entries.for_team(team)
+    - entries = current_user_entries.for_day(date).order_by_priority
+    - entries.each_with_sortable_id do |entry, sortable_id|
+      - next if entry.completed_same_day?
+      %li.list-entries-item{:id => sortable_id}
+        = render partial: 'entries/entry_brief', locals: { entry: entry, entry_user: current_user, entry_team: team, team_organization: team_organization }
+    - outstanding_goals = current_user_entries.outstanding_goals.order_by_priority.reject { |g| g.occurred_on >= date }
+    - outstanding_goals.each_with_sortable_id do |entry, sortable_id|
+      %li.list-entries-item{:id => sortable_id}
+        = render partial: 'entries/entry_brief', locals: { entry: entry, entry_user: current_user, entry_team: team, team_organization: team_organization  }
+    %li.list-entries-item.do-not-drag= render partial: 'entries/form', locals: { team: team, entry: @entry }
+
+    - if ((entries + outstanding_goals).size < 4)
+      - (4 - (entries + outstanding_goals).size).times do
+        %li.list-entries-item
+          %div.entry-brief-placeholder
+            %div.entry-status &nbsp;
+            %div.entry-content  &nbsp;

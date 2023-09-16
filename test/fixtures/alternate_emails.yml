@@ -1,0 +1,11 @@
+unverified:
+  user: user_one
+  email_address: benji@idonethis.com
+  verification_code: zhyTCoUPSwtONYzMxdRG5g
+
+verified:
+  user: user_one
+  email_address: teri@idonethis.com
+  verification_code: null
+  verified_at: 2015-01-02
+

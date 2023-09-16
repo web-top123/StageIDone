@@ -1,0 +1,19 @@
+- content_for :current_page do
+  = link_to "Teams", organization_path(@organization)
+
+- content_for :header do
+  = render partial: 'organizations/header', locals: { organization: @organization }
+
+%main.application-main
+  %div.wrapper-small{role: 'layout'}
+    %header.header-standard
+      %h2 Teams
+
+    %section.section-standard
+      %ul.list-teams
+        - current_user.active_teams.where(organization_id: @organization.id).each do |team|
+          %li.list-team-item.active= render partial: 'teams/summary', locals: { team: team }
+        - @organization.teams.each do |team|
+          - next if team.active_users.include?(current_user)
+          - next unless policy(team).show?
+          %li.list-team-item.inactive= render partial: 'teams/summary', locals: { team: team }

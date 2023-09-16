@@ -1,0 +1,38 @@
+%header.header--bg.application-header
+  %div{:role => "wrapper"}
+    .clearfix
+      .application-header_logo
+        %p
+          .logo  
+          .wordtype.wordtype--color I Done This
+      %nav.application-header_nav
+        - if current_user.nil?
+          %a.header-login{:href => "/login"} Login
+    .header-content
+      %h2.header_text About I Done This
+%main.main
+  %div{:role => "wrapper"}
+    .about-us.clearfix
+      .about-us-left-column
+        %p.about-us_par
+          I Done This is a privately held company with a dedicated team of productivity nuts! We were founded in 2011 by Walter Chen and Rodrigo Guzman to leverage the insights Walter employed high-productivity studying techniques while achieving his law degree. Following on great insights on
+          = succeed "," do
+            %a.about-us_link{:href => "http://lifehacker.com/im-daniel-pink-and-this-is-how-i-work-509280806"} human behavior
+          = succeed "," do
+            %a.about-us_link{:href => "http://blog.idonethis.com/google-team-collaboration/"} optimal team environments
+          and lightweight practices for
+          %a.about-us_link{:href => "https://blog.bufferapp.com/the-8-most-important-business-tools-that-keep-our-company-on-track"} seeing achievements
+          I Done This has grown from a personal productivity motivator to the realization of the
+          = succeed ":" do
+            %a.about-us_link{:href => "https://www.youtube.com/watch?v=FJ0rs9ZENgM"} Science of Small Wins
+          Helping teams create transparent progress every day.
+
+        %p.about-us_par We are based in San Francisco and at the Downtown Project in Las Vegas. We welcome visitors and always meet our customer as we travel.
+
+      .about-us-right-column
+        = image_tag("logo/logo-1.png", alt: "logo-1", class: "logo_image")
+        = image_tag("logo/logo-2.png", alt: "logo-2", class: "logo_image")
+        = image_tag("logo/logo-3.png", alt: "logo-3", class: "logo_image")
+        = image_tag("logo/logo-4.png", alt: "logo-4", class: "logo_image")
+        = image_tag("logo/logo-5.png", alt: "logo-5", class: "logo_image")
+        = image_tag("logo/logo-6.png", alt: "logo-6", class: "logo_image")

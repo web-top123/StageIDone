@@ -1,0 +1,11 @@
+= javascript_include_tag "rails_emoji_picker.js"
+- comment_reactable = comment.reactable
+- comment_reactable_team = comment_reactable.team
+= form_for [comment_reactable, comment], html: {class: "emoji-picker-container comment-form #{ comment.persisted? ? 'persisted' : nil }", data: {id: comment.id}} do |f|
+  .user= render partial: 'users/portrait', locals: { user: comment.user, portrait_size: 'small' }
+  .field= f.text_area :body, placeholder: raw("Write a comment&hellip;"),autocomplete: 'off', rows: 2, data: {emojiable: true, expandable: true, users: comment_reactable_team.active_users.map(&:first_name).uniq.compact, tags: comment_reactable_team.tags.map(&:name).uniq.compact}
+  %div.comment-hint
+    Press <span data-bind='browserEnterKey'>Enter</span> to post</a>
+  .action= f.submit raw('&nbsp;'), class: 'button'
+  
+

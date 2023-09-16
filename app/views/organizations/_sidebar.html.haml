@@ -1,0 +1,18 @@
+- organization_hash_id = organization.hash_id
+= link_to organization, class: (current_page == 'teams' && organization_hash_id == params[:id]) ? 'current' : nil do
+  .icon= render partial: 'layouts/sidebar/icon_organization'
+  .text Overview
+
+- if organization.entries.many?
+  = link_to [:stats, organization], class: (current_page == 'stats' && organization_hash_id == params[:id]) ? 'current' : nil  do
+    .icon= render partial: 'layouts/sidebar/icon_reports'
+    .text Reports
+
+- if policy(organization).settings?
+  = link_to [organization, :organization_memberships], class: (current_page == 'organization_membership' && organization_hash_id == params[:organization_id]) ? 'current' : nil  do
+    .icon= render partial: 'layouts/sidebar/icon_team'
+    .text Members
+
+  = link_to [:settings, organization], class: (current_page == 'settings' && organization_hash_id == params[:id]) ? 'current' : nil  do
+    .icon= render partial: 'layouts/sidebar/icon_settings'
+    .text Settings

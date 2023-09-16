@@ -1,0 +1,20 @@
+.breadcrumbs
+  a
+    display: inline-block
+    color: rgba($white,0.51)
+    &:hover
+      color: rgba($white,0.71)
+
+    &:after
+      content: '>'
+      font-family: $mono
+      font-size: ms(-1)
+      color: rgba($white,0.325)
+      margin-left: 0.25rem
+
+    &:last-child
+      color: rgba($white,0.71)
+      &:hover
+        color: rgba($white,0.91)
+      &:after
+        content: none

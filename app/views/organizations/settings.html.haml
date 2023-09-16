@@ -1,0 +1,82 @@
+= render 'shared/stripe'
+
+- content_for :current_page do
+  = link_to "Settings", settings_organization_path(@organization)
+
+- content_for :header do
+  = render partial: 'organizations/header', locals: { organization: @organization }
+
+%main.application-main
+  %div.wrapper-small{role: 'layout'}
+    %section.section-settings
+      %header.header-settings
+        %h2 Details
+
+      %div= render partial: 'organizations/form', locals: { organization: @organization }
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Customize
+
+      %div= render partial: 'customize', locals: { organization: @organization }
+
+    - if policy(@organization).saml_save?
+      %section.section-settings
+        %header.header-settings
+          %h2 Single Sign-on
+          :markdown
+            I Done This offers Single Sign On using SAML 2.0. This standard integrates well with most Single Sign On systems and can be used with services such as [onelogin.com](http://onelogin.com).
+
+        %div= render partial: 'organizations/saml', locals: { organization: @organization }
+
+    - if @organization.billable_card_on_file?
+      - if policy(@organization).billing?
+        %section.section-settings
+          %header.header-settings
+            %h2 Plan
+
+          %div
+            %section.section-billing
+              - if @organization.billed_manually?
+                :markdown
+                  The <strong>#{ @organization.name }</strong> organization is currently being billed manually, so you'll have to confer with our customer support team to update your billing information.
+              - elsif !@organization.on_trial?
+                :markdown
+                  The <strong>#{ @organization.name }</strong> organization is currently subscribed to the **#{ @organization.plan_name } plan** and is paying #{ @organization.plan_interval }.
+              - else
+                :markdown
+                  The <strong>#{ @organization.name }</strong> organization's trial ends in #{ pluralize( @organization.days_left_in_trial,'day') }, at which point it will be moved onto the **#{ @organization.plan_name } plan**.
+
+              .actions
+                = link_to 'Change plan', organization_upgrade_path(@organization), class: 'button utility'
+
+    - elsif @organization.on_trial?
+      - if policy(@organization).upgrade?
+        %section.section-settings
+          %header.header-settings
+            %h2 Upgrade
+
+          %div
+            %section.section-billing
+              :markdown
+                The <strong>#{ @organization.name }</strong> organization's trial ends in #{ pluralize( @organization.days_left_in_trial,'day') } and doesn't have a payment method on file.
+
+              .actions
+                = link_to 'Add payment method', organization_upgrade_path(@organization), class: 'button utility'
+
+    - if !@organization.billed_manually? && @organization.billable_card_on_file?
+      - if policy(@organization).billing?
+        %section.section-settings
+          %header.header-settings
+            %h2 Billing
+
+          %div{'data-bind' => 'asyncTemplate', 'data-template' => billing_organization_path(@organization)}
+            %div.spinner Loading&hellip;
+
+      - if policy(@organization).invoices?
+        %section.section-settings
+          %header.header-settings
+            %h2 Billing history
+
+          %div.scrollable{'data-bind' => 'asyncTemplate', 'data-template' => invoices_organization_path(@organization)}
+            %div.spinner Loading&hellip;

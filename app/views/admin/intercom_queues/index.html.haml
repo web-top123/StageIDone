@@ -1,0 +1,12 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Intercom Queue", [:admin, :intercom_queues]
+
+.wrapper-small{role: 'layout'}
+  .admin-pane
+    .admin-pane-header
+      %header.admin-pane-results
+        %p.total-results= pluralize @scope_count, 'intercom queue'
+        = paginate @intercom_queues
+
+    %ul.admin-list.admin-list-teams= render @intercom_queues

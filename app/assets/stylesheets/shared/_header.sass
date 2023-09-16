@@ -1,0 +1,92 @@
+.header-standard
+  margin-bottom: 1rem
+  padding: 1rem 0
+  border-bottom: 1px solid $faint
+  overflow: hidden
+  clear: both
+
+  h2
+    color: $black
+    a
+      border-bottom: 2px solid $black
+      &:hover
+        cursor: pointer
+        color: $red
+        border-bottom-color: $red
+
+    &.left
+      float: left
+
+  .header-search
+    float: right
+
+  p
+    color: $grey
+
+.header-calendar
+  position: relative
+
+  .header-calendar_current
+    text-align: center
+
+  .header-calendar_previous, .header-calendar_next
+    position: absolute
+    bottom: 1rem
+
+    a
+      color: $grey
+      opacity: 0.875
+      &:hover
+        color: $grey
+        opacity: 1
+
+  .header-calendar_previous
+    left: 0
+    &:before
+      content: '<'
+      font-family: $mono
+      font-size: ms(-1)
+      color: rgba($grey,0.325)
+      margin-right: 0.25rem
+  .header-calendar_next
+    right: 0
+    &:after
+      content: '>'
+      font-family: $mono
+      font-size: ms(-1)
+      color: rgba($grey,0.325)
+      margin-left: 0.25rem
+
+.header-unintrusive
+  margin-bottom: 0.5rem
+  padding: 0.5rem 0
+
+.header-settings
+  p
+    font-size: ms(-1)
+    line-height: 1.5
+    color: $grey
+    font-weight: 400
+    margin: 0.5rem 0
+
+  strong
+    font-weight: 600
+
+.header-stats
+  text-align: center
+  padding: 0.125rem 0
+
+.header-profile
+  margin-bottom: 1rem
+  padding: 1rem 0
+  border-bottom: 1px solid $faint
+  text-align: center
+
+  .square.portrait
+    margin: 0 auto 0.75rem
+
+.header-standard-border
+  border-bottom: 1px solid $faint
+
+.header-standard-heard-margin
+  margin-top: -3rem

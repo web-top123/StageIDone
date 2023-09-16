@@ -1,0 +1,33 @@
+.user-day
+  %header.user-day_header
+    = link_to [team_organization, user] do
+      = render partial: 'users/portrait', locals: { user: user, portrait_size: 'large' }
+      %h2= (user == current_user) ? 'You' : user.first_name_or_something_else_identifying
+  %main.user-day_main
+    %ol.list-entries.sortable
+      - if team.carry_over_goals?
+        - outstanding_entries = user_entries.outstanding_entries.where('occurred_on < ?', cur_date)
+        - todays_entries = user_entries.for_day(cur_date)
+        - entries = (outstanding_entries + todays_entries).sort do |a,b|
+          - a = a.sort.nil? ? 0 : a.sort
+          - b = b.sort.nil? ? 0 : b.sort
+          - a <=> b
+      - else
+        - entries = Entry.none
+
+      - entries.each_with_sortable_id do |entry, sortable_id|
+        - entry_user = entry.user
+        - next if entry.completed_same_day?
+        - next if entry.tip? && entry_user != current_user
+        %li.list-entries-item{:id => sortable_id}
+          = render partial: 'entries/entry_brief', locals: { entry: entry, entry_user: entry_user, entry_team: team, team_organization: team_organization }
+
+      - if (user == current_user) && @entry
+        %li.list-entries-item.do-not-drag= render partial: 'entries/form', locals: { team: team, entry: @entry }
+
+      - if (user == current_user) && (entries.size < 4)
+        - (4 - (entries.size)).times do
+          %li.list-entries-item
+            %div.entry-brief-placeholder
+              %div.entry-status &nbsp;
+              %div.entry-content  &nbsp;

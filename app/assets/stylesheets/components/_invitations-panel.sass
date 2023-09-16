@@ -1,0 +1,129 @@
+.invitations-panel
+  background: $white
+  padding: 0
+
+.invitations-panel_omnifield
+  padding: 1rem
+  border-bottom: 1px solid $faint
+  input
+    border-radius: 1.5rem
+    padding-left: 1rem
+    padding-right: 1rem
+    width: 100%
+
+.invitations-panel_potential-invitations
+  padding: 1
+  min-height: 12.5rem
+
+  &.scrollable
+    max-height: 24rem
+    overflow-x: hidden
+    overflow-y: auto
+
+  .invitations-panel_potential-invitations_list
+    li
+      padding: 0.75rem 1rem
+      text-align: left
+      border-bottom: 1px solid $super-faint
+      overflow: hidden
+
+      &:last-child
+        border-bottom: 0
+
+      &.active
+        strong
+          font-weight: 600
+          color: $black
+        .good-button
+          display: none
+        .bad-button
+          display: block
+
+      strong
+        font-weight: 400
+        color: $grey
+        float: left
+
+      .indicator
+        float: left
+        background: $super-faint
+        margin-left: 0.5rem
+        font-size: ms(-1)
+        margin-top: 0.25rem
+        border-radius: 2px
+        padding: 0 0.5rem
+        color: $grey
+
+      .bad-button
+        float: right
+        display: none
+        font-size: ms(-1)
+        text-transform: uppercase
+        margin-top: 0.25rem
+        padding: 0 0.25rem
+        vertical-align: top
+        color: $red
+        font-weight: 500
+        background: $white
+        text-align: center
+        &:hover
+          color: $white
+          background: $red
+          padding: 0 0.25rem
+          cursor: pointer
+
+      .good-button
+        float: right
+        display: block
+        font-size: ms(-1)
+        text-transform: uppercase
+        margin-top: 0.25rem
+        padding: 0 0.25rem
+        vertical-align: top
+        color: $green
+        font-weight: 500
+        background: $white
+        text-align: center
+        &:hover
+          color: $white
+          background: $green
+          padding: 0 0.25rem
+          cursor: pointer
+
+      .remove
+        float: right
+        font-family: $mono
+        margin-top: 0.25rem
+        color: $faint
+        &:hover
+          color: $red
+          cursor: pointer
+
+  .empty
+    padding: 4rem 5.5rem
+    color: $grey
+    font-style: italic
+    code
+      font-style: normal
+      background: $super-faint
+
+.invitations-panel_actions
+  border-top: 1px solid $faint
+  padding: 1rem
+  overflow: hidden
+  clear: both
+
+  .other-option
+    float: left
+    padding: 0.9rem 0 0
+    a
+      font-size: ms(-1)
+      float: left
+      display: block
+      color: rgba($grey,0.71)
+      text-decoration: underline
+      &:hover
+        color: $red
+
+  .button
+    float: right

@@ -1,0 +1,61 @@
+:coffeescript
+  stripeResponseHandler = (status, response) ->
+    form = $('#billing-details')
+    if response.error
+      form.find('.js-list-errors').html $('<li>' + response.error.message + '</li>')
+      form.find('.js-list-errors').show()
+      form.find('.list-errors').hide()
+      form.find('.submit').prop 'disabled', false
+    else
+      token = response.id
+      div = form.parents('div:first')
+      form.append $('<input type="hidden" name="organization[stripe_token]">').val(token)
+      $.ajax
+        url: '#{ billing_save_organization_path(organization) }'
+        data: form.serialize()
+        type: 'PATCH'
+        success: (data) ->
+          div.html data
+          $('[type="submit"]:first', div).val('Saved')
+          $('[type="submit"]:first', div).attr('disabled', true)
+          setTimeout(->
+            $('[type="submit"]:first', div).val('Save Changes')
+            $('[type="submit"]:first', div).attr('disabled', false)
+          , 5000)
+
+  $ ->
+    Stripe.setPublishableKey '#{ ENV['STRIPE_PUBLIC_KEY'] }'
+
+    form = $('#billing-details')
+    form.submit (event) ->
+      form.find('.submit').prop 'disabled', true
+      Stripe.card.createToken form, stripeResponseHandler
+      false
+
+%section.section-billing
+  = form_for(organization, html: {class: 'settings-form', id: 'billing-details'}) do |f|
+    %ul.js-list-errors
+    - if organization.errors.any?
+      %ul.list-errors
+        - organization.errors.full_messages.each do |msg|
+          %li= msg
+
+    .field
+      = f.label :billing_name, 'Name on card'
+      = f.text_field :billing_name, placeholder: 'Benji Franklin'
+
+    .field.credit-card
+      %label Credit card
+      .numbers
+        %input{type: 'tel', placeholder: "•••• •••• •••• #{ organization.billing_card_last_four || '••••' }", 'data-stripe' => 'number'}
+        %input{type: 'tel', placeholder: 'CVC/CVV', 'data-stripe' => 'cvc'}
+      .dates
+        %label Expiration date
+        %input{type: 'tel', placeholder: 'MM', 'data-stripe' => 'exp_month'}
+        %input{type: 'tel', placeholder: 'YYYY', 'data-stripe' => 'exp_year'}
+
+    .actions
+      = f.submit 'Save Changes', class: 'button'
+      %p.opt-out
+        or
+        %a{'data-action' => 'showTemplate', 'data-template' => billing_organization_path(organization)} close without saving

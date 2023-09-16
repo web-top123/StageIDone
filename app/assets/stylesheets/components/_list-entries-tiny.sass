@@ -1,0 +1,19 @@
+.list-entries-tiny
+  overflow: hidden
+  margin: 0
+
+.list-entries-tiny_item
+  float: left
+  margin: 1px
+  div.status
+    width: 4px
+    height: 4px
+    text-indent: -9999px
+    overflow: hidden
+
+    &.done
+      background: $green
+    &.goal
+      background: $blue
+    &.blocked
+      background: $red

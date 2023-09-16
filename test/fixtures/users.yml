@@ -1,0 +1,54 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+user_one:
+  hash_id: test
+  email_address: test@idonethis.com
+  crypted_password: <%= default_password_digest %>
+  salt: RU5koc4EZ2CYBk7FCPSN
+  time_zone: "Berlin"
+  full_name: Test User
+  api_token: abcdef
+
+# column: value
+#
+user_two:
+  hash_id: test-two
+  email_address: test+two@idonethis.com
+  crypted_password: <%= default_password_digest %>
+  salt: RU5koc4EZ2CYBk7FCPSN
+  migrated_from_legacy_at: 2015-01-02
+  time_zone: "Pacific Time (US & Canada)"
+  full_name: Second User
+  created_at: 2015-01-02
+  api_token: ghijkl
+
+user_three:
+  hash_id: test-three
+  email_address: test+three@idonethis.com
+  crypted_password: <%= default_password_digest %>
+  salt: RU5koc4EZ2CYBk7FCPSN
+  time_zone: "Berlin"
+  full_name: Teri Wilson
+  api_token: jhjhjhhh
+
+user_four:
+  hash_id: test-four
+  email_address: test+four@idonethis.com
+  crypted_password: <%= default_password_digest %>
+  salt: RU5koc4EZ2CYBk7FCPSN
+  time_zone: Wellington
+  full_name: Fourth User
+  api_token: uytyugg
+
+user_five:
+  hash_id: test-five
+  email_address: test+five@idonethis.com
+  crypted_password: <%= default_password_digest %>
+  salt: RU5koc4EZ2CYBk7FCPSN
+  time_zone: Pacific Time (US & Canada)
+  full_name:  Fifth User
+  api_token: lfsihg

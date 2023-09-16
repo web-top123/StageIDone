@@ -1,0 +1,121 @@
+.modal-form
+  .list-errors
+    background: rgba($red,0.1)
+    color: $red
+    padding: 0.5rem
+    font-size: ms(-1)
+    margin-bottom: 1rem
+    text-align: left
+
+  .js-list-errors
+    background: rgba($red,0.1)
+    color: $red
+    padding: 0.5rem
+    font-size: ms(-1)
+    margin-bottom: 1rem
+    text-align: left
+    display: none
+
+  .field
+    text-align: left
+    overflow: hidden
+    clear: both
+    width: 100%
+    margin: 0 0 1rem
+
+    label
+      color: $grey
+      font-weight: 400
+      padding: 0
+
+    input
+      display: block
+      width: 100%
+
+      &[type="text"], &[type="email"], &[type="password"], &[type="tel"]
+        border: 1px solid $faint
+        background-color: $white
+        border-radius: 2px
+        &:focus
+          border-color: $silver
+
+  .field.credit-card
+    label
+      clear: both
+
+    .inputs
+      clear: both
+      overflow: hidden
+
+      .numbers
+        width: 75%
+        float: left
+        padding-right: 3.75rem
+
+        input:first-child
+          width: 100%
+          float: left
+          border-radius: 2px 0 0 2px
+
+        input:last-child
+          width: 3.25rem
+          float: right
+          margin-right: -3.25rem
+          border-radius: 0 2px 2px 0
+          &:focus
+
+      .expiration
+        width: 25%
+        float: right
+
+        input:first-child
+          width: 42.5%
+          float: left
+          border-radius: 2px 0 0 2px
+
+        input:last-child
+          width: 57.5%
+          float: right
+          border-radius: 0 2px 2px 0
+          &:focus
+
+      input
+        width: 50%
+        float: left
+
+  .field.inline-checks
+    margin-bottom: 1.5rem
+    font-weight: 300
+    color: $grey
+
+    label.big
+      color: $grey
+      font-weight: 400
+      padding: 0
+      display: block
+      &:hover
+        color: $grey
+        cursor: default
+
+    label
+      display: inline-block
+      font-weight: 300
+      color: $black
+      &:hover
+        color: $red
+        cursor: pointer
+
+    input[type='checkbox']
+      display: inline
+      clear: none
+      width: auto
+
+
+  .actions
+    margin-top: 1rem
+    .button
+      margin: 0 auto
+      width: 100%
+      padding: 0.75rem 0
+      text-align: center
+      font-weight: 500

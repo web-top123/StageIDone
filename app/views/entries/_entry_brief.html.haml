@@ -1,0 +1,127 @@
+- if entry_user == current_user
+  %span.handle
+%script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+
+- # I do this to prevent triggering an extra query to count the length
+- # which will be more expensive, assuming the number of reactions is low
+
+- entry_prompting_goal = entry.prompting_goal
+- entry_completed = entry.completed?
+
+- if entry_completed && entry_prompting_goal.present?
+  - completed_entry = entry_prompting_goal
+  - completed_entry_reactions = completed_entry.reactions
+  - likes = completed_entry_reactions.is_like.chronologically.to_a
+  - comments = completed_entry_reactions.is_comment.chronologically.includes(:user, :reactable).to_a
+  - @team_members_obj = TeamMembership.where(team_id: completed_entry.team.id, removed_at: nil)
+- else
+  - entry_reactions = entry.reactions
+  - likes = entry_reactions.is_like.chronologically.to_a
+  - comments = entry_reactions.is_comment.chronologically.includes(:user, :reactable).to_a
+  - @team_members_obj = TeamMembership.where(team_id: entry_team.id, removed_at: nil)
+- team_membership_users = User.where(id: @team_members_obj.pluck(:user_id))
+- team_members_arr = team_members_arr.to_a
+- count = 0
+- entry_status = entry.status
+- entry_hash_id = entry.hash_id
+- entry_id = entry.id
+- entry_personal = entry_team.personal?
+
+- team_membership_users.each do |tm|
+  - team_members_arr << tm if tm.id != current_user.id
+%div.entry-brief.do-not-drag{'data-bind' => 'entry', 'data-id' => entry_hash_id, 'id' => entry_hash_id}
+  %div.entry-status
+    - if (entry_status == 'goal') && entry_completed
+      %div.disc.icon.status.small.completed{class: entry_status, title: "#{ entry_status } for #{ entry.occurred_on}"}= entry_status
+    - else
+      %div.disc.icon.status.small{class: entry_status, title: "#{ entry_status } for #{ entry.occurred_on}"}= entry_status
+
+  %div.entry-content
+    %div.entry-body{class: policy(entry).edit? ? 'editable' : nil}
+      - if entry_team.enable_entry_timestamps?
+        %em
+          = entry.created_at.strftime("%H:%M")
+      = raw EntryParser.auto_link(entry)
+    %nav.entry-options
+      - if (entry_status == 'goal') && (entry_user == current_user) && !entry_completed
+        %a{'data-action' => 'markDone', 'data-id' => entry_hash_id} Mark as done
+        %a{'data-action' => 'archive', 'data-id' => entry_hash_id} Archive
+
+      - if !entry_personal
+        - if entry_completed && entry_prompting_goal.present?
+          - data_id = entry_prompting_goal.hash_id
+        - else
+          - data_id = entry_hash_id
+        %a{'data-action' => 'toggleLike', 'data-id' => data_id}
+          - if current_user.likes?(entry)
+            Liked
+          - else
+            Like
+          - if likes.any?
+            (#{ likes.length })
+
+        %a{'data-action' => 'comment', 'data-id' => data_id, 'class' => 'comment_count'}
+          - if comments.any?
+            Comments
+            (#{ comments.length })
+          - else
+            Comment
+
+      - if (entry_status == 'goal') && entry_completed
+        = link_to "Completed on #{ entry.completed_on.strftime('%B %e') }", team_path(entry_team, date: entry.completed_on)
+      - elsif entry_prompting_goal.present?
+        - entry_prompting_goal_occurred_on = entry_prompting_goal.occurred_on
+        - if (!entry_user.migrated_from_legacy_at.present? || (entry_prompting_goal_occurred_on != entry_user.migrated_from_legacy_at.to_date))
+          = link_to "Goal set on #{ entry_prompting_goal_occurred_on.strftime('%B %e') }", team_path(entry_team, date: entry_prompting_goal_occurred_on)
+
+      - if policy(entry).edit?
+        %a{'data-action' => 'edit', 'data-id' => entry_hash_id} Edit
+      - if policy(entry).destroy?
+        = link_to 'Delete', [entry], method: :delete, class: 'trash', data: { confirm: "Permanently delete this?" }
+      - if !entry_personal
+        - if policy(entry).assign?
+          = link_to 'Assign Task', "#", id: "myModal-#{entry_id}", class: "modal-link"
+
+      - if !entry_personal
+        .modal.fade{:role => "dialog" ,id: "myModal-#{entry_id}"}
+          .modal-dialog.modal-md
+            .modal-content
+              .modal-body
+                = form_tag assign_entry_path(entry), method: :get, id: "contact_form", class: "contact_form" do
+                  - if team_members_arr.empty?
+                    = "There is no member in team, please add by click here:"
+                    / = link_to "Add team members", [:new, @team, :team_membership]
+                  - else
+                    - team_members_arr.each do |team_member|
+                      = radio_button_tag :user_id , team_member.id
+                      = team_member.full_name + " ( " + team_member.email_address + " )"
+                      - count = count + 1
+                      %br
+                      - if count == 0
+                        = "There is no member in team, please add and then assign"
+                        / = link_to "Add team members", [:new, @team, :team_membership]
+                  .modal-footer
+                    %button.btn.btn-default{"data-dismiss" => "modal", :type => "button" ,class: "myModal-close",id: "myModal-#{entry_id}"} Close
+                    - if !team_members_arr.empty?
+                      - if count != 0
+                        = submit_tag("Send", class: "btn btn-default" ,id: "submitForm")
+                    - if entry_completed && entry_prompting_goal.present?
+                      - entry = entry_prompting_goal
+                    - else
+                      - entry = entry
+  = render partial: 'entries/reactions', locals: { entry: entry, likes: likes, comments: comments, entry_org: team_organization }
+
+:javascript
+  $(document).ready( function() {
+    $('.modal-link').click(function() {
+    console.log("modal-link");
+      var Id = $(this).attr('id');
+      $("#"+Id+".modal").addClass("in");
+      $("#"+Id+".modal").css("display", "block");
+    });
+    $('.myModal-close').click(function() {
+      var Id = $(this).attr('id');
+      $("#"+Id+".modal").removeClass("in");
+      $("#"+Id+".modal").css("display", "none");
+    });
+  });

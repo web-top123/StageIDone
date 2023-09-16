@@ -1,0 +1,74 @@
+- content_for :current_page do
+  = link_to "Settings", [:settings, @team]
+
+- content_for :header do
+  = render partial: 'teams/header', locals: { team: @team }
+
+- content_for :sidebar do
+  = render partial: 'teams/sidebar', locals: { team: @team, current_page: 'settings' }
+
+%main.settings-main
+  %div.wrapper-small{role: 'layout'}
+    - if policy(@team).settings?
+      %section.section-settings
+        %header.header-settings
+          %h2 Details
+
+          - if !@team.personal?
+            :markdown
+              Visible teams can be seen (and joined) by anyone in the **#{ @team.organization.name }** organization; non-visible teams can only be seen by team members, admins, or owners.
+
+        %div= render partial: 'teams/form', locals: { team: @team }
+
+    - if @team.active_users.include?(current_user)
+      %section.section-settings
+        %header.header-settings
+          %h2 Reminders
+          :markdown
+            Most users turn on reminders for every day of the week they typically work. We'll send a digest of your team's progress, and a daily reminder to add your own entries.
+
+        %div= render partial: 'team_memberships/form', locals: { team_membership: current_user.membership_of(@team) }
+
+    - if @team.active_users.include?(current_user)
+      %section.section-settings
+        %header.header-settings
+          %h2 Notifications
+
+        %div= render partial: 'team_memberships/notifications', locals: { team_membership: current_user.membership_of(@team) }
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Integrations
+
+      %div= render 'integrations/list'
+
+    - if policy(@team).customize?
+      - if @team.owner_id == @current_user.id
+        %section.section-settings
+          %header.header-settings
+            %h2 Customize
+
+            :markdown
+              You can customize the prompts for each kind of daily entry.
+
+              Short, quick individual entries provide the most ongoing value to productive teams. However, if your team needs to make particularly detailed status updates, you can turn on *Allow longer entries?* and the form will automatically expand to fit longer entries.
+
+              Enabling entry timestamps will show the entry time for each timestamp on the web.
+
+              Team goals are carried over each day until completed, however you can disable this.
+
+          %div= render partial: 'teams/customize', locals: { team: @team }
+
+    / - if policy(@team).destroy?
+    - if @team.owner_id == @current_user.id || @team.organization.owners.include?(@current_user)
+      %section.section-settings
+        %header.header-settings
+          %h2 Delete team
+
+        %div
+          :markdown
+            Deleting the **#{ @team.name }** team is not reversible. Once deleted, you will not be able to recover any data from this team.
+
+          %hr
+
+          = link_to "Delete Team", @team, class: 'button inline', method: 'delete', data: { confirm: 'Are you extremely certain? Doubly certain? Certain to a fault? Immensely certain? This cannot be undone.' }

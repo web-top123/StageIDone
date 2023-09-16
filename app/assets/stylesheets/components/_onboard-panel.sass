@@ -1,0 +1,55 @@
+.onboard-panel
+  position: relative
+  overflow: hidden
+  clear: both
+  padding: 2rem 2rem 5rem 14rem
+  background: $white
+
+  &.illustrated-logo
+    background-image: url(asset-path('icon-logo-red.svg'))
+    background-repeat: no-repeat
+    background-position: 4rem center
+    background-size: 6rem auto
+
+  main
+    float: right
+
+    p
+      margin: 1rem 0
+
+      &:first-child
+        margin-top: 0
+      &:last-child
+        margin-bottom: 0
+
+  aside
+    float: left
+    margin-left: -12rem
+    width: 9rem
+    position: relative
+    height: 100%
+
+  nav
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    padding: 1rem 2rem 1rem
+    overflow: hidden
+    clear: both
+
+    .other-option
+      float: left
+      padding: 0.9rem 0 0
+      a
+        font-size: ms(-1)
+        float: left
+        display: block
+        color: rgba($grey,0.71)
+        text-decoration: underline
+        &:hover
+          color: $red
+
+
+    .button
+      float: right

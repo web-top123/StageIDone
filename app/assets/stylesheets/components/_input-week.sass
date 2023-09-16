@@ -1,0 +1,27 @@
+.week[role='input']
+  overflow: hidden
+  .days
+    overflow: hidden
+    float: left
+    .day
+      float: left
+      overflow: hidden
+      div
+        height: 2rem
+        width: 2rem
+        background: $very-faint
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: 400
+        color: $silver
+
+        &:hover
+          background: $faint
+          color: $grey
+          cursor: pointer
+
+        &.active
+          color: $white
+          background: $green
+          font-weight: 500

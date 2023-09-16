@@ -1,0 +1,13 @@
+.cta{:role => "slide"}
+  .small{:role => "wrapper"}
+    .cta_content
+      %h1
+        %strong I Done This
+        is making teams better.
+      %p Yours could be one of them.
+      %form.cta-form{"accept-charset" => "UTF-8", :action => "/register", :method => "get"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        .single-field.clearfix
+          %input{"data-parsley-type" => "email", :name => "email_address", :placeholder => "Enter your email", :required => "", :type => "email"}/
+          %input.button.confident.button-red{:type => "submit", :value => "Sign up"}/
+        = link_to(image_tag("logo/google.svg", alt: "log in with google", class: "cta-form_log-in-google-ico") + 'Sign up with google', "#{root_path}auth/google", class: "cta-form_log-in")

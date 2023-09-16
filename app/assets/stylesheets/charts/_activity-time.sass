@@ -1,0 +1,39 @@
+.activity-time
+  margin-bottom: -1rem
+  margin-top: 0.5rem
+  svg
+    height: auto
+    width: 100%
+
+    .day
+      .bar-well
+        fill: $very-faint
+      .bar-done
+        fill: rgba($green,0.71)
+      .bar-goal
+        fill: rgba($blue,0.71)
+      .bar-blocked
+        fill: rgba($red,0.71)
+      .label
+        fill: rgba($grey,0)
+        transition: fill ease 0.25s
+
+      &:hover
+        cursor: pointer
+        .bar-done
+          fill: $green
+        .bar-goal
+          fill: $blue
+        .bar-blocked
+          fill: $red
+        .label
+          fill: $grey
+
+  &.brief
+    margin-bottom: 1rem
+    svg
+    .day
+      .bar-well
+        fill: $super-faint
+      .bar-content
+        fill: $silver

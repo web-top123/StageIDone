@@ -1,0 +1,13 @@
+= form_for user, url: personalize_user_path, html: {class: 'settings-form static'} do |f|
+  - if user.errors.any?
+    %ul.list-errors
+      - user.errors.full_messages.each do |msg|
+        %li= msg
+
+  .field
+    %div.uploader
+      = render partial: 'users/portrait', locals: { user: user, portrait_size: 'large' }
+      = f.hidden_field(:portrait_cache)
+      = f.file_field(:portrait)
+
+  .actions= f.submit 'Save Changes', class: 'button'

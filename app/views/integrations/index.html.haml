@@ -1,0 +1,31 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Integrations", :integrations
+
+%main.application-main
+  %div.wrapper-small{role: 'layout'}
+    %header.header-standard
+      %h2 Integrations & Add-on Services
+
+    %div
+      %ul.list-integrations
+        %li.list-integrations-item
+          %div
+            %big Slack
+            :markdown
+              Send entries from Slack and/or get team digests
+            %nav= link_to "Add Slack", '/integrations/slack/link', class: 'button utility'
+
+        %li.list-integrations-item
+          %div
+            %big Github
+            :markdown
+              Turn commits or pull-requests into IDT entries
+            %nav= link_to "Add Github", '/integrations/github/link', class: 'button utility'
+
+        %li.list-integrations-item
+          %div
+            %big Zapier
+            :markdown
+              Use Zapier to integrate with over 500 apps
+            %nav= link_to "Add Zapier", 'https://zapier.com/developer/invite/37602/99eb75f1554d6789c673b83f9185b099/', class: 'button utility'

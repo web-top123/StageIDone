@@ -1,0 +1,110 @@
+// 20170105091558
+// https://si.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6IjM1YTM5ZmRkLTA3N2YtNDI3ZC04ZGY5LWE3MTU0NDAzZmFmNyIsInMiOiIyMGViOWJmMGRhIiwiYyI6InNiaWFkIn0=
+
+{
+  "Received": "by 10.79.142.134 with HTTP; Tue, 3 Jan 2017 21:55:29 -0800 (PST)",
+  "stripped-signature": "-- \r\nJose Paul Martin • (+973) 39983350 • http://jpmartin.com",
+  "From": "Jose Paul Martin <jpm@jpmartin.com>",
+  "X-Envelope-From": "<jpm@jpmartin.com>",
+  "recipients": "jpm-personal@entry.idonethis.com",
+  "X-Google-Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:mime-version:in-reply-to:references:from:date         :message-id:subject:to;        bh=sTco3CWmQr0YC4OPIy3E4LETRNwsEI+aLz9YyE4Lfmg=;        b=jbFFZf585hlbelyV0/E70tAGxR1RzowCJPvfi4KX8/bavNCiipETYHggB2d1KGLdBM         yoWFHoMT6qRC2VvRsbI/SV0qU0mu489NbIH6klca/u56UYPtfKQfWtWZKg8W4/WTeVW8         aCzAn0q+ADYgONOAxLnP442p84JxNP+LwabgJZNqSLHcftWZdTmXmnahBGwkitq+nT54         SbeJVrLSuxaZc4YrtD04+Bsl0+vOvvfVFK61lelZlMgumpM3RRkmAADmrfyOOUUI2VuP         HFkp2aFGqa4NpCj7LeCuHCOMmcLT8wQVDpkkHYjRw7a8dho4tMTbZ/uX9pFfrbDXN3fv         EbTA==",
+  "To": "I Done This <jpm-personal@entry.idonethis.com>",
+  "message-headers": [
+    [
+      "X-Mailgun-Incoming",
+      "Yes"
+    ],
+    [
+      "X-Envelope-From",
+      "<jpm@jpmartin.com>"
+    ],
+    [
+      "Received",
+      "from mail-io0-f174.google.com (mail-io0-f174.google.com [209.85.223.174]) by mxa.mailgun.org with ESMTP id 586c8e52.7fdce40f9a70-in03; Wed, 04 Jan 2017 05:55:30 -0000 (UTC)"
+    ],
+    [
+      "Received",
+      "by mail-io0-f174.google.com with SMTP id p42so447584439ioo.1        for <jpm-personal@entry.idonethis.com>; Tue, 03 Jan 2017 21:55:30 -0800 (PST)"
+    ],
+    [
+      "Dkim-Signature",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=jpmartin-com.20150623.gappssmtp.com; s=20150623;        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;        bh=sTco3CWmQr0YC4OPIy3E4LETRNwsEI+aLz9YyE4Lfmg=;        b=V9Na7FFoVgikFynRv9CWRuea+aO97DHd+WVh9AsH1KAgATTEndek4692BaFJLZBezc         iBZlh1c6agluqjSuoZAWFV7TNqZK2WvmXeBRpJ6WRfQa0SKo5gxJAzNqbrWfpngfaHHW         XSG0NuRkqUdOqFmJCg7yGX6k2D4C+AMaLgRfM6/Xil8NrC4a7/flEtu4ChQfdyY6XZ1k         We1oxB4wWeqwoNboTm8JBjO25yyfnJ9LFzBHWQFmsdeNY9w5SQzZ9a3+xno6czQZ6c99         lVYolHdwqPvmejC5ti4kIcFG2dcDxA/7pSrYZHbU2FGV1yYFHPv8YaVGWo7mb2t+Tc8x         ZVTA=="
+    ],
+    [
+      "X-Google-Dkim-Signature",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:mime-version:in-reply-to:references:from:date         :message-id:subject:to;        bh=sTco3CWmQr0YC4OPIy3E4LETRNwsEI+aLz9YyE4Lfmg=;        b=jbFFZf585hlbelyV0/E70tAGxR1RzowCJPvfi4KX8/bavNCiipETYHggB2d1KGLdBM         yoWFHoMT6qRC2VvRsbI/SV0qU0mu489NbIH6klca/u56UYPtfKQfWtWZKg8W4/WTeVW8         aCzAn0q+ADYgONOAxLnP442p84JxNP+LwabgJZNqSLHcftWZdTmXmnahBGwkitq+nT54         SbeJVrLSuxaZc4YrtD04+Bsl0+vOvvfVFK61lelZlMgumpM3RRkmAADmrfyOOUUI2VuP         HFkp2aFGqa4NpCj7LeCuHCOMmcLT8wQVDpkkHYjRw7a8dho4tMTbZ/uX9pFfrbDXN3fv         EbTA=="
+    ],
+    [
+      "X-Gm-Message-State",
+      "AIkVDXKB3dZtRAXm9nSRoNCx7NG1no/2SeVgUaG3hvs5qqC3zYQmFxQnRhFuNGxoViXYrT5OE2FQ0pygKj6BJ0k5"
+    ],
+    [
+      "X-Received",
+      "by 10.107.31.17 with SMTP id f17mr12898311iof.126.1483509329574; Tue, 03 Jan 2017 21:55:29 -0800 (PST)"
+    ],
+    [
+      "Mime-Version",
+      "1.0"
+    ],
+    [
+      "Received",
+      "by 10.79.142.134 with HTTP; Tue, 3 Jan 2017 21:55:29 -0800 (PST)"
+    ],
+    [
+      "In-Reply-To",
+      "<586b36f124b67_43fd29696df402351944@8fad1212-bc6e-441d-a2fd-e5dee6995476.mail>"
+    ],
+    [
+      "References",
+      "<586b36f124b67_43fd29696df402351944@8fad1212-bc6e-441d-a2fd-e5dee6995476.mail>"
+    ],
+    [
+      "From",
+      "Jose Paul Martin <jpm@jpmartin.com>"
+    ],
+    [
+      "Date",
+      "Wed, 4 Jan 2017 08:55:29 +0300"
+    ],
+    [
+      "Message-Id",
+      "<CAFffBwV9rW30-ubF0skDd+8A4oyqdJFOQtEOFKVcqdEsXsfucQ@mail.gmail.com>"
+    ],
+    [
+      "Subject",
+      "Re: JPM Personal Digest for January 3"
+    ],
+    [
+      "To",
+      "I Done This <jpm-personal@entry.idonethis.com>"
+    ],
+    [
+      "Content-Type",
+      "multipart/alternative; boundary=\"001a114041fa9c850905453e6efe\""
+    ]
+  ],
+  "Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=jpmartin-com.20150623.gappssmtp.com; s=20150623;        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;        bh=sTco3CWmQr0YC4OPIy3E4LETRNwsEI+aLz9YyE4Lfmg=;        b=V9Na7FFoVgikFynRv9CWRuea+aO97DHd+WVh9AsH1KAgATTEndek4692BaFJLZBezc         iBZlh1c6agluqjSuoZAWFV7TNqZK2WvmXeBRpJ6WRfQa0SKo5gxJAzNqbrWfpngfaHHW         XSG0NuRkqUdOqFmJCg7yGX6k2D4C+AMaLgRfM6/Xil8NrC4a7/flEtu4ChQfdyY6XZ1k         We1oxB4wWeqwoNboTm8JBjO25yyfnJ9LFzBHWQFmsdeNY9w5SQzZ9a3+xno6czQZ6c99         lVYolHdwqPvmejC5ti4kIcFG2dcDxA/7pSrYZHbU2FGV1yYFHPv8YaVGWo7mb2t+Tc8x         ZVTA==",
+  "content-id-map": {
+    
+  },
+  "subject": "Re: JPM Personal Digest for January 3",
+  "stripped-html": "<html><head></head><body><div dir=\"ltr\">Fixed ActiveCampaign Tags<div><br><div><br></div></div></div><div class=\"gmail_extra\"><br><br><br clear=\"all\"><div><br></div>-- <br><div data-smartmail=\"gmail_signature\" class=\"gmail_signature\"><div dir=\"ltr\"><div><div dir=\"ltr\">Jose Paul Martin &#8226; (+973) 39983350 &#8226;&#160;<a href=\"http://jpmartin.com\" target=\"_blank\">http://jpmartin.com</a><span></span></div></div></div></div>\n</div>\n</body></html>",
+  "from": "Jose Paul Martin <jpm@jpmartin.com>",
+  "sender": "jpm@jpmartin.com",
+  "stripped-text": "Fixed ActiveCampaign Tags",
+  "X-Mailgun-Incoming": "Yes",
+  "X-Received": "by 10.107.31.17 with SMTP id f17mr12898311iof.126.1483509329574; Tue, 03 Jan 2017 21:55:29 -0800 (PST)",
+  "X-Gm-Message-State": "AIkVDXKB3dZtRAXm9nSRoNCx7NG1no/2SeVgUaG3hvs5qqC3zYQmFxQnRhFuNGxoViXYrT5OE2FQ0pygKj6BJ0k5",
+  "attachments": [
+    
+  ],
+  "body-html": "<div dir=\"ltr\">Fixed ActiveCampaign Tags<div><br><div><br></div></div></div><div class=\"gmail_extra\"><br><div class=\"gmail_quote\">On Tue, Jan 3, 2017 at 8:30 AM, I Done This <span dir=\"ltr\">&lt;<a href=\"mailto:jpm-personal@entry.idonethis.com\" target=\"_blank\">jpm-personal@entry.idonethis.com</a>&gt;</span> wrote:<br><blockquote class=\"gmail_quote\" style=\"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex\"><u></u>\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div style=\"box-sizing:border-box;color:#3e4036;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;height:100%;line-height:22px;margin:0;width:100%!important\" bgcolor=\"#fbfaf9\">\r\n\r\n<div class=\"m_2938067523877742916top-note\" style=\"box-sizing:border-box;color:#fbfaf9;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:10px;font-weight:400;line-height:15px;margin:0;width:100%\" align=\"center\">0 entries from 0 team members</div>\r\n<div class=\"m_2938067523877742916content\" style=\"box-sizing:border-box;display:block;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0 auto;max-width:600px;padding:20px\">\r\n<div class=\"m_2938067523877742916header\" style=\"box-sizing:border-box;clear:both;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0;overflow:hidden;width:100%\">\r\n<div class=\"m_2938067523877742916main-wrap\" style=\"box-sizing:border-box;clear:both;display:block;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0;padding:30px\">\r\n<table style=\"box-sizing:border-box;display:table;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0;width:100%\">\r\n<tbody><tr style=\"box-sizing:border-box;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0\">\r\n<td style=\"box-sizing:border-box;display:table-cell;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0\" valign=\"top\">\r\n<h1 style=\"box-sizing:border-box;color:#3e4036;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,&#39;Lucida Grande&#39;,sans-serif;font-size:32px;font-weight:800;line-height:38px;margin:0\" align=\"left\">JPM Personal</h1>\r\n</td>\r\n<td style=\"box-sizing:border-box;display:table-cell;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0\" valign=\"bottom\">\r\n<p class=\"m_2938067523877742916salutation\" style=\"box-sizing:border-box;color:#767771;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:12px;font-weight:400;margin:0\" align=\"right\">Tuesday,  3 January 2017</p>\r\n</td>\r\n</tr>\r\n</tbody></table>\r\n</div>\r\n</div>\r\n<div class=\"m_2938067523877742916main\" style=\"background:#fff;border-radius:10px;box-sizing:border-box;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0\">\r\n<div class=\"m_2938067523877742916main-wrap\" style=\"box-sizing:border-box;clear:both;display:block;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0;padding:30px\">\r\n<div class=\"m_2938067523877742916important-text\" style=\"box-sizing:border-box;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0 0 20px\">\r\n<p style=\"box-sizing:border-box;color:#767771;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;line-height:26px;margin:0 0 10px\">\r\nSince yesterday, <strong style=\"box-sizing:border-box;color:#3e4036;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:17px;font-weight:800;line-height:26px;margin:0\">JPM Personal</strong> has logged <strong style=\"box-sizing:border-box;color:#3e4036;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:17px;font-weight:800;line-height:26px;margin:0\">0 entries</strong> — 0 that are done, 0 that are set as goals, and 0 that are blocked.\r\n</p>\r\n</div>\r\n<div class=\"m_2938067523877742916content-block m_2938067523877742916delineate-top m_2938067523877742916padded-block m_2938067523877742916omega\" style=\"border-top-color:#fbfaf9;border-top-style:solid;border-top-width:1px;box-sizing:border-box;clear:both;display:block;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0;padding:20px 0 0\">\r\n<p class=\"m_2938067523877742916centered\" style=\"box-sizing:border-box;color:#767771;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0 0 10px\" align=\"center\">We haven’t heard from <strong style=\"box-sizing:border-box;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:1em;font-weight:800;margin:0\">Jose Paul Martin</strong>.</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"m_2938067523877742916footer\" style=\"box-sizing:border-box;clear:both;color:#767771;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;margin:0;padding:20px;width:100%\">\r\n<p class=\"m_2938067523877742916centered\" style=\"box-sizing:border-box;color:#767771;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:13px;font-weight:400;margin:0 0 10px\" align=\"center\">You’re receiving this because you&#39;re a member of <a href=\"http://email.entry.idonethis.com/c/eJwVjjsOgzAQRE8DHQjvz7hwkSbXiGyvVziCJEp8fwWk0RRvXjEavQLp2CKvklHMAWXxD0JTCBJEjRZAdoFooGW1pA4cTLlInYicTglMp8paq4TA5GU-UtvHLToowOZTYLEs4jOhX6gicpGC5Mc9br1_BrwNcD-Ta09z0_er9q395vI-Ttivgc1YC8KqdfzG5-c4n5ydvr29Lu8Ps6I4yw\" style=\"box-sizing:border-box;color:#478cfe;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:13px;font-weight:400;margin:0;text-decoration:none\" target=\"_blank\">JPM Personal</a>. Turn it <a href=\"http://email.entry.idonethis.com/c/eJwVTsuKwzAQ-5rklhCPx69DDr3sbxSPZ7zxUqchdv9_XRASkkCId8eAPJfdeEvaZgVI1j1RZ4Zgg-WMG2ijAuKEm8-RFShYKFlZEBUvETIvYljEhmDQ2bXG8pqP3VCgDABxI2U9JEElVoKnaCQT5_m1H71fk35M8DNA0uNa-H1KP0pb07uOsH8Lk7PhpMGzDFulktztKFcbToNzYejnbB9q6S4kTy6_0nqb7_3vquP14Hj3cn43_wFd7kmL\" style=\"box-sizing:border-box;color:#478cfe;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:13px;font-weight:400;margin:0;text-decoration:none\" target=\"_blank\">off</a>.</p>\r\n<p class=\"m_2938067523877742916centered\" style=\"box-sizing:border-box;color:#767771;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:13px;font-weight:400;margin:0 0 10px\" align=\"center\">\r\n<a href=\"http://email.entry.idonethis.com/c/eJwVjTEOwyAMAF8TtkRgbBMGhi79RgUYFKokjVL-r1LpdMMtJ8EJoKgWaOVkuRrAxO6Ftgp49iwVNVgyHnFCvdYoBgzMKXOZEY3MEarMhaQU9p7Q8XLEtqstiLYxUyYszkHSJEbb4il6APG2strD1vs12ccEz0EqPS5NPmfpW_su-XOMqO7wvo5xHo53b-e__wB3VDRK\" style=\"box-sizing:border-box;color:#478cfe;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:13px;font-weight:400;margin:0;text-decoration:none\" target=\"_blank\"><img class=\"m_2938067523877742916strapline\" alt=\"We love progress\" src=\"https://beta.idonethis.com/assets/emails/we-love-progress-3d6a0197aaa34e4b59a3090e22dec296adae3b639d4b846fd531b85a09592732.png\" style=\"box-sizing:border-box;display:block;font-family:&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;height:auto;margin:15px auto;max-width:90%;opacity:0.925;width:256px\">\r\n</a></p>\r\n</div>\r\n</div>\r\n<img width=\"1px\" height=\"1px\" alt=\"\" src=\"http://email.entry.idonethis.com/o/eJwNzEEOAiEMAMDXyI0NLaXQA28xQGnEiJqN_497meNozYqkbtVUuEc2QOqc7xRNUVhYjQLGBEJ0o1CsKSCg74OnJwL1DU39TDoniyTKfOy2Xu5RQyFJPIYRZB6mIXNqYKXNPrv04s76_O4rvWznb72P8dl_6zMo7w\"></div>\r\n\r\n</blockquote></div><br><br clear=\"all\"><div><br></div>-- <br><div class=\"gmail_signature\" data-smartmail=\"gmail_signature\"><div dir=\"ltr\"><div><div dir=\"ltr\">Jose Paul Martin • (+973) 39983350 •&nbsp;<a href=\"http://jpmartin.com\" target=\"_blank\">http://jpmartin.com</a><span></span></div></div></div></div>\r\n</div>\r\n",
+  "References": "<586b36f124b67_43fd29696df402351944@8fad1212-bc6e-441d-a2fd-e5dee6995476.mail>",
+  "Mime-Version": "1.0",
+  "In-Reply-To": "<586b36f124b67_43fd29696df402351944@8fad1212-bc6e-441d-a2fd-e5dee6995476.mail>",
+  "Date": "Wed, 4 Jan 2017 08:55:29 +0300",
+  "Message-Id": "<CAFffBwV9rW30-ubF0skDd+8A4oyqdJFOQtEOFKVcqdEsXsfucQ@mail.gmail.com>",
+  "Content-Type": "multipart/alternative; boundary=\"001a114041fa9c850905453e6efe\"",
+  "body-plain": "Fixed ActiveCampaign Tags\r\n\r\n\r\n\r\nOn Tue, Jan 3, 2017 at 8:30 AM, I Done This <\r\njpm-personal@entry.idonethis.com> wrote:\r\n\r\n> 0 entries from 0 team members\r\n> JPM Personal\r\n>\r\n> Tuesday, 3 January 2017\r\n>\r\n> Since yesterday, *JPM Personal* has logged *0 entries* — 0 that are done,\r\n> 0 that are set as goals, and 0 that are blocked.\r\n>\r\n> We haven’t heard from *Jose Paul Martin*.\r\n>\r\n> You’re receiving this because you're a member of JPM Personal\r\n> <http://email.entry.idonethis.com/c/eJwVjjsOgzAQRE8DHQjvz7hwkSbXiGyvVziCJEp8fwWk0RRvXjEavQLp2CKvklHMAWXxD0JTCBJEjRZAdoFooGW1pA4cTLlInYicTglMp8paq4TA5GU-UtvHLToowOZTYLEs4jOhX6gicpGC5Mc9br1_BrwNcD-Ta09z0_er9q395vI-Ttivgc1YC8KqdfzG5-c4n5ydvr29Lu8Ps6I4yw>.\r\n> Turn it off\r\n> <http://email.entry.idonethis.com/c/eJwVTsuKwzAQ-5rklhCPx69DDr3sbxSPZ7zxUqchdv9_XRASkkCId8eAPJfdeEvaZgVI1j1RZ4Zgg-WMG2ijAuKEm8-RFShYKFlZEBUvETIvYljEhmDQ2bXG8pqP3VCgDABxI2U9JEElVoKnaCQT5_m1H71fk35M8DNA0uNa-H1KP0pb07uOsH8Lk7PhpMGzDFulktztKFcbToNzYejnbB9q6S4kTy6_0nqb7_3vquP14Hj3cn43_wFd7kmL>\r\n> .\r\n>\r\n> [image: We love progress]\r\n> <http://email.entry.idonethis.com/c/eJwVjTEOwyAMAF8TtkRgbBMGhi79RgUYFKokjVL-r1LpdMMtJ8EJoKgWaOVkuRrAxO6Ftgp49iwVNVgyHnFCvdYoBgzMKXOZEY3MEarMhaQU9p7Q8XLEtqstiLYxUyYszkHSJEbb4il6APG2strD1vs12ccEz0EqPS5NPmfpW_su-XOMqO7wvo5xHo53b-e__wB3VDRK>\r\n>\r\n\r\n\r\n\r\n-- \r\nJose Paul Martin • (+973) 39983350 • http://jpmartin.com\r\n",
+  "Subject": "Re: JPM Personal Digest for January 3"
+}

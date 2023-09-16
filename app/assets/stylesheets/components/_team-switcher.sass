@@ -1,0 +1,47 @@
+.team-switcher
+  margin: 0 auto
+  max-width: 11rem
+  position: relative
+  padding: 0.25rem 0 0
+
+  .team-current
+    border-radius: 2px
+    padding: 2px
+    border: 2px solid transparent
+    a
+      text-align: center
+      font-size: ms(0)
+      font-weight: 400
+      border-radius: 2px
+      display: block
+      overflow: hidden
+      height: 1.63157894736842rem
+      padding: 0.01rem 0.25rem 0.15rem
+      &:hover
+        color: $black
+        background-color: $super-faint
+
+  .team-options
+    display: none
+    position: absolute
+    background: $very-faint
+    width: 100%
+    padding: 0.125rem 0 0.325rem
+    li
+      display: block
+      a
+        font-weight: 300
+        text-align: center
+        display: block
+        padding: 0.125rem 0.5rem  0.125rem
+
+  &.active
+    .team-current
+      border-color: $red
+      a
+        display: block
+        background: $very-faint
+        color: $red
+
+    .team-options
+      display: block

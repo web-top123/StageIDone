@@ -1,0 +1,22 @@
+- content_for :header do
+  - if current_user.active_teams.any?
+    %nav.nav-exit
+      = link_to :back, title: 'back' do
+        %div.square.icon.light.close.small close
+
+.modal-content-small
+  %header.modal-header
+    %h1 New organization
+
+  .modal-card
+    = form_for @organization, html: { class: 'modal-form' } do |f|
+      - if @organization.errors.any?
+        %ul.list-errors
+          - @organization.errors.full_messages.each do |msg|
+            %li= msg
+
+      .field
+        = f.label :name
+        = f.text_field :name, placeholder: "Acme Ltd"
+
+      .actions= f.submit 'Create', class: 'button'

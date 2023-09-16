@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+team_one:
+  name: My Team
+  organization: org_one
+  hash_id: my
+  slug: myteam
+
+team_two:
+  name: Foo Team
+  organization: org_one
+  hash_id: foo
+  slug: footeam
+
+team_three:
+  name: Bar Team
+  organization: org_one
+  hash_id: bar
+  slug: barteam
+
+team_four:
+  name: Fantastic Four
+  organization: org_one
+  hash_id: ftstc
+  slug: fantastic
+
+team_five:
+  name: Fab Five
+  organization: paid_organization
+  hash_id: fbfv
+  slug: fabfive
+
+user_one_personal:
+  name: personal progress log
+  hash_id: 123unique
+  slug: personal-progress-log
+
+user_two_personal:
+  name: personal progress log
+  hash_id: ABCunique
+  slug: personal-progress-log
+
+trial_organization_team_one:
+  name: Team One
+  organization: trial_organization
+  hash_id: team_one
+  slug: trial_organization_team_one

@@ -1,0 +1,14 @@
+- content_for :header do
+  %nav.nav-exit
+    = link_to settings_user_path, title: 'back' do
+      %div.square.icon.light.close.small close
+
+.modal-content-card
+  .modal-header
+    %h1 It&rsquo;s time to upgrade
+
+  .modal-card
+    .modal-card_note
+      = image_tag "statuses@2x.jpg"
+      :markdown
+        The organization has reached the end of its free trial. To continue using **I Done This**, one of the owners or administrators of the **#{ @organization.name }** account will need to choose a plan and provide a payment method.

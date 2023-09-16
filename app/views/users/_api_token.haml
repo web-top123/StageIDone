@@ -1,0 +1,12 @@
+= form_for current_user, url: reset_api_token_users_path, html: {class: 'settings-form', id: 'revoke-user-api-token-form'} do |f|
+  .token_field.field
+    %label{for: 'old_password'} Your API token is:
+    %input.token{readonly: true, type: 'text', value: current_user.api_token, name: 'api_token', id: 'api_token'}
+  .token_description
+    .token_warning
+      This token identifies you, #{current_user.full_name}, your email address is #{current_user.email_address}
+  .revoke_api_warning
+    .top-note
+    Resetting the token by clicking below is irreversible and will cause every service that uses it to lose access to your I Done This account.
+
+  .actions= f.submit 'Reset', class: 'button', data: {text: 'Reset'}

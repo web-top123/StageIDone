@@ -1,0 +1,147 @@
+$sidebar-closed-width: 0.75rem
+$sidebar-half-width: 3.5rem
+$sidebar-width: 14rem
+$header-height: 2.6rem
+
+.application[role='layout']
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  height: 100%
+  overflow-x: hidden
+  overflow-y: auto
+  padding-left: $sidebar-closed-width
+
+  & > .application-sidebar
+    position: fixed
+    right: 0
+    left: 0
+    top: 0
+    bottom: 0
+    z-index: 99
+    overflow: hidden
+    transition: width ease 0.175s
+    width: $sidebar-closed-width
+    padding: 0
+    margin: 0
+
+    .sidebar-nav
+      display: none
+
+    .menu-toggle
+      display: none
+
+  & > .application-content
+    position: relative
+    padding-top: $header-height + 1
+    min-height: 100%
+    height: auto
+
+    .application-header
+      z-index: 9
+      position: fixed
+      top: 0
+      transition: left ease 0.175s
+      left: $sidebar-closed-width
+      right: 0
+      height: $header-height
+
+  &.sidebar-open
+    & > .application-content
+      .application-header
+
+    & > .application-sidebar
+      width: 100%
+      border-right: 0
+      overflow-y: auto
+
+      .sidebar-nav
+        width: 100%
+        display: block
+        padding-right: $sidebar-closed-width
+        section
+          width: 100%
+
+      .menu-toggle
+        display: block
+        position: fixed
+        top: 0
+        bottom: 0
+        right: 0
+        width: $sidebar-closed-width
+        a
+          display: block
+          width: 100%
+          height: 100%
+          background: $white
+          border-left: 2px solid $faint
+          &:hover
+            background: $white
+            cursor: pointer
+
+  @media screen and (min-width: $small)
+  @media screen and (min-width: $medium)
+    padding-left: $sidebar-width
+
+    & > .application-content
+      .application-header
+        z-index: 999
+        left: $sidebar-width
+
+    & > .application-sidebar
+      right: auto
+      width: $sidebar-width
+      overflow-y: auto
+      .sidebar-nav
+        width: 100%
+        min-height: 100vh
+        display: -webkit-box
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -webkit-flex-direction: column
+        -ms-flex-direction: column
+        flex-direction: column
+        -webkit-box-pack: justify
+        -webkit-justify-content: space-between
+        -ms-flex-pack: justify
+        justify-content: space-between
+        -webkit-box-align: start
+        -webkit-align-items: flex-start
+        -ms-flex-align: start
+        align-items: flex-start
+        & > section
+          /* ie11 min-height fix */
+          display: -webkit-box
+          display: -webkit-flex
+          display: -ms-flexbox
+          display: flex
+          -webkit-box-orient: vertical
+          -webkit-box-direction: normal
+          -webkit-flex-direction: column
+          -ms-flex-direction: column
+          flex-direction: column
+
+    &.sidebar-open
+      padding-left: $sidebar-width
+
+      & > .application-content
+        .application-header
+          z-index: 999
+          left: $sidebar-width
+
+      & > .application-sidebar
+        right: auto
+        width: $sidebar-width
+        .sidebar-nav
+          width: $sidebar-width
+          display: block
+          section
+            width: $sidebar-width
+
+  @media screen and (min-width: $large)
+  @media screen and (min-width: $giant)

@@ -1,0 +1,3 @@
+- user_portrait = user.portrait
+%div.square.portrait{style: "background-color:#{ user.profile_color }; background-image:url(#{ user_portrait.thumbnail.url })", class: user_portrait.present? ? portrait_size : "#{ portrait_size } blank"}
+  = user.full_name_or_something_else_identifying.first

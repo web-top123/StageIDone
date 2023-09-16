@@ -1,0 +1,17 @@
+= render 'alternate_emails/form'
+
+%table.alternate-emails
+  - current_user.alternate_emails.each do |alternate_email|
+    %tr
+      %td
+        = alternate_email.email_address
+      %td
+        - if alternate_email.verified_at?
+          %span.pill-green
+            verified
+        - else
+          %span.pill-red
+            not verified
+      %td
+        %a.button.utility{'data-action' => 'removeAlternateEmail', 'data-id' => alternate_email.id}
+          remove

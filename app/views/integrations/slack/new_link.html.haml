@@ -1,0 +1,40 @@
+- content_for :header do
+  - if current_user.active_teams.any?
+    %nav.nav-exit
+      = link_to :integrations, title: 'back' do
+        %div.square.icon.light.close.small close
+
+.modal-content-small
+  %header.modal-header
+    %h1 Add Slack integration
+
+  .modal-card
+    %ul.list-settings-items
+      %li.list-settings-form
+        %big.instruction Use the <code>#{@slack_slash_command}</code> command to post entries directly from Slack.
+        = form_tag integrations_slack_link_path, class: 'list-item-form' do
+          %fieldset
+            = hidden_field_tag 'integration_link[integration_type]', 'slack-incoming'
+            = hidden_field_tag 'integration_link[integration_user_id]', @slack_user.id
+            .field.full-size
+              = select_tag 'integration_link[team_id]',
+                options_for_select(current_user.active_teams.collect{|t| [t.name, t.id]}),
+                include_blank: 'Select Team'
+          .actions= submit_tag 'Add', class: 'button utility'
+      %li.list-settings-form
+        %big.instruction Automatically post new entries to Slack.
+        - if @slack_channels.nil?
+          %strong.instruction
+            Unfortunately it looks to us like there are no channels for your
+            slack team that we can post to, if this is wrong, please contact
+            support and we'll try correct this.
+        - else
+          = form_tag integrations_slack_link_path, class: 'list-item-form' do
+            %fieldset
+              = hidden_field_tag 'integration_link[integration_type]', 'slack-poster'
+              = hidden_field_tag 'integration_link[integration_user_id]', @slack_user.id
+              .field
+                = select_tag 'integration_link[team_id]', options_for_select(current_user.teams.collect{|t| [t.name, t.id]}), include_blank: 'Select Team'
+              .field
+                = select_tag 'slack_channel', options_for_select(@slack_channels), include_blank: 'Select Channel'
+            .actions= submit_tag 'Add', class: 'button utility'

@@ -1,0 +1,226 @@
+{
+  "stripped-signature": "",
+  "Spamdiagnosticmetadata": "NSPM",
+  "From": "Shane Mingins <shane@idonethis.com>",
+  "X-Envelope-From": "<outlook_C365AC267188B6C6@outlook.com>",
+  "X-Ms-Tnef-Correlator": "",
+  "To": "I Done This <idt-live-test@entry.idonethis.com>",
+  "Thread-Topic": "What did you get done? - IDT Live Test - February 28",
+  "X-Microsoft-Exchange-Diagnostics": "1;SN1NAM01HT205;5:Jvk5Br3MuwXi28UvgD1L+0W/j3gWQc8HfEKRiNJaONREmiuUgyi9boQoLhK8+j3jRazvQcsjtD/R1Gb5RUcezs5vlh4NcEio+knzIe9UKxEQFxI0chgHrZyLlwS9Kfm7dIXLmy274TKykfxDv7YYoA==;24:w5Qo/YyfCcWHJp2Nx0Pjk6bsvGBie0P/6FAenHFUlE+KZCWQEcaf4spLMRRnv/wALTRTAaM6x9rA0kOU/jr13V4n3KIuxiS89si8tdUR/xI=;7:WrBx9IC5hLrH+vIbpCIX/yUO/VHlYoMWzXOnziNBBiJsRwCkK5BQRvt90qHtj5lDSOCvLMbtVEAxcQu0VdIg5BxUb85emaU3/T+RpddIxmeAYpuPsVmOKkyKaCOZBIn2dvjShGA53IQ6ZtFY9qj+M7AJkIJbt0JM/ffVfSNmBfP7lSiRFbI2zMOZeW3mGF60SSoXfFXft1y75ufzis1Q+8vAQCi/KzYTLeljT6A5kL091Pgai4wVQezqrFFHcszX5TJ74IKc220JCfXBCcesLkKIyi+z7woIe1kTUYtnKtENLmIm7BGFNDoZ2q/8PhFg",
+  "Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com; s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version; bh=evFnBTyCevC9m+LYSNf4ejB/cpep0S+XqxMZoUJN+VE=; b=Eh/EEEriVeB4w2Lu/WIrqZdvdSAgwltTw5LEDNodUjgdJ60d7/TqG6cGYGaaK1Mrs5xUu5GNonFtVXjWykBOc5AAsg8IPXUPO1OMBnCZVAUw4LWWuGk0oObOL4qSDsCEFodcHmAM5plThjhSMVE46gMkAZDlA0LLf+IKqk/tulK0xY7Z450HHayB4pB0vQusynQYmPWxobObSenK1gFUrtF8RRAK00/4Kacvy1VUc70jz6R8+nRcmp5B+lNq19Az/IQc9hTTT54Dp9L9O/WbScc/VJ23myUW0Wa8aV7CTho4AT7B51TUlKO03MSnSOla1c1sWCvjXTiFt1RFnacCrA==",
+  "X-Ms-Exchange-Crosstenant-Fromentityheader": "Internet",
+  "Accept-Language": "en-US",
+  "X-Ms-Exchange-Crosstenant-Originalarrivaltime": "28 Feb 2017 01:13:03.8164 (UTC)",
+  "subject": "Re: What did you get done? - IDT Live Test - February 28",
+  "stripped-html": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\n<style type=\"text/css\" style=\"display:none;\"><!-- P {margin-top:0;margin-bottom:0;} --></style>\n</head>\n<body dir=\"ltr\">\n<div id=\"divtagdefaultwrapper\" style=\"font-size:12pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-serif;\" dir=\"ltr\">\n<p><span style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">No link entry</span></p>\n<div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">\nLink at the end&nbsp;<a href=\"http://www.stuff.co.nz/\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=http://www.stuff.co.nz/&amp;source=gmail&amp;ust=1488330657876000&amp;usg=AFQjCNGwyqZypSPlcJdh4cGGe3tSFRAT0A\" style=\"color: rgb(17, 85, 204);\" id=\"LPlnk698466\">http://www.stuff.co.nz/</a></div>\n<div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">\nLink in&nbsp;<a href=\"http://www.cnn.com/\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=http://www.cnn.com/&amp;source=gmail&amp;ust=1488330657876000&amp;usg=AFQjCNHFAgYxzvDNJT0PWMUdfhAfOkZvFA\" style=\"color: rgb(17, 85, 204);\">http://www.cnn.com/</a>&nbsp;the\n middle</div>\n<div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">\n<a href=\"https://www.google.com/\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=https://www.google.com/&amp;source=gmail&amp;ust=1488330657876000&amp;usg=AFQjCNESMDm-wlDfeAnlEarDIReZ6a5x_g\" style=\"color: rgb(17, 85, 204);\">https://www.google.com/</a>&nbsp;Link\n at the start</div>\n<br>\n<p></p>\n<p><br>\n</p>\n<div id=\"Signature\">\n<div id=\"divtagdefaultwrapper\" style=\"font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-family: Calibri, Arial, Helvetica, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols;\">\nSent from <a href=\"http://aka.ms/weboutlook\" id=\"LPNoLP\">Outlook</a></div>\n</div>\n</div>\n</body>\n</html>\n",
+  "Thread-Index": "AQHSkV+c/KJ518+ekECCQjiCNEwQdQ==",
+  "from": "Shane Mingins <shane@idonethis.com>",
+  "Content-Language": "en-US",
+  "Return-Path": "outlook_C365AC267188B6C6@outlook.com",
+  "X-Originatororg": "outlook.com",
+  "X-Ms-Has-Attach": "",
+  "Date": "Tue, 28 Feb 2017 01:13:03 +0000",
+  "X-Incomingheadercount": "38",
+  "Message-Id": "<SN1PR14MB0320A79B9F9C72FE6F160C70B8560@SN1PR14MB0320.namprd14.prod.outlook.com>",
+  "body-plain": "No link entry\r\n\r\nLink at the end http://www.stuff.co.nz/\r\nLink in http://www.cnn.com/ the middle\r\nhttps://www.google.com/ Link at the start\r\n\r\n\r\n\r\nSent from Outlook<http://aka.ms/weboutlook>\r\n",
+  "Mime-Version": "1.0",
+  "Received": "from SN1PR14MB0320.namprd14.prod.outlook.com ([10.163.204.139]) by SN1PR14MB0320.namprd14.prod.outlook.com ([10.163.204.139]) with mapi id 15.01.0933.019; Tue, 28 Feb 2017 01:13:04 +0000",
+  "X-Ms-Exchange-Transport-Crosstenantheadersstamped": "SN1NAM01HT205",
+  "content-id-map": {},
+  "Sender": "Shane Mingins <outlook_C365AC267188B6C6@outlook.com>",
+  "recipients": "idt-live-test@entry.idonethis.com",
+  "Authentication-Results": "entry.idonethis.com; dkim=none (message not signed) header.d=none;entry.idonethis.com; dmarc=none action=none header.from=idonethis.com;",
+  "X-Ms-Exchange-Crosstenant-Id": "84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa",
+  "X-Forefront-Prvs": "0232B30BBC",
+  "message-headers": [
+    [
+      "X-Mailgun-Incoming",
+      "Yes"
+    ],
+    [
+      "X-Envelope-From",
+      "<outlook_C365AC267188B6C6@outlook.com>"
+    ],
+    [
+      "Received",
+      "from SNT004-OMC2S3.hotmail.com (snt004-omc2s3.hotmail.com [65.55.90.78]) by mxa.mailgun.org with ESMTP id 58b4cea1.7f516c7666b0-smtp-in-n01; Tue, 28 Feb 2017 01:13:05 -0000 (UTC)"
+    ],
+    [
+      "Received",
+      "from NAM01-SN1-obe.outbound.protection.outlook.com ([65.55.90.73]) by SNT004-OMC2S3.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);\t Mon, 27 Feb 2017 17:13:05 -0800"
+    ],
+    [
+      "Dkim-Signature",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com; s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version; bh=evFnBTyCevC9m+LYSNf4ejB/cpep0S+XqxMZoUJN+VE=; b=Eh/EEEriVeB4w2Lu/WIrqZdvdSAgwltTw5LEDNodUjgdJ60d7/TqG6cGYGaaK1Mrs5xUu5GNonFtVXjWykBOc5AAsg8IPXUPO1OMBnCZVAUw4LWWuGk0oObOL4qSDsCEFodcHmAM5plThjhSMVE46gMkAZDlA0LLf+IKqk/tulK0xY7Z450HHayB4pB0vQusynQYmPWxobObSenK1gFUrtF8RRAK00/4Kacvy1VUc70jz6R8+nRcmp5B+lNq19Az/IQc9hTTT54Dp9L9O/WbScc/VJ23myUW0Wa8aV7CTho4AT7B51TUlKO03MSnSOla1c1sWCvjXTiFt1RFnacCrA=="
+    ],
+    [
+      "Received",
+      "from SN1NAM01FT033.eop-nam01.prod.protection.outlook.com (10.152.64.54) by SN1NAM01HT205.eop-nam01.prod.protection.outlook.com (10.152.65.192) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.919.10; Tue, 28 Feb 2017 01:13:04 +0000"
+    ],
+    [
+      "Received",
+      "from SN1PR14MB0320.namprd14.prod.outlook.com (10.152.64.58) by SN1NAM01FT033.mail.protection.outlook.com (10.152.64.173) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.933.11 via Frontend Transport; Tue, 28 Feb 2017 01:13:04 +0000"
+    ],
+    [
+      "Received",
+      "from SN1PR14MB0320.namprd14.prod.outlook.com ([10.163.204.139]) by SN1PR14MB0320.namprd14.prod.outlook.com ([10.163.204.139]) with mapi id 15.01.0933.019; Tue, 28 Feb 2017 01:13:04 +0000"
+    ],
+    [
+      "From",
+      "Shane Mingins <shane@idonethis.com>"
+    ],
+    [
+      "To",
+      "I Done This <idt-live-test@entry.idonethis.com>"
+    ],
+    [
+      "Subject",
+      "Re: What did you get done? - IDT Live Test - February 28"
+    ],
+    [
+      "Thread-Topic",
+      "What did you get done? - IDT Live Test - February 28"
+    ],
+    [
+      "Thread-Index",
+      "AQHSkV+c/KJ518+ekECCQjiCNEwQdQ=="
+    ],
+    [
+      "Sender",
+      "Shane Mingins <outlook_C365AC267188B6C6@outlook.com>"
+    ],
+    [
+      "Date",
+      "Tue, 28 Feb 2017 01:13:03 +0000"
+    ],
+    [
+      "Message-Id",
+      "<SN1PR14MB0320A79B9F9C72FE6F160C70B8560@SN1PR14MB0320.namprd14.prod.outlook.com>"
+    ],
+    [
+      "Accept-Language",
+      "en-US"
+    ],
+    [
+      "Content-Language",
+      "en-US"
+    ],
+    [
+      "X-Ms-Has-Attach",
+      ""
+    ],
+    [
+      "X-Ms-Tnef-Correlator",
+      ""
+    ],
+    [
+      "Authentication-Results",
+      "entry.idonethis.com; dkim=none (message not signed) header.d=none;entry.idonethis.com; dmarc=none action=none header.from=idonethis.com;"
+    ],
+    [
+      "X-Incomingtopheadermarker",
+      "OriginalChecksum:3D176B835AB889049ECEA90E6A8C28F890BAEBFB59A121CAC6357213B47DCDC5;UpperCasedChecksum:0906C5849EA959977551A5DAAFFC8A874E1757C95CC0E0EEBCBE047B6E1434E3;SizeAsReceived:7703;Count:38"
+    ],
+    [
+      "X-Ms-Exchange-Messagesentrepresentingtype",
+      "2"
+    ],
+    [
+      "X-Tmn",
+      "[jo1ggYTSUBb1coZPuOcsxlcmggGsE6ti]"
+    ],
+    [
+      "X-Incomingheadercount",
+      "38"
+    ],
+    [
+      "X-Eopattributedmessage",
+      "0"
+    ],
+    [
+      "X-Microsoft-Exchange-Diagnostics",
+      "1;SN1NAM01HT205;5:Jvk5Br3MuwXi28UvgD1L+0W/j3gWQc8HfEKRiNJaONREmiuUgyi9boQoLhK8+j3jRazvQcsjtD/R1Gb5RUcezs5vlh4NcEio+knzIe9UKxEQFxI0chgHrZyLlwS9Kfm7dIXLmy274TKykfxDv7YYoA==;24:w5Qo/YyfCcWHJp2Nx0Pjk6bsvGBie0P/6FAenHFUlE+KZCWQEcaf4spLMRRnv/wALTRTAaM6x9rA0kOU/jr13V4n3KIuxiS89si8tdUR/xI=;7:WrBx9IC5hLrH+vIbpCIX/yUO/VHlYoMWzXOnziNBBiJsRwCkK5BQRvt90qHtj5lDSOCvLMbtVEAxcQu0VdIg5BxUb85emaU3/T+RpddIxmeAYpuPsVmOKkyKaCOZBIn2dvjShGA53IQ6ZtFY9qj+M7AJkIJbt0JM/ffVfSNmBfP7lSiRFbI2zMOZeW3mGF60SSoXfFXft1y75ufzis1Q+8vAQCi/KzYTLeljT6A5kL091Pgai4wVQezqrFFHcszX5TJ74IKc220JCfXBCcesLkKIyi+z7woIe1kTUYtnKtENLmIm7BGFNDoZ2q/8PhFg"
+    ],
+    [
+      "X-Forefront-Antispam-Report",
+      "EFV:NLI;SFV:NSPM;SFS:(10019020)(98900012);DIR:OUT;SFP:1102;SCL:1;SRVR:SN1NAM01HT205;H:SN1PR14MB0320.namprd14.prod.outlook.com;FPR:;SPF:None;LANG:en;"
+    ],
+    [
+      "X-Ms-Office365-Filtering-Correlation-Id",
+      "64d7fbf4-be79-4345-b17c-08d45f76f257"
+    ],
+    [
+      "X-Microsoft-Antispam",
+      "UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(1601125254)(1603101448)(1701031045);SRVR:SN1NAM01HT205;"
+    ],
+    [
+      "X-Exchange-Antispam-Report-Cfa-Test",
+      "BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:SN1NAM01HT205;BCL:0;PCL:0;RULEID:;SRVR:SN1NAM01HT205;"
+    ],
+    [
+      "X-Forefront-Prvs",
+      "0232B30BBC"
+    ],
+    [
+      "Spamdiagnosticoutput",
+      "1:99"
+    ],
+    [
+      "Spamdiagnosticmetadata",
+      "NSPM"
+    ],
+    [
+      "Content-Type",
+      "multipart/alternative; boundary=\"_000_SN1PR14MB0320A79B9F9C72FE6F160C70B8560SN1PR14MB0320namp_\""
+    ],
+    [
+      "Mime-Version",
+      "1.0"
+    ],
+    [
+      "X-Originatororg",
+      "outlook.com"
+    ],
+    [
+      "X-Ms-Exchange-Crosstenant-Originalarrivaltime",
+      "28 Feb 2017 01:13:03.8164 (UTC)"
+    ],
+    [
+      "X-Ms-Exchange-Crosstenant-Fromentityheader",
+      "Internet"
+    ],
+    [
+      "X-Ms-Exchange-Crosstenant-Id",
+      "84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa"
+    ],
+    [
+      "X-Ms-Exchange-Transport-Crosstenantheadersstamped",
+      "SN1NAM01HT205"
+    ],
+    [
+      "Return-Path",
+      "outlook_C365AC267188B6C6@outlook.com"
+    ],
+    [
+      "X-Originalarrivaltime",
+      "28 Feb 2017 01:13:05.0031 (UTC) FILETIME=[D054E170:01D2915F]"
+    ]
+  ],
+  "stripped-text": "No link entry\r\n\r\nLink at the end http://www.stuff.co.nz/\r\nLink in http://www.cnn.com/ the middle\r\nhttps://www.google.com/ Link at the start\r\n\r\n\r\n\r\nSent from Outlook<http://aka.ms/weboutlook>",
+  "Spamdiagnosticoutput": "1:99",
+  "sender": "outlook_C365AC267188B6C6@outlook.com",
+  "X-Mailgun-Incoming": "Yes",
+  "X-Eopattributedmessage": "0",
+  "X-Originalarrivaltime": "28 Feb 2017 01:13:05.0031 (UTC) FILETIME=[D054E170:01D2915F]",
+  "X-Microsoft-Antispam": "UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(1601125254)(1603101448)(1701031045);SRVR:SN1NAM01HT205;",
+  "attachments": [],
+  "body-html": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<style type=\"text/css\" style=\"display:none;\"><!-- P {margin-top:0;margin-bottom:0;} --></style>\r\n</head>\r\n<body dir=\"ltr\">\r\n<div id=\"divtagdefaultwrapper\" style=\"font-size:12pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-serif;\" dir=\"ltr\">\r\n<p><span style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">No link entry</span></p>\r\n<div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">\r\nLink at the end&nbsp;<a href=\"http://www.stuff.co.nz/\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=http://www.stuff.co.nz/&amp;source=gmail&amp;ust=1488330657876000&amp;usg=AFQjCNGwyqZypSPlcJdh4cGGe3tSFRAT0A\" style=\"color: rgb(17, 85, 204);\" id=\"LPlnk698466\">http://www.stuff.co.nz/</a></div>\r\n<div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">\r\nLink in&nbsp;<a href=\"http://www.cnn.com/\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=http://www.cnn.com/&amp;source=gmail&amp;ust=1488330657876000&amp;usg=AFQjCNHFAgYxzvDNJT0PWMUdfhAfOkZvFA\" style=\"color: rgb(17, 85, 204);\">http://www.cnn.com/</a>&nbsp;the\r\n middle</div>\r\n<div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px;\">\r\n<a href=\"https://www.google.com/\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=https://www.google.com/&amp;source=gmail&amp;ust=1488330657876000&amp;usg=AFQjCNESMDm-wlDfeAnlEarDIReZ6a5x_g\" style=\"color: rgb(17, 85, 204);\">https://www.google.com/</a>&nbsp;Link\r\n at the start</div>\r\n<br>\r\n<p></p>\r\n<p><br>\r\n</p>\r\n<div id=\"Signature\">\r\n<div id=\"divtagdefaultwrapper\" style=\"font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-family: Calibri, Arial, Helvetica, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols;\">\r\nSent from <a href=\"http://aka.ms/weboutlook\" id=\"LPNoLP\">Outlook</a></div>\r\n</div>\r\n</div>\r\n</body>\r\n</html>\r\n",
+  "X-Ms-Exchange-Messagesentrepresentingtype": "2",
+  "X-Incomingtopheadermarker": "OriginalChecksum:3D176B835AB889049ECEA90E6A8C28F890BAEBFB59A121CAC6357213B47DCDC5;UpperCasedChecksum:0906C5849EA959977551A5DAAFFC8A874E1757C95CC0E0EEBCBE047B6E1434E3;SizeAsReceived:7703;Count:38",
+  "X-Ms-Office365-Filtering-Correlation-Id": "64d7fbf4-be79-4345-b17c-08d45f76f257",
+  "X-Forefront-Antispam-Report": "EFV:NLI;SFV:NSPM;SFS:(10019020)(98900012);DIR:OUT;SFP:1102;SCL:1;SRVR:SN1NAM01HT205;H:SN1PR14MB0320.namprd14.prod.outlook.com;FPR:;SPF:None;LANG:en;",
+  "X-Tmn": "[jo1ggYTSUBb1coZPuOcsxlcmggGsE6ti]",
+  "Content-Type": "multipart/alternative; boundary=\"_000_SN1PR14MB0320A79B9F9C72FE6F160C70B8560SN1PR14MB0320namp_\"",
+  "X-Exchange-Antispam-Report-Cfa-Test": "BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:SN1NAM01HT205;BCL:0;PCL:0;RULEID:;SRVR:SN1NAM01HT205;",
+  "Subject": "Re: What did you get done? - IDT Live Test - February 28"
+}

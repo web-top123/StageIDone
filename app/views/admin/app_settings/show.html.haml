@@ -1,0 +1,86 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "App Settings", [:admin, :app_settings]
+    = link_to "Plans & Pricing", [:admin, :app_settings]
+
+.wrapper-small{role: 'layout'}
+  .admin-pane
+    = form_for @app_setting, url: [:admin, :app_settings], html: { class: 'admin-form' } do |f|
+      .admin-form-note
+        :markdown
+          Don't change these unless you know what you're doing, or you're one of those people who just wants to watch the world burn.
+
+      .admin-form_plans
+        .plan
+          %big= f.label :tiny_monthly_plan_id, 'Tiny (monthly)'
+          = f.text_field :tiny_monthly_plan_id
+          = f.label :tiny_monthly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :tiny_monthly_plan_price_in_cents
+
+        .plan
+          %big= f.label :tiny_yearly_plan_id, 'Tiny (yearly)'
+          = f.text_field :tiny_yearly_plan_id
+          = f.label :tiny_yearly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :tiny_yearly_plan_price_in_cents
+
+        .plan
+          %big= f.label :basic_monthly_plan_id, 'Basic (monthly)'
+          = f.text_field :basic_monthly_plan_id
+          = f.label :basic_monthly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :basic_monthly_plan_price_in_cents
+
+        .plan
+          %big= f.label :basic_yearly_plan_id, 'Basic (yearly)'
+          = f.text_field :basic_yearly_plan_id
+          = f.label :basic_yearly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :basic_yearly_plan_price_in_cents
+
+        .plan
+          %big= f.label :small_monthly_plan_id, 'Small (monthly)'
+          = f.text_field :small_monthly_plan_id
+          = f.label :small_monthly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :small_monthly_plan_price_in_cents
+
+        .plan
+          %big= f.label :small_yearly_plan_id, 'Small (yearly)'
+          = f.text_field :small_yearly_plan_id
+          = f.label :small_yearly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :small_yearly_plan_price_in_cents
+
+        .plan
+          %big= f.label :medium_monthly_plan_id, 'Medium (monthly)'
+          = f.text_field :medium_monthly_plan_id
+          = f.label :medium_monthly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :medium_monthly_plan_price_in_cents
+
+        .plan
+          %big= f.label :medium_yearly_plan_id, 'Medium (yearly)'
+          = f.text_field :medium_yearly_plan_id
+          = f.label :medium_yearly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :medium_yearly_plan_price_in_cents
+
+        .plan
+          %big= f.label :large_monthly_plan_id, 'Large (monthly)'
+          = f.text_field :large_monthly_plan_id
+          = f.label :large_monthly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :large_monthly_plan_price_in_cents
+
+        .plan
+          %big= f.label :large_yearly_plan_id, 'Large (yearly)'
+          = f.text_field :large_yearly_plan_id
+          = f.label :large_yearly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :large_yearly_plan_price_in_cents
+
+        .plan
+          %big= f.label :invoice_monthly_plan_id, 'Invoice (monthly)'
+          = f.text_field :invoice_monthly_plan_id
+          = f.label :invoice_monthly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :invoice_monthly_plan_price_in_cents
+
+        .plan
+          %big= f.label :invoice_yearly_plan_id, 'Invoice (yearly)'
+          = f.text_field :invoice_yearly_plan_id
+          = f.label :invoice_yearly_plan_price_in_cents, 'Monthly price'
+          = f.telephone_field :invoice_yearly_plan_price_in_cents
+
+      .actions= f.submit 'Save', class: 'button'

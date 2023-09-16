@@ -1,0 +1,41 @@
+:coffeescript
+  $ ->
+    for form in $('.admin-pane-filter form')
+      filterForm = $(form)
+      fieldVal = $('[name="filter_field"]:first', filterForm).val()
+      if (fieldVal.length == 0) or (fieldVal == 'All')
+        $('[name="filter_value"]').hide()
+        $('[name="filter_value"]').val('')
+      else
+        $('[name="filter_value"]').show()
+
+    $('[name="filter_field"]').on 'change', (e) ->
+      if ($(e.currentTarget).val().length == 0) or ($(e.currentTarget).val() == 'All')
+        $('[name="filter_value"]').hide()
+        $('[name="filter_value"]').val('')
+        location.reload()
+      else
+        $('[name="filter_value"]').show()
+
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Users", [:admin, :users]
+
+.wrapper-small{role: 'layout'}
+  .admin-pane
+    .admin-pane-header
+      %nav.admin-pane-filter
+        %form{method: 'get'}
+          %label Filter:
+          %select{name: 'filter_field'}
+            %option All
+            - User.filter_fields.each do |filter_field|
+              %option{value: filter_field, selected: (filter_field == params[:filter_field]) ? 'selected' : nil}= filter_field
+
+          %input{name: 'filter_value', value: params[:filter_value]}
+
+      %header.admin-pane-results
+        %p.total-results= pluralize @scope_count, 'user'
+        = paginate @users
+
+    %ul.admin-list.admin-list-users= render @users

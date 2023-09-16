@@ -1,0 +1,18 @@
+- if @archived_notifications.any?      
+  %table{ style:"width:100%"}
+    - @archived_notifications.each do |notification|
+      %tr
+        %td
+          %p= "#{notification.entry.team.name}"
+        %td
+          = link_to "#{notification.message}", team_path(notification.entry.team, date: notification.entry.occurred_on), class: 'inline', style: 'color: blue;'
+        %td
+          = notification.updated_at.strftime("%Y/%m/%d")
+    %tr
+      %td
+      %td
+      %td
+        -if @hidden_archived_notifications_count > 0
+          %span#show_all_notifications= link_to "Show next #{@hidden_archived_notifications_count}", 'javascript:void(0);', onclick:'reload_archived_notifications();', style: 'color: blue;'
+- else
+  %p You have no archived notifications

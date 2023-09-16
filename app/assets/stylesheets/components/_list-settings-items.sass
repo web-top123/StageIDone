@@ -1,0 +1,46 @@
+.list-settings-items
+
+.list-settings-form
+  border-bottom: 1px solid $super-faint
+
+  &:last-child
+    border-bottom: 0
+
+  .instruction
+    text-align: left
+    display: block
+    font-size: 0.9em
+
+    code
+      background: $super-faint
+      padding: 0 0.125rem
+
+.list-settings-item
+  border-bottom: 1px solid $super-faint
+  padding: 0.25rem 4rem 0.325rem 0
+  overflow: hidden
+
+  .content
+    float: left
+    span
+      color: $silver
+      font-size: ms(-1)
+
+    form.inline-form
+      display: inline-block
+
+  .actions
+    float: right
+    margin-right: -4rem
+    width: 4rem
+    padding: 0.125rem 0 0
+
+    .button
+      width: 100%
+      text-align: center
+      padding-top: 0.25rem
+
+  .unredeemed
+    color: $grey
+    strong
+      font-weight: 400

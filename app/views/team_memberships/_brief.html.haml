@@ -1,0 +1,15 @@
+- is_member = team.active_users.include?(user)
+%div.content
+  = link_to [team.organization, user] do
+    - if is_member
+      <strong>#{ user.full_name_or_something_else_identifying }</strong>
+    - else
+      #{ user.full_name_or_something_else_identifying }
+- if policy(TeamMembership.new(team: team)).update?
+  %nav.actions
+    - if is_member
+      %a.button.utility{'data-action' => 'removeFromTeam', 'data-id' => user.hash_id, 'data-team' => team.hash_id}
+        Remove
+    - else
+      %a.button.utility{'data-action' => 'addToTeam', 'data-id' => user.hash_id, 'data-team' => team.hash_id}
+        Add

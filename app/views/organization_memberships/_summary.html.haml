@@ -1,0 +1,26 @@
+- organization = organization_membership.organization
+- user = organization_membership.user
+
+%div.membership-summary
+  %div.membership-summary_portrait
+    = link_to [organization, user] do
+      = render partial: 'users/portrait', locals: { user: user, portrait_size: 'large' }
+
+  %div.membership-summary_content
+    %h3.membership-summary_content_name
+      = link_to user.full_name_or_something_else_identifying, [organization, user]
+
+    %p.membership-summary_content_subtitle
+      #{ pluralize user.entries.count, 'entry' } ·
+      #{ pluralize user.active_teams.size, 'team' }
+
+  .membership-summary_role
+    - if policy(organization_membership).edit?
+      = form_for [organization, organization_membership] do |f|
+        = f.select :role, policy(organization_membership).authorized_roles.collect { |option| [option.capitalize, option] }
+    -else
+      = organization_membership.role.capitalize
+
+  .membership-summary-remove
+    - if policy(organization_membership).destroy?
+      = link_to 'Remove', [organization, organization_membership], class: 'button utility', method: 'delete', data: { confirm: 'Are you sure?' } unless organization_membership.user == current_user

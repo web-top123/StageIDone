@@ -1,0 +1,23 @@
+- cache(entry) do
+  %div.entry-stream
+    - entry_user = entry.user
+    - entry_status = entry.status
+    - entry_team = entry.team
+    - entry_occurred_on = entry.occurred_on
+    %div.entry-stream_status
+      - organization = entry_team.organization    
+      = link_to [organization, entry_user] do
+        = render partial: 'users/portrait', locals: { user: entry_user, portrait_size: 'large' }
+      - if entry.class == Entry
+        %div.disc.icon.status.small{class: entry_status, title: "#{ entry_status } for #{ entry_occurred_on}"}= entry_status
+
+    %div.entry-stream_content
+      %h3= link_to entry_user.full_name, [organization, entry_user]
+      %div.entry-body= raw EntryParser.auto_link(entry)
+
+    %footer.entry-stream_meta
+      = entry.class
+      - if entry.class == Entry
+        = link_to "Date: #{ entry_occurred_on.strftime('%B %e') }", team_path(entry_team, date: entry_occurred_on)
+      -elsif entry.class == Reaction
+        = link_to "Date: #{ entry.created_at.strftime('%B %e') }", team_path(entry_team, date: entry.created_at)

@@ -1,0 +1,32 @@
+- content_for :current_page do
+  = link_to "Members", [@team, :team_memberships]
+
+- content_for :header do
+  = render partial: 'teams/header', locals: { team: @team }
+
+- content_for :sidebar do
+  = render partial: 'teams/sidebar', locals: { team: @team, current_page: 'team_memberships' }
+
+%main.application-main
+  %div.wrapper-small{role: 'layout'}
+    %header.header-standard
+      %h2.left Team members
+
+      / - if @team.owner_id == @current_user.id
+      %nav.header-standard-nav
+        = link_to "Add team members", [:new, @team, :team_membership], class: 'button simple'
+
+    %section.section-standard
+      %ul.list-members
+        - @team_memberships.each do |team_membership|
+          %li.list-member-item= render partial: 'summary', locals: { team_membership: team_membership }
+
+    - if @team.owner_id == @current_user.id
+      - if @invitations.any?
+        %header.header-unintrusive
+          %h4 Pending invitations
+
+        %section.section-standard
+          %ul.list-invitations
+            - @invitations.each do |invitation|
+              %li.list-invitation-item= render partial: 'invitations/summary', locals: { invitation: invitation }

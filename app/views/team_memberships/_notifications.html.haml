@@ -1,0 +1,7 @@
+= form_for([:notifications_save, team_membership.team, team_membership], html: {class: 'settings-form'}) do |f|
+  = f.collection_check_boxes :subscribed_notifications, [['comment', 'Notify me when team members comment on my entries'], ['mention', 'Notify me when team members mention me in comments or entries'], ['like', 'Notify me when team members like my comments or entries']], :first, :last do |b|
+    .field
+      = b.check_box
+      = b.label
+
+  .actions= f.submit 'Save Changes', class: 'button'

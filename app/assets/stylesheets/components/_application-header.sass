@@ -1,0 +1,53 @@
+.application-header
+  background: $blue
+  padding: 0.5rem 1rem
+
+  a
+    display: inline-block
+    color: rgba($white,0.71)
+    &:hover
+      color: rgba($white,0.91)
+      cursor: pointer
+
+    &.icon
+      float: left
+      margin-top: 0.125rem
+      margin-left: -0.5rem
+      .square.icon.header
+        display: block
+        margin: 0
+        background-size: auto 70%
+
+  .nav-exit
+    position: absolute
+    left: 1rem
+    top: 0.5rem
+
+    a
+      margin-right: 1rem
+
+      &:last-child
+        margin-right: 0
+
+  .nav-hamburger
+    display: block
+    position: absolute
+    right: 0.5rem
+    top: 0.675rem
+
+    a
+      text-indent: -9999rem
+      width: 1.25rem
+      height: 1.25rem
+      background-size: auto 1rem
+      background-repeat: no-repeat
+      background-position: center center
+      background-image: url(asset-path('icon-menu-white.svg'))
+
+  @media screen and (min-width: $small)
+  @media screen and (min-width: $medium)
+    .nav-hamburger
+      display: none
+
+  @media screen and (min-width: $large)
+  @media screen and (min-width: $giant)

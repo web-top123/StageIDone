@@ -1,0 +1,12 @@
+%header.modal-export_header
+  %h2 Export organization entries
+
+%form.form-export.modal-export_main
+  .field
+    %label From
+    %div= select_date start_date, prefix: :start_date, order: [:day, :month, :year]
+  .field
+    %label To
+    %div= select_date end_date, prefix: :end_date, order: [:day, :month, :year]
+  .actions
+    %a.button.simple{'data-base_path' => export_organization_path(organization)} Export CSV

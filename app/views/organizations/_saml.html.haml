@@ -1,0 +1,16 @@
+= form_for organization, url: saml_save_organization_path(organization), html: {class: 'settings-form', id: 'saml-form'} do |f|
+  - if organization.errors.any?
+    %ul.list-errors
+      - organization.errors.full_messages.each do |msg|
+        %li= msg
+
+  .field
+    %label Service Provider URL
+    %input{type: 'text', 'data-action' => 'copier', value: "#{request.protocol}#{request.host_with_port}/saml/metadata/#{organization.hash_id}", readonly: true}
+    %p.hint You'll need to provide this URL to your SAML identity provider.
+
+  .field
+    = f.label :saml_meta_url, 'Identity Provider URL'
+    = f.text_field :saml_meta_url, placeholder: 'https://example-idp.com/saml/metadata'
+
+  .actions= f.submit 'Save', class: 'button'

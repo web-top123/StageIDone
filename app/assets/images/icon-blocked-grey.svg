@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="208px" height="208px" viewBox="0 0 208 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <path d="M24,24 L184,184" stroke="#767771" stroke-width="48"></path>
+        <path d="M184,24 L24,184" stroke="#767771" stroke-width="48"></path>
+    </g>
+</svg>

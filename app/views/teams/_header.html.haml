@@ -1,0 +1,7 @@
+%div.breadcrumbs
+  - if team.organization.present?
+    = link_to team.organization.name.present? ? team.organization.name : 'My Organization', team.organization
+  = link_to team.name, team
+
+  - if content_for? :current_page
+    = yield :current_page

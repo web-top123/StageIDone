@@ -1,0 +1,105 @@
+= render 'shared/stripe'
+
+:coffeescript
+  stripeResponseHandler = (status, response) ->
+    form = $('#billing-details')
+    if response.error
+      form.find('.js-list-errors').html $('<li>' + response.error.message + '</li>')
+      form.find('.js-list-errors').show()
+      form.find('.list-errors').hide()
+      form.find('.submit').prop 'disabled', false
+    else
+      token = response.id
+      form.append $('<input type="hidden" name="organization[stripe_token]">').val(token)
+      form.get(0).submit()
+
+  $ ->
+    Stripe.setPublishableKey '#{ ENV['STRIPE_PUBLIC_KEY'] }'
+
+    form = $('#billing-details')
+    form.submit (event) ->
+      form.find('.submit').prop 'disabled', true
+      Stripe.card.createToken form, stripeResponseHandler
+      false
+
+- content_for :header do
+  %nav.nav-exit
+    = link_to root_path, method: :get, title: 'Close' do
+      %div.square.icon.light.close.small close
+
+- if params[:controller] == "onboard" && params[:action] == "onboard_one_save" || params[:controller] == "teams" && params[:action] == "show"
+  .modal-content-card-singup
+    .modal-header.text-center
+      %h1.strong 14 Day Free Trial
+      %p Your account will then convert to the Small Plan billed monthly at $12.50 per user
+      %p.no-terms.strong NO TERM COMMITMENTS!
+
+    .modal-card
+      = form_for(@organization, url: organization_upgrade_complete_path(@organization), html: {class: 'modal-form', id: 'billing-details'}) do |f|
+        %h2 Payment Information
+        %ul.js-list-errors
+        - if @organization.errors.any?
+          %ul.list-errors
+            - @organization.errors.full_messages.each do |msg|
+              %li= msg
+
+        = f.hidden_field :plan_level
+        = f.hidden_field :plan_interval
+
+        .field
+          = f.label :billing_name, 'Name on card'
+          = f.text_field :billing_name, placeholder: 'Benji Franklin'
+
+        .field.credit-card
+          %label Credit card
+          .inputs
+            .numbers
+              %input{type: 'tel', placeholder: "•••• •••• •••• #{ @organization.billing_card_last_four || '••••' }", 'data-stripe' => 'number'}
+              %input{type: 'tel', placeholder: 'CVC', 'data-stripe' => 'cvc'}
+            .expiration
+              %input{type: 'tel', placeholder: 'MM', 'data-stripe' => 'exp_month'}
+              %input{type: 'tel', placeholder: 'YYYY', 'data-stripe' => 'exp_year'}
+
+
+        .actions
+          = f.submit "Continue", class: 'button enthusiastic button-green'
+
+    .modal-footer
+      / SSL Encrypted · Powered by Stripe
+      =image_tag "powered-by-stripe-300x139.png", width: "200px"
+
+-else
+  .modal-content-card
+    .modal-header
+      %h1 Enter payment details
+    .modal-card
+      = form_for(@organization, url: organization_upgrade_complete_path(@organization), html: {class: 'modal-form', id: 'billing-details'}) do |f|
+        %ul.js-list-errors
+        - if @organization.errors.any?
+          %ul.list-errors
+            - @organization.errors.full_messages.each do |msg|
+              %li= msg
+
+        = f.hidden_field :plan_level
+        = f.hidden_field :plan_interval
+
+        .field
+          = f.label :billing_name, 'Name on card'
+          = f.text_field :billing_name, placeholder: 'Benji Franklin'
+
+        .field.credit-card
+          %label Credit card
+          .inputs
+            .numbers
+              %input{type: 'tel', placeholder: "•••• •••• •••• #{ @organization.billing_card_last_four || '••••' }", 'data-stripe' => 'number'}
+              %input{type: 'tel', placeholder: 'CVC', 'data-stripe' => 'cvc'}
+            .expiration
+              %input{type: 'tel', placeholder: 'MM', 'data-stripe' => 'exp_month'}
+              %input{type: 'tel', placeholder: 'YYYY', 'data-stripe' => 'exp_year'}
+
+
+        .actions
+          = f.submit "Continue (#{AppSetting.human_name_for_plan_interval(@organization.plan_interval)} #{ format_cents AppSetting.plan_price_in_cents_per_user(@organization.plan_level,@organization.plan_interval) } per user)", class: 'button enthusiastic button-green'
+
+    .modal-footer
+      SSL Encrypted · Powered by Stripe

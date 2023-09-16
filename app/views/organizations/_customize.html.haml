@@ -1,0 +1,13 @@
+= form_for organization, url: customize_organization_path(organization), html: {class: 'settings-form static'} do |f|
+  - if organization.errors.any?
+    %ul.list-errors
+      - organization.errors.full_messages.each do |msg|
+        %li= msg
+
+  .field
+    %div.uploader
+      %div.square.large.portrait{style: "background-color:#{ organization.profile_color }; background-image:url(#{ organization.logo.thumbnail.url })", class: organization.logo.present? ? '' : "blank"}= organization.name ? organization.name.gsub(' ', '')[0..1] : ''
+      = f.hidden_field(:logo_cache)
+      = f.file_field(:logo)
+
+  .actions= f.submit 'Save Changes', class: 'button'

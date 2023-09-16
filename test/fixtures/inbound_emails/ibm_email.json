@@ -1,0 +1,259 @@
+// 20170105095930
+// https://se.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6IjM0MTgzODkzLWRiYzMtNDc5Zi1iNWQ5LTMxZTRkYTE2MTBhMyIsInMiOiI5OWVjNzczYzQ0IiwiYyI6InRhbmtiIn0=
+
+{
+  "X-Content-Scanned": "Fidelis XPS MAILER",
+  "From": "\"Rashik Parmar\" <rashik_parmar@uk.ibm.com>",
+  "X-Envelope-From": "<rashik_parmar@uk.ibm.com>",
+  "X-Ibm-Av-Detection": "SAVI=unused REMOTE=unused XFE=unused",
+  "X-Ibm-Iss-Spamdetectors": "Score=0.405233; BY=0.241252; FL=0; FP=0; FZ=0; HX=0; KW=0; PH=0; SC=0.405233; ST=0; TS=0; UL=0; ISC=",
+  "stripped-signature": "",
+  "X-Proofpoint-Virus-Version": "vendor=fsecure engine=2.50.10432:,, definitions=2017-01-04_13:,, signatures=0",
+  "To": "personal@entry.idonethis.com",
+  "X-Tnefevaluated": "1",
+  "subject": "Re: What'd you get done today? - Personal - December 16",
+  "Content-Type": "multipart/related; boundary=\"=_related 005C8BA00025809E_=\"",
+  "from": "\"Rashik Parmar\" <rashik_parmar@uk.ibm.com>",
+  "Importance": "Normal",
+  "X-Tm-As-Gconf": "00",
+  "stripped-html": "<html><head></head><body><div style=\"font-family:Arial, Helvetica, sans-serif;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div dir=\"ltr\">- Narsaifua - Funeral</div>\n<div dir=\"ltr\">- Catch-up on emails</div>\n<div dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"font-family:Arial;font-size:10.5pt\" class=\"socmaildefaultfont\" dir=\"ltr\"><div style=\"margin-top: 20px;\" dir=\"ltr\"><div><div>________________________________________________________________________________</div></div>\n<div><table width=\"636\" style=\"null border-collapse : collapse; border-color : #696969;\" border=\"0\" height=\"107\">        <tbody>                <tr>                        <td style=\" border-color : #696969;\">                        <div><img src=\"cid:1483511454497169\" alt=\"\"></div>                        </td>                        <td style=\" border-color : #696969;\">                        <div style=\"font-size: 12pt; font-weight: bold; font-family: sans-serif; color: #7C7C5F;\"><span style=\"color:#696969;\"><span style=\"font-size: 0.857em;\"><span style=\"font-family: trebuchet ms,helvetica,sans-serif;\">Rashik Parmar MBE</span></span></span><br>                        <span style=\"font-size:0.714em;\"><span style=\"font-family: trebuchet ms,helvetica,sans-serif;\"><span style=\"color:#808080;\">Technical Executive - Europe<br>                        IBM Distinguished Engineer<br>                        Past President, IBM Academy of Technology<br>                        Mobile: +44-7710-820616 | Tie-Line: 37276048<br>                        E-mail: rashik_parmar@uk.ibm.com</span></span></span>                        <div style=\"font-size: 10pt; font-weight: bold; font-family: sans-serif;\">                        <div>&#160;</div>                        </div>                        </div>                        </td>                        <td style=\" border-color : #696969;\">                        <div><img src=\"cid:1483511454497170\" style=\"float: right;\" alt=\"\"></div>\n                        <div style=\"text-align: right;\">&#160;</div>\n                        <div style=\"text-align: right;\"><span style=\"font-size:0.571em;\"><span style=\"color:#808080;\">1</span></span></div>\n                        <div style=\"text-align: right;\"><span style=\"font-size:0.571em;\"><span style=\"color:#808080;\">1175 Century Way, Thorpe Park, Colton,<br>                        Leeds LS15 8ZB, United Kingdom</span></span></div>                        </td>                </tr>        </tbody></table></div></div></div></div></div></div></div></div></div></div></div>\n<div dir=\"ltr\">&#160;</div>\n<div dir=\"ltr\">&#160;</div>\n<div dir=\"ltr\">&#160;</div></div>\nUnless stated otherwise above:<br>\nIBM United Kingdom Limited - Registered in England and Wales with number 741598. <br>\nRegistered office: PO Box 41, North Harbour, Portsmouth, Hampshire PO6 3AU<br>\n<br></body></html>",
+  "X-Ibm-Mailfrom": "rashik_parmar@uk.ibm.com",
+  "body-html": "<div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial, Helvetica, sans-serif;font-size:10.5pt\" ><div dir=\"ltr\" >- Narsaifua - Funeral</div>\r\n<div dir=\"ltr\" >- Catch-up on emails</div>\r\n<div dir=\"ltr\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div class=\"socmaildefaultfont\" dir=\"ltr\" style=\"font-family:Arial;font-size:10.5pt\" ><div dir=\"ltr\" style=\"margin-top: 20px;\" ><div><div>________________________________________________________________________________</div></div>\r\n<div><table border=\"0\" height=\"107\" style=\"null border-collapse : collapse; border-color : #696969;\" width=\"636\" >        <tbody>                <tr>                        <td style=\" border-color : #696969;\" >                        <div><img alt=\"\" src=\"cid:1483511454497169\"  ></div>                        </td>                        <td style=\" border-color : #696969;\" >                        <div style=\"font-size: 12pt; font-weight: bold; font-family: sans-serif; color: #7C7C5F;\" ><span style=\"color:#696969;\" ><span style=\"font-size: 0.857em;\" ><span style=\"font-family: trebuchet ms,helvetica,sans-serif;\" >Rashik Parmar MBE</span></span></span><br>                        <span style=\"font-size:0.714em;\" ><span style=\"font-family: trebuchet ms,helvetica,sans-serif;\" ><span style=\"color:#808080;\" >Technical Executive - Europe<br>                        IBM Distinguished Engineer<br>                        Past President, IBM Academy of Technology<br>                        Mobile: +44-7710-820616 | Tie-Line: 37276048<br>                        E-mail: rashik_parmar@uk.ibm.com</span></span></span>                        <div style=\"font-size: 10pt; font-weight: bold; font-family: sans-serif;\" >                        <div>&nbsp;</div>                        </div>                        </div>                        </td>                        <td style=\" border-color : #696969;\" >                        <div><img alt=\"\" src=\"cid:1483511454497170\" style=\"float: right;\"  ></div>\r\n                        <div style=\"text-align: right;\" >&nbsp;</div>\r\n                        <div style=\"text-align: right;\" ><span style=\"font-size:0.571em;\" ><span style=\"color:#808080;\" >1</span></span></div>\r\n                        <div style=\"text-align: right;\" ><span style=\"font-size:0.571em;\" ><span style=\"color:#808080;\" >1175 Century Way, Thorpe Park, Colton,<br>                        Leeds LS15 8ZB, United Kingdom</span></span></div>                        </td>                </tr>        </tbody></table></div></div></div></div></div></div></div></div></div></div></div>\r\n<div dir=\"ltr\" >&nbsp;</div>\r\n<div dir=\"ltr\" >&nbsp;</div>\r\n<blockquote data-history-content-modified=\"1\" dir=\"ltr\" style=\"border-left:solid #aaaaaa 2px; margin-left:5px; padding-left:5px; direction:ltr; margin-right:0px\" >----- Original message -----<br>From: I Done This &lt;personal@entry.idonethis.com&gt;<br>To: Rashik Parmar/UK/IBM@IBMGB<br>Cc:<br>Subject: What'd you get done today? - Personal - December 16<br>Date: Fri, Dec 16, 2016 10:00 PM<br>&nbsp;<br><!--Notes ACF\r\n<meta content=\"text/html; charset=utf8\" http-equiv=\"Content-Type\" >-->\r\n<div align=\"center\" style=\"box-sizing: border-box; color: #fbfaf9; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 400; line-height: 15px; margin: 0; width: 100%;\" >Take 30 seconds to do a quick status update for your team.</div>\r\n<div style=\"box-sizing: border-box; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 auto; max-width: 600px; padding: 20px;\" ><div style=\"box-sizing: border-box; clear: both; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; overflow: hidden; width: 100%;\" ><div style=\"box-sizing: border-box; clear: both; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 30px;\" ><table style=\"box-sizing: border-box; display: table; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; width: 100%;\" >        <tbody>                <tr style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" >                        <td style=\"box-sizing: border-box; display: table-cell; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" valign=\"top\" >                        <h1 align=\"left\" style=\"box-sizing: border-box; color: #3E4036; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 32px; font-weight: 800; line-height: 38px; margin: 0;\" >What'd you get done today?</h1>                        </td>                        <td style=\"box-sizing: border-box; display: table-cell; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" valign=\"bottom\" >                        <p align=\"right\" style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; margin: 0;\" >Friday, 16 December 2016</p>                        </td>                </tr>        </tbody></table></div></div>\r\n<div style=\"background: #fff; border-radius: 10px; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" ><div style=\"box-sizing: border-box; clear: both; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 30px;\" ><div style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 0 20px;\" ><p style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 400; line-height: 26px; margin: 0 0 10px;\" ><strong style=\"box-sizing: border-box; color: #3E4036; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 800; line-height: 26px; margin: 0;\" >Take 30 seconds to write out what you got done today.</strong> You can do that by <a href=\"http://email.entry.idonethis.com/c/eJwVjkEOgzAMBF8DN1CInQQfcuil30AmdkREaRGk_28q7Uqj1RxWYhCL0pfoZoceVLINQgtCVpmCyYEhBTCeOjQMkkBRhixeB3SNSHkaJEMwyTLzLOPB5dVvEcGtM6_eeCBHiKIMGbzVmcilYPpX3Go9O3h09tmyauWxyOetdSv3mD5HG2urYTRIyduJUn_Fi--t7MvJ18FX-_Tdx7Ief_8H3XI74w\" style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 400; line-height: 26px; margin: 0; text-decoration: none;\" target=\"_blank\" >clicking here</a> and adding a few entries. Or you can just reply to this email: list a few accomplishments for the day and your teammates will see what you've been up to.</p></div>\r\n<div style=\"box-sizing: border-box; clear: both; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 15px 0; width: 100%;\" ><a href=\"http://email.entry.idonethis.com/c/eJwVjkEOgzAMBF8DN1CInQQfcuil30AmdkREaRGk_28q7Uqj1RxWYhCL0pfoZoceVLINQgtCVpmCyYEhBTCeOjQMkkBRhixeB3SNSHkaJEMwyTLzLOPB5dVvEcGtM6_eeCBHiKIMGbzVmcilYPpX3Go9O3h09tmyauWxyOetdSv3mD5HG2urYTRIyduJUn_Fi--t7MvJ18FX-_Tdx7Ief_8H3XI74w\" style=\"background: #e94b35; border: 0; border-radius: 3px; box-sizing: border-box; color: #fff; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 auto; max-width: 256px; padding: 15px; text-align: center; text-decoration: none; width: 90%;\" target=\"_blank\" >Check-in on <strong style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1em; font-weight: 800; margin: 0;\" >I Done This</strong></a></div>\r\n<div style=\"border-top-color: #fbfaf9; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; clear: both; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 0 20px; padding: 20px 0;\" ><strong style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1em; font-weight: 800; margin: 0;\" >One year ago</strong>\r\n<p style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 0 10px;\" >This is what you got done on this day one year ago, Wednesday, December 16, 2015</p>\r\n<table style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" >        <tbody>                <tr style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" >                        <td style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 2px;\" valign=\"top\" ><img alt=\"done\" s_org_src=\"https://beta.idonethis.com/assets/emails/icon-done-24x24-6830fb7e2d654e44c23274496c81ef442e528e916c81550a6f358c85a84026bd.png\" style=\"box-sizing: border-box; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" ></td>                        <td style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 2px;\" valign=\"top\" >                        <p style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 0 10px;\" >- evening meeting with the procurement lead + team</p>                        </td>                </tr>                <tr style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" >                        <td style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 2px;\" valign=\"top\" ><img alt=\"done\" s_org_src=\"https://beta.idonethis.com/assets/emails/icon-done-24x24-6830fb7e2d654e44c23274496c81ef442e528e916c81550a6f358c85a84026bd.png\" style=\"box-sizing: border-box; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" ></td>                        <td style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 2px;\" valign=\"top\" >                        <p style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 0 10px;\" >- UniCredit - Prep meetings</p>                        </td>                </tr>                <tr style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" >                        <td style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 2px;\" valign=\"top\" ><img alt=\"done\" s_org_src=\"https://beta.idonethis.com/assets/emails/icon-done-24x24-6830fb7e2d654e44c23274496c81ef442e528e916c81550a6f358c85a84026bd.png\" style=\"box-sizing: border-box; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0;\" ></td>                        <td style=\"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 2px;\" valign=\"top\" >                        <p style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0 0 10px;\" >- Lunch with Massimo M</p>                        </td>                </tr>        </tbody></table></div></div></div>\r\n<div style=\"box-sizing: border-box; clear: both; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; margin: 0; padding: 20px; width: 100%;\" ><p align=\"center\" style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; margin: 0 0 10px;\" >You’re receiving this because you're a member of <a href=\"http://email.entry.idonethis.com/c/eJwVjkEOgzAMBF8DN1CInQQfcuil30AmdkREaRGk_28q7Uqj1RxWYhCL0pfoZoceVLINQgtCVpmCyYEhBTCeOjQMkkBRhixeB3SNSHkaJEMwyTLzLOPB5dVvEcGtM6_eeCBHiKIMGbzVmcilYPpX3Go9O3h09tmyauWxyOetdSv3mD5HG2urYTRIyduJUn_Fi--t7MvJ18FX-_Tdx7Ief_8H3XI74w\" style=\"box-sizing: border-box; color: #478cfe; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; margin: 0; text-decoration: none;\" target=\"_blank\" >Personal</a>. Turn it <a href=\"http://email.entry.idonethis.com/c/eJwVj8HKhDAMhJ9Gb0ptWmMPHv7L_xqSNimW3bpS9f03CxkyXxgGwiuyddyX1S_ezSCcLXLYHGThCU1GgoRg5tA5Q8AJxPGQeZbBeXVBaBo4A5pkiWjhsVJ59_tqjJntJD6DB7EYFhQUszgbZwQU27_X_b7PDv46-68T5aax8OeQey_XmD5Vj7fKkDMuJC0LSbFKjdKuvZyX0uSCd7qf43rilVqJsjWp5WDN9G1tpMnXdlKr1PSD5zWWWH_tX8KcS8M\" style=\"box-sizing: border-box; color: #478cfe; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; margin: 0; text-decoration: none;\" target=\"_blank\" >off</a>.</p>\r\n<p align=\"center\" style=\"box-sizing: border-box; color: #767771; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; margin: 0 0 10px;\" ><a href=\"http://email.entry.idonethis.com/c/eJwVjjsOwyAQBU9jOiP-axcUaXINa2FBINuxhcn9Q6RXjGaaRx5IGWLV28UapxNlBbRuRudEEkQG1BG0cOtkBGqKOhmaM7k0GztoTShnyhpEVIi4ED-xHqx4RVYoEBJocSGACuBQZgEmoKSYkR2-9H5P-jWp91hIHXml65N6qQ-P1zkka77hU-q-3dhObOPDd-c1nP_-A5byOHQ\" style=\"box-sizing: border-box; color: #478cfe; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; margin: 0; text-decoration: none;\" tabindex=\"-1\" target=\"_blank\" ><img alt=\"We love progress\" s_org_src=\"https://beta.idonethis.com/assets/emails/we-love-progress-3d6a0197aaa34e4b59a3090e22dec296adae3b639d4b846fd531b85a09592732.png\" style=\"box-sizing: border-box; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; height: auto; margin: 15px auto; max-width: 90%; opacity: 0.925; width: 256px;\" > </a></p></div></div><img alt=\"\" height=\"1px\" s_org_src=\"http://email.entry.idonethis.com/o/eJwNzDEOgzAMAMDXlA0UYscmQ96CTGyLiEatUvH_st10Wlgj6tRK2hISmHpkzTuCm64cnAUqQ6D8wiCgFQx1diWbMT3KJuusDhxqFJFNly7tPZ3lSKaBRPSZUowV2Wt0Imc3y7ROowz5ne3avzK6jKe_r6Udfamf_geWiCzy\" width=\"1px\" ></blockquote>\r\n<div dir=\"ltr\" >&nbsp;</div></div>\r\nUnless stated otherwise above:<BR>\r\nIBM United Kingdom Limited - Registered in England and Wales with number 741598. <BR>\r\nRegistered office: PO Box 41, North Harbour, Portsmouth, Hampshire PO6 3AU<BR>\r\n<BR>",
+  "In-Reply-To": "<585463edf27d9_43fed170f7a3c73069@a3dc3e4d-fd6e-454d-9ea1-df370c2aaa8d.mail>",
+  "Date": "Wed, 4 Jan 2017 16:50:50 +0000",
+  "Message-Id": "<OF3F908156.767A27CA-ON0025809E.005C8B9F-0025809E.005C8BA1@notes.na.collabserv.com>",
+  "X-Mailer": "IBM Verse Build 13080-972 | IBM Domino Build V851SAAS_12052016_FP4 December 15, 2016",
+  "Mime-Version": "1.0",
+  "Received": "from us1a3-mail151.a3.dal06.isc4sb.com ([10.146.38.115])          by us1a3-smtp05.a3.dal06.isc4sb.com          with ESMTP id 2017010416504994-213602 ;          Wed, 4 Jan 2017 16:50:49 +0000 ",
+  "content-id-map": {
+    "<1483511454497169>": {
+      "url": "https://se.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6IjM0MTgzODkzLWRiYzMtNDc5Zi1iNWQ5LTMxZTRkYTE2MTBhMyIsInMiOiI5OWVjNzczYzQ0IiwiYyI6InRhbmtiIn0=/attachments/0",
+      "content-type": "image/png",
+      "name": "Image.1483511454497169.png",
+      "size": 6003
+    },
+    "<1483511454497170>": {
+      "url": "https://se.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6IjM0MTgzODkzLWRiYzMtNDc5Zi1iNWQ5LTMxZTRkYTE2MTBhMyIsInMiOiI5OWVjNzczYzQ0IiwiYyI6InRhbmtiIn0=/attachments/1",
+      "content-type": "image/png",
+      "name": "Image.1483511454497170.png",
+      "size": 661
+    }
+  },
+  "recipients": "personal@entry.idonethis.com",
+  "X-Disclaimed": "39299",
+  "X-Ibm-Iss-Detailinfo": "BY=3.00006372; HX=3.00000240; KW=3.00000007; PH=3.00000004; SC=3.00000199; SDB=6.00803476; UDB=6.00390886; UTC=2017-01-04 16:50:51",
+  "message-headers": [
+    [
+      "X-Mailgun-Incoming",
+      "Yes"
+    ],
+    [
+      "X-Envelope-From",
+      "<rashik_parmar@uk.ibm.com>"
+    ],
+    [
+      "Received",
+      "from mx0a-001b2d01.pphosted.com (mx0a-001b2d01.pphosted.com [148.163.156.1]) by mxa.mailgun.org with ESMTP id 586d27fa.7f98e40f0bb0-smtp-in-n01; Wed, 04 Jan 2017 16:51:06 -0000 (UTC)"
+    ],
+    [
+      "Received",
+      "from pps.filterd (m0098394.ppops.net [127.0.0.1])\tby mx0a-001b2d01.pphosted.com (8.16.0.17/8.16.0.17) with SMTP id v04Gn8fN044354\tfor <personal@entry.idonethis.com>; Wed, 4 Jan 2017 11:51:05 -0500"
+    ],
+    [
+      "Received",
+      "from e06smtp07.uk.ibm.com (e06smtp07.uk.ibm.com [195.75.94.103])\tby mx0a-001b2d01.pphosted.com with ESMTP id 27s3th2wrv-1\t(version=TLSv1.2 cipher=AES256-SHA bits=256 verify=NOT)\tfor <personal@entry.idonethis.com>; Wed, 04 Jan 2017 11:51:04 -0500"
+    ],
+    [
+      "Received",
+      "from localhost\tby e06smtp07.uk.ibm.com with IBM ESMTP SMTP Gateway: Authorized Use Only! Violators will be prosecuted\tfor <personal@entry.idonethis.com> from <rashik_parmar@uk.ibm.com>;\tWed, 4 Jan 2017 16:51:02 -0000"
+    ],
+    [
+      "Received",
+      "from d06dlp01.portsmouth.uk.ibm.com (9.149.20.13)\tby e06smtp07.uk.ibm.com (192.168.101.137) with IBM ESMTP SMTP Gateway: Authorized Use Only! Violators will be prosecuted;\tWed, 4 Jan 2017 16:50:59 -0000"
+    ],
+    [
+      "X-Ibm-Helo",
+      "d06dlp01.portsmouth.uk.ibm.com"
+    ],
+    [
+      "X-Ibm-Mailfrom",
+      "rashik_parmar@uk.ibm.com"
+    ],
+    [
+      "X-Ibm-Rcptto",
+      "personal@entry.idonethis.com"
+    ],
+    [
+      "Received",
+      "from b06cxnps4075.portsmouth.uk.ibm.com (d06relay12.portsmouth.uk.ibm.com [9.149.109.197])\tby d06dlp01.portsmouth.uk.ibm.com (Postfix) with ESMTP id 32D0F17D805A\tfor <personal@entry.idonethis.com>; Wed,  4 Jan 2017 16:53:47 +0000 (GMT)"
+    ],
+    [
+      "Received",
+      "from d06av22.portsmouth.uk.ibm.com (d06av22.portsmouth.uk.ibm.com [9.149.105.58])\tby b06cxnps4075.portsmouth.uk.ibm.com (8.14.9/8.14.9/NCO v10.0) with ESMTP id v04Goxpn4653532\tfor <personal@entry.idonethis.com>; Wed, 4 Jan 2017 16:50:59 GMT"
+    ],
+    [
+      "Received",
+      "from d06av22.portsmouth.uk.ibm.com (unknown [127.0.0.1])\tby IMSVA (Postfix) with ESMTP id 6B50F4C04A\tfor <personal@entry.idonethis.com>; Wed,  4 Jan 2017 15:49:13 +0000 (GMT)"
+    ],
+    [
+      "Received",
+      "from d06av22.portsmouth.uk.ibm.com (unknown [127.0.0.1])\tby IMSVA (Postfix) with ESMTP id A5AAF4C044\tfor <personal@entry.idonethis.com>; Wed,  4 Jan 2017 15:49:12 +0000 (GMT)"
+    ],
+    [
+      "Received",
+      "from d50lp33.co.us.ibm.com (unknown [9.17.249.38])\tby d06av22.portsmouth.uk.ibm.com (Postfix) with ESMTPS\tfor <personal@entry.idonethis.com>; Wed,  4 Jan 2017 15:49:12 +0000 (GMT)"
+    ],
+    [
+      "Received",
+      "from localhost\tby d50lp33.co.us.ibm.com with IBM ESMTP SMTP Gateway: Authorized Use Only! Violators will be prosecuted\tfor <personal@entry.idonethis.com> from <rashik_parmar@uk.ibm.com>;\tWed, 4 Jan 2017 09:50:56 -0700"
+    ],
+    [
+      "Received",
+      "from smtp.notes.na.collabserv.com (192.155.248.90)\tby d50lp33.co.us.ibm.com (192.168.2.144) with IBM ESMTP SMTP Gateway: Authorized Use Only! Violators will be prosecuted;\t(version=TLSv1/SSLv3 cipher=AES128-GCM-SHA256 bits=128/128)\tWed, 4 Jan 2017 09:50:54 -0700"
+    ],
+    [
+      "Received",
+      "from localhost\tby smtp.notes.na.collabserv.com with smtp.notes.na.collabserv.com ESMTP\tfor <personal@entry.idonethis.com> from <rashik_parmar@uk.ibm.com>;\tWed, 4 Jan 2017 16:50:52 -0000"
+    ],
+    [
+      "Received",
+      "from us1a3-smtp05.a3.dal06.isc4sb.com (10.146.71.159)\tby smtp.notes.na.collabserv.com (10.106.227.141) with smtp.notes.na.collabserv.com ESMTP;\tWed, 4 Jan 2017 16:50:50 -0000"
+    ],
+    [
+      "Received",
+      "from us1a3-mail151.a3.dal06.isc4sb.com ([10.146.38.115])          by us1a3-smtp05.a3.dal06.isc4sb.com          with ESMTP id 2017010416504994-213602 ;          Wed, 4 Jan 2017 16:50:49 +0000 "
+    ],
+    [
+      "Subject",
+      "Re: What'd you get done today? - Personal - December 16"
+    ],
+    [
+      "In-Reply-To",
+      "<585463edf27d9_43fed170f7a3c73069@a3dc3e4d-fd6e-454d-9ea1-df370c2aaa8d.mail>"
+    ],
+    [
+      "From",
+      "\"Rashik Parmar\" <rashik_parmar@uk.ibm.com>"
+    ],
+    [
+      "To",
+      "personal@entry.idonethis.com"
+    ],
+    [
+      "Date",
+      "Wed, 4 Jan 2017 16:50:50 +0000"
+    ],
+    [
+      "Sensitivity",
+      ""
+    ],
+    [
+      "Mime-Version",
+      "1.0"
+    ],
+    [
+      "References",
+      "<585463edf27d9_43fed170f7a3c73069@a3dc3e4d-fd6e-454d-9ea1-df370c2aaa8d.mail>"
+    ],
+    [
+      "Importance",
+      "Normal"
+    ],
+    [
+      "X-Priority",
+      "3 (Normal)"
+    ],
+    [
+      "X-Mailer",
+      "IBM Verse Build 13080-972 | IBM Domino Build V851SAAS_12052016_FP4 December 15, 2016"
+    ],
+    [
+      "X-Llnoutbound",
+      "False"
+    ],
+    [
+      "X-Disclaimed",
+      "39299"
+    ],
+    [
+      "X-Tnefevaluated",
+      "1"
+    ],
+    [
+      "Content-Type",
+      "multipart/related; boundary=\"=_related 005C8BA00025809E_=\""
+    ],
+    [
+      "X-Cbid",
+      "17010416-0028-0000-0000-0000028CD37F"
+    ],
+    [
+      "X-Ibm-Iss-Spamdetectors",
+      "Score=0.405233; BY=0.241252; FL=0; FP=0; FZ=0; HX=0; KW=0; PH=0; SC=0.405233; ST=0; TS=0; UL=0; ISC="
+    ],
+    [
+      "X-Ibm-Iss-Detailinfo",
+      "BY=3.00006372; HX=3.00000240; KW=3.00000007; PH=3.00000004; SC=3.00000199; SDB=6.00803476; UDB=6.00390886; UTC=2017-01-04 16:50:51"
+    ],
+    [
+      "X-Cbparentid",
+      "17010416-9718-0000-0000-000002771B66"
+    ],
+    [
+      "X-Ibm-Av-Detection",
+      "SAVI=unused REMOTE=unused XFE=unused"
+    ],
+    [
+      "X-Tm-As-Gconf",
+      "00"
+    ],
+    [
+      "X-Content-Scanned",
+      "Fidelis XPS MAILER"
+    ],
+    [
+      "X-Ibm-Av-Detection",
+      "SAVI=unused REMOTE=unused XFE=unused"
+    ],
+    [
+      "Message-Id",
+      "<OF3F908156.767A27CA-ON0025809E.005C8B9F-0025809E.005C8BA1@notes.na.collabserv.com>"
+    ],
+    [
+      "X-Proofpoint-Virus-Version",
+      "vendor=fsecure engine=2.50.10432:,, definitions=2017-01-04_13:,, signatures=0"
+    ],
+    [
+      "X-Proofpoint-Spam-Details",
+      "rule=outbound_notspam policy=outbound score=0 spamscore=0 suspectscore=38 malwarescore=0 phishscore=0 adultscore=0 bulkscore=0 classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1612050000 definitions=main-1701040262"
+    ]
+  ],
+  "stripped-text": "Unless stated otherwise above: \n- Narsaifua - Funeral \n- Catch-up on emails \n________________________________________________________________________________    \n \n  \n Rashik Parmar MBE  \n Technical Executive - Europe IBM Distinguished Engineer \nPast President, IBM Academy of Technology \nMobile: +44-7710-820616 | Tie-Line: 37276048 \nE-mail: rashik_parmar@uk.ibm.com \n\n \n  \n \n \n \n 1175 Century Way, Thorpe Park, Colton, Leeds LS15 8ZB, United Kingdom",
+  "X-Proofpoint-Spam-Details": "rule=outbound_notspam policy=outbound score=0 spamscore=0 suspectscore=38 malwarescore=0 phishscore=0 adultscore=0 bulkscore=0 classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1612050000 definitions=main-1701040262",
+  "X-Ibm-Helo": "d06dlp01.portsmouth.uk.ibm.com",
+  "X-Cbparentid": "17010416-9718-0000-0000-000002771B66",
+  "X-Llnoutbound": "False",
+  "sender": "rashik_parmar@uk.ibm.com",
+  "X-Priority": "3 (Normal)",
+  "X-Mailgun-Incoming": "Yes",
+  "Sensitivity": "",
+  "body-plain": "Unless stated otherwise above: \n- Narsaifua - Funeral \n- Catch-up on emails \n________________________________________________________________________________    \n \n  \n Rashik Parmar MBE  \n Technical Executive - Europe IBM Distinguished Engineer \nPast President, IBM Academy of Technology \nMobile: +44-7710-820616 | Tie-Line: 37276048 \nE-mail: rashik_parmar@uk.ibm.com \n\n \n  \n \n \n \n 1175 Century Way, Thorpe Park, Colton, Leeds LS15 8ZB, United Kingdom \n\n \n ----- Original message ----- From: I Done This <personal@entry.idonethis.com> \nTo: Rashik Parmar/UK/IBM@IBMGB \nCc: \nSubject: What'd you get done today? - Personal - December 16 \nDate: Fri, Dec 16, 2016 10:00 PM \n\nTake 30 seconds to do a quick status update for your team.    \n \nWhat'd you get done today?  \nFriday, 16 December 2016 Take 30 seconds to write out what you got done today. You can do that by clicking here and adding a few entries. Or you can just reply to this email: list a few accomplishments for the day and your teammates will see what you've been up to. (http://email.entry.idonethis.com/c/eJwVjkEOgzAMBF8DN1CInQQfcuil30AmdkREaRGk_28q7Uqj1RxWYhCL0pfoZoceVLINQgtCVpmCyYEhBTCeOjQMkkBRhixeB3SNSHkaJEMwyTLzLOPB5dVvEcGtM6_eeCBHiKIMGbzVmcilYPpX3Go9O3h09tmyauWxyOetdSv3mD5HG2urYTRIyduJUn_Fi--t7MvJ18FX-_Tdx7Ief_8H3XI74w) Check-in on (http://email.entry.idonethis.com/c/eJwVjkEOgzAMBF8DN1CInQQfcuil30AmdkREaRGk_28q7Uqj1RxWYhCL0pfoZoceVLINQgtCVpmCyYEhBTCeOjQMkkBRhixeB3SNSHkaJEMwyTLzLOPB5dVvEcGtM6_eeCBHiKIMGbzVmcilYPpX3Go9O3h09tmyauWxyOetdSv3mD5HG2urYTRIyduJUn_Fi--t7MvJ18FX-_Tdx7Ief_8H3XI74w) I Done This One year ago \nThis is what you got done on this day one year ago, Wednesday, December 16, 2015    \n  \n- evening meeting with the procurement lead + team  \n  \n- UniCredit - Prep meetings  \n  \n- Lunch with Massimo M \nYouâ€™re receiving this because you're a member of Personal. Turn it (http://email.entry.idonethis.com/c/eJwVjkEOgzAMBF8DN1CInQQfcuil30AmdkREaRGk_28q7Uqj1RxWYhCL0pfoZoceVLINQgtCVpmCyYEhBTCeOjQMkkBRhixeB3SNSHkaJEMwyTLzLOPB5dVvEcGtM6_eeCBHiKIMGbzVmcilYPpX3Go9O3h09tmyauWxyOetdSv3mD5HG2urYTRIyduJUn_Fi--t7MvJ18FX-_Tdx7Ief_8H3XI74w) off. (http://email.entry.idonethis.com/c/eJwVj8HKhDAMhJ9Gb0ptWmMPHv7L_xqSNimW3bpS9f03CxkyXxgGwiuyddyX1S_ezSCcLXLYHGThCU1GgoRg5tA5Q8AJxPGQeZbBeXVBaBo4A5pkiWjhsVJ59_tqjJntJD6DB7EYFhQUszgbZwQU27_X_b7PDv46-68T5aax8OeQey_XmD5Vj7fKkDMuJC0LSbFKjdKuvZyX0uSCd7qf43rilVqJsjWp5WDN9G1tpMnXdlKr1PSD5zWWWH_tX8KcS8M) IBM United Kingdom Limited - Registered in England and Wales with number 741598. \nRegistered office: PO Box 41, North Harbour, Portsmouth, Hampshire PO6 3AU",
+  "attachments": [
+    {
+      "url": "https://se.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6IjM0MTgzODkzLWRiYzMtNDc5Zi1iNWQ5LTMxZTRkYTE2MTBhMyIsInMiOiI5OWVjNzczYzQ0IiwiYyI6InRhbmtiIn0=/attachments/0",
+      "content-type": "image/png",
+      "name": "Image.1483511454497169.png",
+      "size": 6003
+    },
+    {
+      "url": "https://se.api.mailgun.net/v3/domains/entry.idonethis.com/messages/eyJwIjpmYWxzZSwiayI6IjM0MTgzODkzLWRiYzMtNDc5Zi1iNWQ5LTMxZTRkYTE2MTBhMyIsInMiOiI5OWVjNzczYzQ0IiwiYyI6InRhbmtiIn0=/attachments/1",
+      "content-type": "image/png",
+      "name": "Image.1483511454497170.png",
+      "size": 661
+    }
+  ],
+  "X-Cbid": "17010416-0028-0000-0000-0000028CD37F",
+  "References": "<585463edf27d9_43fed170f7a3c73069@a3dc3e4d-fd6e-454d-9ea1-df370c2aaa8d.mail>",
+  "X-Ibm-Rcptto": "personal@entry.idonethis.com",
+  "Subject": "Re: What'd you get done today? - Personal - December 16"
+}

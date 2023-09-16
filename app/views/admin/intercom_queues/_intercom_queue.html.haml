@@ -1,0 +1,10 @@
+%li.admin-list_item.admin-list-users_item
+  = link_to admin_user_path(intercom_queue.user) do
+    %big= intercom_queue.user.full_name_or_something_else_identifying
+    %dl
+      %dt Queued
+      %dd= intercom_queue.created_at.strftime("%b %d '%y")
+      %dt User Created
+      %dd= intercom_queue.user.created_at.strftime("%b %d '%y")
+      %dt User Updated
+      %dd= intercom_queue.user.updated_at.strftime("%b %d '%y")

@@ -1,0 +1,104 @@
+.settings-form
+  .list-errors
+    color: $red
+    margin-bottom: 1rem
+
+  .js-list-errors
+    color: $red
+    margin-bottom: 1rem
+    display: none
+
+  .field
+    text-align: left
+    overflow: hidden
+    margin: 0
+    padding: 0.5rem 0
+    border-bottom: 1px solid $super-faint
+
+    label
+      color: $grey
+      font-weight: 300
+      padding: 0 0 0.25rem
+
+    [type="text"], [type="password"], [type="email"], [type="file"], [type='tel']
+      display: block
+      width: 100%
+
+    select
+      display: block
+
+    &:first-of-type
+      padding-top: 0
+
+    &:last-child
+      padding-bottom: 0
+      border-bottom: 0
+
+    &.clocks
+      & > .clock
+        float: left
+        margin-right: 1rem
+        padding-right: 1rem
+        border-right: 1px solid $super-faint
+        &:last-child
+          margin-right: 0
+          padding-right: 0
+          border-right: 0
+
+  .field.tel
+    overflow: visible !important
+
+  .field
+    .uploader
+      display: block
+      overflow: hidden
+      padding-left: 3.5rem
+      .square.portrait
+        float: left
+        margin-left: -3.5rem
+
+    .hint
+      font-size: ms(-2)
+      color: $grey
+
+  .field.credit-card
+    .numbers
+      overflow: hidden
+      padding-right: 5.5rem
+
+      label
+        display: block
+
+      [type='tel']
+        float: left
+        &:first-child
+          width: 100%
+        &:last-child
+          float: right
+          margin-right: -5.5rem
+          width: 5rem
+
+    .dates
+      overflow: hidden
+
+      label
+        display: block
+
+      [type='tel']
+        width: 4rem
+        float: left
+        text-align: center
+        margin-right: 0.5rem
+
+  .actions
+    overflow: hidden
+
+    .opt-out
+      float: right
+      margin: 0.675rem 0
+      color: $grey
+      a
+        color: $black
+        &:hover
+          cursor: pointer
+          color: $red

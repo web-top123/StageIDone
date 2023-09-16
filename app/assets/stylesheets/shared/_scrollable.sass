@@ -1,0 +1,14 @@
+.scrollable
+  position: relative
+  max-height: 60vh
+  overflow-x: hidden
+  overflow-y: auto
+
+  &.overflowed-top
+    box-shadow: inset 0 2px 1px rgba($black,0.05)
+
+  &.overflowed-bottom
+    box-shadow: inset 0 -2px 1px rgba($black,0.05)
+
+  &.overflowed-top.overflowed-bottom
+    box-shadow: inset 0 2px 1px rgba($black,0.05), inset 0 -2px 1px rgba($black,0.05)

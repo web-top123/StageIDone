@@ -1,0 +1,27 @@
+- content_for :current_page do
+  = link_to "Members", [@organization, :organization_memberships]
+
+- content_for :header do
+  = render partial: 'organizations/header', locals: { organization: @organization }
+
+%main.application-main
+  %div.wrapper-small{role: 'layout'}
+    %header.header-standard
+      %h2.left Organization members
+
+      %nav.header-standard-nav
+        = link_to "Invite members", [:new, @organization, :invitation], class: 'button simple'
+
+    %section.section-standard
+      %ul.list-members
+        - @organization_memberships.each do |organization_membership|
+          %li.list-member-item= render partial: 'summary', locals: { organization_membership: organization_membership }
+
+    - if @invitations.any?
+      %header.header-unintrusive
+        %h4 Pending invitations
+
+      %section.section-standard
+        %ul.list-invitations
+          - @invitations.each do |invitation|
+            %li.list-invitation-item= render partial: 'invitations/summary', locals: { invitation: invitation }

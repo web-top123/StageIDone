@@ -1,0 +1,48 @@
+.wrapper-small{role: 'layout'}
+  .onboard-content
+    %header.onboard-header
+      %h1 Upgrade your <strong>I Done This</strong> account
+
+    - if @source_errors.present?
+      .onboard-panel.illustrated-logo
+        %main
+          :markdown
+            Unfortunately, your account is not eligible for the automatic upgrade process.
+
+            To proceed with your upgrade, please contact support at [support@idonethis.com](mailto:support@idonethis.com) or [1·800·508·9177](tel:+18005089177).
+
+          %aside &nbsp;
+
+          %nav= link_to "Return to I Done This", "https://idonethis.com", class: 'button'
+
+    - else
+      = form_tag "/migrate" do
+        %input{type: 'hidden', name: 'override', value: params[:override]}
+        %input{type: 'hidden', name: 'disable_digest_and_reminders', value: params[:disable_digest_and_reminders]}
+        %input{type: 'hidden', name: 'username', value: params[:username]}
+        %input{type: 'hidden', name: 'validate', value: params[:validate]}
+        .onboard-panel
+          %main
+            :markdown
+              Please review the data summary to the left and make sure it looks correct.
+
+              After upgrading, all your team members will be upgraded to the new version of **I Done This**. (_n.b._ Users will need to re-connect any integrations currently being used.)
+
+            - if @source_data && @source_data[:entries].length > 5000
+              :markdown
+                This process will take a while, and **I Done This** will be inaccessible to your organization during this time. We recommend performing the upgrade during periods of low usage.
+
+          %aside
+            %h3 #{pretty_name}:
+            %ul
+              - if !only_personal && (non_personal_teams && non_personal_teams.length > 1)
+                %li <code>#{ pluralize non_personal_teams.length, 'team' }</code>
+              - if !only_personal
+                %li <code>#{ pluralize @source_data[:users].length, 'user' }</code>
+              %li <code>#{ pluralize @source_data[:entries].length, 'entry' }</code>
+              %li <code>#{ pluralize @source_data[:comments].length, 'comment' }</code>
+              %li <code>#{ pluralize @source_data[:likes].length, 'like'}</code>
+
+          %nav
+            %input.button{type: 'submit', value: 'Continue'}
+

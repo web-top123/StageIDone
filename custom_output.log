@@ -1,0 +1,6 @@
+nohup: ignoring input
+W, [2023-09-14T01:10:32.867345 #31654]  WARN -- : [SKYLIGHT] [0.10.6] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)
+I, [2023-09-14T01:10:32.907821 #31654]  INFO -- sentry: ** [Raven] Raven 2.1.0 ready to catch errors
+** [Raven] Raven 2.1.0 ready to catch errors
+  [1m[36mTeamMembership Load (118.2ms)[0m  [1mSELECT  "team_memberships".* FROM "team_memberships" WHERE "team_memberships"."deleted_at" IS NULL AND "team_memberships"."reminder_status" IS NULL AND (next_reminder_time < '2023-09-14 01:20:33.157932') AND "team_memberships"."removed_at" IS NULL  ORDER BY "team_memberships"."id" ASC LIMIT 1000[0m

@@ -1,0 +1,9 @@
+%div.invitation-summary
+  %div.invitation-summary_content
+    #{ invitation.email_address }
+    %em (Sent #{ time_ago_in_words(invitation.sent_at) } ago)
+
+  %nav.invitation-summary_role
+    %a.button.utility{'data-action' => 'cancelInvitation', 'data-id' => invitation.invitation_code} Cancel
+    %a.button.utility{'data-action' => 'resendInvitation', 'data-id' => invitation.invitation_code}
+      Resend

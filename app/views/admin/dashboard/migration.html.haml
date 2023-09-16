@@ -1,0 +1,27 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Dashboard", '/admin'
+    = link_to "Migration metrics", '/admin/dashboard/migration'
+
+.wrapper{role: 'layout'}
+  %nav.admin-subnav
+    = link_to "Acquisition", "/admin/dashboard/acquisition"
+    = link_to "Usage", "/admin/dashboard/usage"
+    = link_to "Migration", "/admin/dashboard/migration"
+
+  %table.admin-data
+    %tr
+      %td &nbsp;
+      %th Migrated orgs
+      %th Migrated users
+      %th Percent who logged in
+
+    - @weeks.each do |week|
+      %tr
+        %th #{ week[:monday].strftime("%m/%d/%Y") }
+        %td #{ week[:migrated_orgs] }
+        %td #{ week[:migrated_users] }
+        - if week[:migrated_users] > 0
+          %td #{ (week[:logged_in_users] * 100.0 / week[:migrated_users]).round(2) }%
+        - else
+          %td -

@@ -1,0 +1,77 @@
+.calendar-overview
+  padding: 0.125rem
+
+  .calendar-overview_header
+    overflow: hidden
+    clear: both
+
+    .day
+      label
+        display: block
+        width: 100%
+        font-weight: 500
+        color: $black
+        font-size: ms(-1)
+        text-align: center
+        background: $super-faint
+
+  .calendar-overview_main
+    overflow: hidden
+    clear: both
+
+  .day
+    float: left
+    width: 14.285%
+    padding: 0.125rem
+
+    a
+      &:hover
+        .card
+          background: rgba($blue,0.03)
+        label
+          color: $blue
+
+  .weekend
+    .card
+      label
+        color: rgba($grey,0.41)
+
+  .card.highlight
+    background: #FFFF99
+
+  .card
+    background: $white
+    height: 4.675rem
+    color: $grey
+    position: relative
+
+    .indicator
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      display: flex
+      align-items: center
+      justify-content: center
+
+      .disc
+        border-radius: 100%
+        background: $faint
+        height: 0.5rem
+        min-height: 0.5rem
+        width: 0.5rem
+        min-width: 0.5rem
+        margin-top: -0.5rem
+
+    label
+      position: absolute
+      bottom: 0.25rem
+      right: 0.5rem
+      font-size: ms(-1)
+      color: rgba($grey,0.71)
+
+    &.current
+      label
+        color: $blue
+        font-weight: 500

@@ -1,0 +1,23 @@
+!!!
+%html
+  %head= render 'layouts/head'
+
+  %body.context-super-faint
+    =# render 'tracking/google_tag_manager'
+
+    .modal-errors
+      - if flash[:notice]
+        %div.application-flash= flash[:notice]
+      - if flash[:alert]
+        %div.application-flash= flash[:alert]
+      - if flash[:error]
+        %div.application-flash= flash[:error]
+
+
+    %div.centered{role: 'layout'}
+      - if content_for? :header
+        %div.application-header= yield :header
+
+      = yield
+
+    =# render partial: 'tracking/snippets'

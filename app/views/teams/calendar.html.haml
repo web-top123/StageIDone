@@ -1,0 +1,69 @@
+- content_for :current_page do
+  = link_to "Calendar", [:calendar, @team]
+
+- content_for :header do
+  = render partial: 'teams/header', locals: { team: @team }
+
+- content_for :sidebar do
+  = render partial: 'teams/sidebar', locals: { team: @team, current_page: 'calendar' }
+
+- content_for :notice do
+  - if !@team.active_users.include?(current_user)
+    :markdown
+      You're not a member of **#{ @team.name }** so you can't add entries here unless you join.
+
+    %nav
+      = link_to raw("Join <strong>#{ @team.name }</strong>"), [:join, @team], method: 'post'
+
+#calendar-entries{ 'data-content' =>  @entries_by_occured_on_by_user.to_json }
+#users-info{ 'data-content' =>  @users_with_entries.to_json }
+
+- cache "/t/#{ @team.hash_id }/calendar-overview/#{ @team.entries.maximum(:updated_at).try(:utc).try(:to_s, :number) }/#{ @calendar_presenter.month }/#{ Date.current }" do
+  %main.application-main
+    %div.wrapper-small{role: 'layout'}
+      %header.header-standard.header-calendar
+        %nav.header-calendar_previous= link_to @calendar_presenter.previous_month.strftime('%B'), calendar_team_path(date: @calendar_presenter.previous_month)
+        %h2.header-calendar_current= @calendar_presenter.month.strftime('%B %Y')
+        %nav.header-calendar_next= link_to @calendar_presenter.next_month.strftime('%B'), calendar_team_path(date: @calendar_presenter.next_month)
+
+      %div.calendar-overview
+        %header.calendar-overview_header
+          %div.day.weekend
+            %label Sunday
+          %div.day
+            %label Monday
+          %div.day
+            %label Tuesday
+          %div.day
+            %label Wednesday
+          %div.day
+            %label Thursday
+          %div.day
+            %label Friday
+          %div.day.weekend
+            %label Saturday
+
+        %main.calendar-overview_main
+          - cur_day = @calendar_presenter.month_beginning
+          - scale = scale_for_entries(@calendar_presenter.entries)
+          - full = 2.5
+          - empty = 0.5
+
+          - cur_day.wday.times do
+            %div.day.blank &nbsp;
+
+          - while cur_day <= @calendar_presenter.month_ending do
+            %div.day{class: (cur_day.saturday? or cur_day.sunday?) ? 'weekend' : nil}
+              .card{class: (cur_day == Date.current) ? 'current' : nil,  'data-action' => 'toggleDate', 'data-value' => cur_day.strftime('%Y-%m-%d')}
+                .indicator
+                  - size = calendar_indicator_size_for_entries(@calendar_presenter.entries.for_day(cur_day), scale, full, empty)
+                  - colour = calendar_indicator_colour_for_entries(@calendar_presenter.entries.for_day(cur_day))
+                  .disc{style: "width: #{ size }rem; height: #{ size }rem; background-color: #{ colour }; border-radius: #{ size * 0.5 }rem"} &nbsp;
+                %label= cur_day.strftime('%e')
+
+
+            - cur_day = cur_day + 1
+
+  %main.application-main
+    %div.wrapper-small{role: 'layout'}
+      %div.content-block#entries

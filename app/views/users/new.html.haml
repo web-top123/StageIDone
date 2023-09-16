@@ -1,0 +1,49 @@
+:coffeescript
+  $ ->
+    tz = jstz.determine()
+    $('#user_time_zone').val tz.name()
+
+.modal-content-small
+  - if @invitation
+    %header.modal-header
+      %h1 Accept invitation
+      %p.accept-invitation Join <strong>#{ @invitation.organization.name }</strong> on <strong>I Done This</strong>.
+
+  - else
+    %header.modal-header
+      %h1 Sign up
+
+  = form_for(@user, html: {class: 'modal-form'}) do |f|
+    - if @user.errors.any?
+      %ul.list-errors
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+    = f.hidden_field :invitation_code
+    = f.hidden_field :time_zone
+
+    .field.terse
+      = f.label :full_name
+      = f.text_field :full_name, placeholder: 'Benji Franklin'
+    .field.terse
+      = f.label :email_address, 'Email'
+      = f.email_field :email_address, placeholder: 'benji@idonethis.com'
+    .field.terse
+      = f.label :phone_number, 'Phone (optional)'
+      = f.telephone_field :phone_number, class: 'tel_input'
+    .field.terse
+      = f.label :password
+      = f.password_field :password, placeholder: 'Must have at least six characters'
+    - if !Rails.env.development?
+      .field.terse
+        = recaptcha_tags
+      
+    .actions.actions-modal= f.submit 'Continue', class: 'button modal'
+
+  - if !@invitation
+    %footer.modal-footer
+      %div.or-other-option
+        :markdown
+          or [Sign Up with your Google Account](/auth/google).
+        %div.or-other-option
+          Already have an account? #{ link_to "Log in", login_path }.

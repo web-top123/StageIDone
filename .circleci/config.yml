@@ -1,0 +1,47 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: ruby:2.3.0
+    working_directory: ~/idt-two-staging
+    environment:
+      COVERAGE_REPORTER: code_climate
+      CODECLIMATE_REPO_TOKEN: e6a0482170447b75ca54c2fab0156374082b3d57d85a0394f55eaaff02ff33b1
+      SLACK_API_KEY: somekey
+      SLACK_API_SECRET: somesecret
+      SLACK_APP_VERIFICATION_TOKEN: abc
+      IDT_SLACK_AUTH_ID: abc
+      IDT_SLACK_AUTH_SECRET: def
+      MAILGUN_API_KEY: mailgunkey
+      MAILGUN_INBOUND_EMAIL_API_KEY: mailgunkey
+      STRIPE_SECRET_KEY: stripesecret
+      STRIPE_PUBLIC_KEY: stripepublic
+      SALESFORCE_USERNAME: joe@dirt.com
+      SALESFORCE_PASSWORD: password
+      SALESFORCE_SECURITY_TOKEN: abc
+      SALESFORCE_CLIENT_ID: def
+      SALESFORCE_CLIENT_SECRET: ghi
+    steps:
+      - checkout
+      # - run: bundle install --path vendor/bundle  # install dependencies
+      # - run: gem install autoprefixer-rails # This is not working
+      # - run: bundle exec rake db:create db:schema:load db:seed --trace  # setup database
+  deploy:
+    machine: true
+    working_directory: ~/idt-two-staging
+    environment:
+      HEROKU_APP: "idt-two-staging"
+    steps:
+      - checkout
+      -  run: git push -f git@heroku.com:idt-two-staging.git $CIRCLE_SHA1:master
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: staging

@@ -1,0 +1,50 @@
+.disc
+  border-radius: 100%
+  background-color: $black
+  display: block
+  color: $white
+  text-indent: -9999px
+  overflow: hidden
+  width: 1.5rem
+  height: 1.5rem
+
+  &.large
+    width: 2rem
+    height: 2rem
+
+  &.small
+    width: 0.875rem
+    height: 0.875rem
+
+.disc.status
+  &.done
+    background-color: $green
+  &.goal
+    background-color: $blue
+  &.blocked
+    background-color: $red
+
+.disc.icon
+  background-color: $grey
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 0.5rem auto
+  text-indent: -9999px
+  overflow: hidden
+
+  &.large
+    background-size: 0.675rem auto
+
+  &.small
+    background-size: 0.4rem auto
+
+  &.done
+    background-image: url(asset-path('icon-done-white.svg'))
+  &.goal
+    background-image: url(asset-path('icon-goal-white.svg'))
+    &.completed
+      &:hover
+        background-image: url(asset-path('icon-done-white.svg'))
+        background-color: $green
+  &.blocked
+    background-image: url(asset-path('icon-blocked-white.svg'))

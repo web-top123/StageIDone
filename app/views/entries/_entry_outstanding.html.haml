@@ -1,0 +1,10 @@
+%div.entry-brief.outstanding-goal{'data-bind' => 'entry', 'data-id' => entry.hash_id}
+  %div.entry-status
+    %div.disc.icon.status.small{class: entry.status, title: "#{ entry.status } for #{ entry.occurred_on}"}= entry.status
+
+  %div.entry-content
+    %div.entry-body= raw EntryParser.auto_link(entry)
+    %nav.entry-options
+      - if entry.user == current_user
+        %a{'data-action' => 'markDone', 'data-id' => entry.hash_id} Mark as done
+        %a{'data-action' => 'archive', 'data-id' => entry.hash_id} Archive

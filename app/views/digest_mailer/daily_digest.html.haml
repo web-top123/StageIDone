@@ -1,0 +1,56 @@
+.top-note #{ pluralize(@entries.size,'entry') } from #{ pluralize(@users_with_entries.size,'team member') }
+
+.content
+  .header
+    .main-wrap
+      %table
+        %tr
+          %td
+            %h1 #{ @team.name }
+          %td
+            %p.salutation= @today.strftime('%A, %e %B %Y')
+
+  .main
+    .main-wrap
+      .important-text
+        %p
+          Since #{ (@last_sent.to_date == (@today - 1)) ? 'yesterday' : @last_sent.in_time_zone(@user.time_zone).strftime('%A') }, <strong>#{ @team.name }</strong> has logged <strong>#{ pluralize(@entries.size,'entry') }</strong> &mdash; #{ @entries.for_status('done').count } that #{ (@entries.for_status('done').count == 1) ? 'is' : 'are' } done, #{ @entries.for_status('goal').count } that #{ (@entries.for_status('goal').count == 1) ? 'is' : 'are' } set as goals, and #{ @entries.for_status('blocked').count } that #{ (@entries.for_status('blocked').count == 1) ? 'is' : 'are' } blocked.
+
+      - @users_with_entries.each do |user|
+        %div.content-block
+          %h2 #{ user.full_name } #{ (user == @user) ? '(you)' : nil }
+          - @entries.where(user_id: user.id).created_since_time(@last_sent).order('status').group_by(&:occurred_on).each do |date, entries|
+            %strong= date.strftime("%A, %B %d, %Y")
+            %table.entries
+              - entries.each do |entry|
+                - like_count = entry.reactions.is_like.count
+                - comment_count = entry.reactions.is_comment.count
+                %tr
+                  - next if entry.completed_same_day?
+                  %tr.entry-row
+                    %td= image_tag "emails/icon-#{ entry.status.downcase }-24x24.png", alt: entry.status
+                    %td= raw EntryParser.auto_link(entry)
+                  %tr.reaction-row
+                    %td
+                    %td
+                      %table.reactions
+                        %tr
+                          %td{class: like_count == 0 ? 'grey' : 'blue'}
+                            =link_to image_tag("emails/icon-like-#{ like_count == 0 ? 'grey' : 'blue'}.png", class: "icon-like #{like_count == 0 ? '' : 'blue'}"), team_url(@team, date: date, entry_id: entry.hash_id)
+                          %td.count{class: like_count == 0 ? 'grey' : 'blue'}
+                            =link_to like_count, team_url(@team, date: date, entry_id: entry.hash_id)
+                          %td.spacer
+                          %td{class: comment_count == 0 ? 'grey' : 'blue'}
+                            =link_to image_tag("emails/icon-comment-#{ comment_count == 0 ? 'grey' : 'blue'}.png", class: 'icon-comment'), team_url(@team, date: date, entry_id: entry.hash_id)
+                          %td.count{class: comment_count == 0 ? 'grey' : 'blue'}
+                            =link_to comment_count, team_url(@team, date: date, entry_id: entry.hash_id)
+      - if @users_without_entries.any?
+        %div.content-block.delineate-top.padded-block.omega
+          %p.centered We haven&rsquo;t heard from #{ @users_without_entries.map { |u| "<strong>#{ u.full_name_or_something_else_identifying }</strong>" }.to_sentence(last_word_connector: ' or ').html_safe }.
+
+  .footer
+    %p.centered You&rsquo;re receiving this because you're a member of #{ link_to @team.name, @team_url }. Turn it #{ link_to 'off', @email_presenter.unsubscribe_digests_url }.
+
+    %p.centered
+      = link_to root_url do
+        = image_tag "emails/we-love-progress.png", class: 'strapline', alt: 'We love progress'

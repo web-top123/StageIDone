@@ -1,0 +1,24 @@
+- content_for :header do
+  %nav.nav-exit
+    = link_to root_path, title: 'back' do
+      %div.square.icon.light.close.small close
+
+.modal-content-small
+  %header.modal-header
+    - if current_user.active_teams.any?
+      %h1 Create a new team
+    - else
+      %h1 Setup your team
+
+  .modal-card
+    = form_for([@organization, @team], html: {class: 'modal-form'}) do |f|
+      - if @team.errors.any?
+        %ul.list-errors
+          - @team.errors.full_messages.each do |msg|
+            %li= msg
+
+      .field.terse
+        = f.label :name
+        = f.text_field :name, placeholder: "e.g. #{ %w(Development Product Marketing).sample } Team"
+
+      .actions= f.submit 'Create team', class: 'button'

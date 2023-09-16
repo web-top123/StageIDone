@@ -1,0 +1,12 @@
+%li.admin-list_item.admin-list-users_item
+  = link_to admin_organization_path(organization, @filter_params) do
+    %big= organization.name.present? ? organization.name : 'Untitled'
+    %dl
+      %dt Members
+      %dd= organization.active_users.count
+      %dt Created
+      %dd= organization.created_at.strftime("%b %d '%y")
+      %dt Teams
+      %dd= organization.teams.count
+      %dt Entries
+      %dd= organization.entries.count

@@ -1,0 +1,66 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Teams", [:admin, :teams]
+
+    - if params[:filter_field].present? && params[:filter_value]
+      = link_to "#{ params[:filter_field] }: #{ params[:filter_value] }", admin_users_path(filter_field: params[:filter_field], filter_value: params[:filter_value])
+
+    = link_to @team.name, [:admin, @team]
+
+.wrapper-small{role: 'layout'}
+  .admin-pane
+    %header.admin-show_header
+      %h1= @team.name
+
+    - if @team.active_users.any?
+      %nav.admin-nav
+        = link_to "Log in as a team member", log_in_as_user_admin_user_path(@team.active_users.first), method: 'post', class: 'button utility'
+
+    %main.admin-show_main
+      = form_for [:admin, @team] do |f|
+        %table.admin-table
+          %tr
+            %th= f.label :id
+            %td= f.text_field :id, readonly: true
+          %tr
+            %th= f.label :name
+            %td= f.text_field :name
+          %tr
+            %th= f.label :prompt_done
+            %td= f.text_field :prompt_done, class: 'extra'
+          %tr
+            %th= f.label :prompt_goal
+            %td= f.text_field :prompt_goal, class: 'extra'
+          %tr
+            %th= f.label :prompt_blocked
+            %td= f.text_field :prompt_blocked, class: 'extra'
+          %tr
+            %th= f.label :public
+            %td= f.check_box :public
+          %tr
+            %th
+              %label Total entries
+            %td
+              %input{readonly: true, type: 'text', value: @team.entries.count}
+          %tr
+            %th
+              %label Organization
+            %td
+              - if @team.organization.present?
+                = link_to @team.organization.name, [:admin,@team.organization]
+              - else
+                No organization
+          %tr
+            %th
+              %label Active Members
+            %td= @team.active_users.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Removed Members
+            %td= @team.removed_users.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Deleted Members
+            %td= @team.users.only_deleted.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+        %nav.actions
+          = f.submit 'Save changes', class: 'button'

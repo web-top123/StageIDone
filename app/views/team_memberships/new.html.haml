@@ -1,0 +1,27 @@
+- content_for :header do
+  %nav.nav-exit
+    = link_to [@team, :team_memberships], title: 'back' do
+      %div.square.icon.light.close.small close
+
+.modal-content
+  %header.modal-header
+    %h1 Add to #{ @team.name }
+
+  %div.invitations-panel
+    = form_for [@team, TeamMembership.new(team: @team)] do |f|
+      %input{type: 'hidden', name: 'team_memberships[email_addresses]', 'data-bind' => 'emailAddresses'}
+
+      .invitations-panel_omnifield
+        %input{type: 'email', placeholder: 'Add or invite by email address', 'data-bind' => 'addOrInviteByEmailAddress'}
+
+      .invitations-panel_potential-invitations.scrollable
+        %ul.invitations-panel_potential-invitations_list
+          - @team.organization.active_users.each do |user|
+            - next if @team.active_users.include? user
+            %li{'data-email_address' => user.email_address}
+              %strong= user.full_name_or_something_else_identifying
+              %a.good-button{'data-action' => 'addToTeam'} Add
+              %a.bad-button{'data-action' => 'removeFromTeam'} Remove
+
+      .invitations-panel_actions{style: 'display:none'}
+        %input.button{type: 'submit', value: 'Add', 'data-verb' => 'Add'}

@@ -1,0 +1,65 @@
+%nav.sidebar-nav
+  - current_user_active_organizations = current_user.active_organizations
+  %section
+    - if current_user.show_personal_team
+      - current_user.personal_teams.each do |team|
+        = link_to team, class: ((@current_team == team) ? 'current' : nil) do
+          .icon= render partial: 'layouts/sidebar/icon_personal'
+          .text= team.name
+
+    - current_user.active_teams.includes(:organization).each do |team|
+      - next unless team.organization.present?
+      = link_to team, class: ((@current_team == team) ? 'current' : nil) do
+        .icon= render partial: 'layouts/sidebar/icon_team'
+        .text= team.name
+
+    - if current_user_active_organizations.any?
+      = link_to [:new, current_user_active_organizations.first, :team], class: 'new-record' do
+        .icon= render partial: 'layouts/sidebar/icon_plus'
+        .text Create new team
+
+  - if content_for? :sidebar
+    %section.subnavigation
+      = yield :sidebar
+
+  - if controller_name == 'organizations'
+    - if current_page?(:controller => 'organizations', :action => 'settings')
+      - current_page = 'settings'
+    - if current_page?(:controller => 'organizations', :action => 'stats')
+      - current_page = 'stats'
+    - if current_page?(:controller => 'organizations', :action => 'show')
+      - current_page = 'teams'
+  - if controller_name == 'organization_memberships'
+    - if current_page?(:controller => 'organization_memberships', :action => 'index')
+      - current_page = 'organization_membership'
+
+  %section.account
+    - if current_user_active_organizations.any?
+      - current_user_active_organizations.each_with_index do |organization, index|
+        %a.btn.btn-primary{"aria-controls" => "collapse_org_menu#{index}", "aria-expanded" => "false", "class"=>"org-collapse", "data-toggle" => "collapse", :role => "button"}
+          .icon= render partial: 'layouts/sidebar/icon_organization'
+          = organization.name_or_something_else_identifying
+
+        - org_menu_style = (params[:id].present? || params[:organization_id].present?) && organization.hash_id == (params[:id] || params[:organization_id]) ? 'display: block' : 'display: none'
+        %div{:id => "collapse_org_menu#{index}", :class => "collapse", :style => org_menu_style }
+          .card.card-body
+            = render partial: 'organizations/sidebar', locals: { organization: organization, current_page: current_page }
+
+    - else
+      = link_to [:new, :organization], class: 'new-record' do
+        .icon= render partial: 'layouts/sidebar/icon_plus'
+        .text Create organization
+
+    = link_to :integrations, class: ((controller_name == 'integrations') ? 'current' : nil) do
+      .icon= render partial: 'layouts/sidebar/icon_integrations'
+      .text Integrations
+
+    = link_to :notifications, class: ((controller_name == 'notifications') ? 'current' : nil) do
+      .icon= render partial: 'layouts/sidebar/icon_notifications'
+      .text Notifications
+      - notifications_count = current_user.notifications_count
+      - if notifications_count > 0
+        .notify= notifications_count
+    = link_to [:settings, :user], class: ((controller_name == 'users') && (action_name == 'settings') && (@user == current_user) ? 'current' : nil) do
+      .icon= render partial: 'layouts/sidebar/icon_settings'
+      .text Account settings

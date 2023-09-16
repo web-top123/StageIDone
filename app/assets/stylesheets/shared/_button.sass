@@ -1,0 +1,145 @@
+.button, input.button, button.button, a.button
+  display: block
+  padding: 0.325rem 0.625rem 0.5rem
+  background-color: $white
+  border: 2px solid rgba($red,0.91)
+  border-radius: 3px
+  color: rgba($red,0.91)
+
+  &:hover
+    background-color: $white
+    border-color: $red
+    color: $red
+    cursor: pointer
+
+  &.button-green
+    color: $forest
+    border-color: $forest
+
+    &:hover
+      background-color: $white
+      color: $forest
+
+  &.button-parrot-green
+    color: $parrot-green
+    border-color: $parrot-green
+
+    &:hover
+      background-color: $white
+      color: $parrot-green
+
+  &.button-orange
+    color: $orange
+    border-color: $orange
+
+    &:hover
+      background-color: $white
+      color: $orange
+
+  &.button-purple
+    color: $violet
+    border-color: $violet
+
+    &:hover
+      background-color: $white
+      color: $violet
+
+  &.button-blue
+    color: $azure
+    border-color: $azure
+
+    &:hover
+      background-color: $white
+      color: $azure
+
+  &.button-white
+    border: 0
+    background-color: rgba($white,0.91)
+    color: $red
+
+    &:hover
+      background-color: $white
+      color: $red
+
+  &.button-small
+    padding: 0.15rem 0.5rem 0.275rem
+
+  &[disabled=disabled]
+    border-color: $silver
+    color: $silver
+
+  &.inline
+    display: inline-block
+
+  &.simple
+    padding: 0.25rem 0.75rem 0.325rem
+    font-size: ms(-1)
+    font-weight: 500
+    background: $green
+    color: $white
+    text-decoration: none
+    border: 0
+
+    &:hover
+      color: $white
+      background-color: darken($green,5%)
+
+  &.utility
+    padding: 0.125rem 0.325rem 0.25rem
+    font-size: ms(-1)
+    font-weight: 500
+    background: $faint
+    color: $grey
+    text-decoration: none
+    border: 0
+
+    &:hover
+      color: $black
+      background-color: darken($faint,5%)
+
+  &.flash
+    padding: 0.25rem 0.325rem
+    font-size: ms(-1)
+    font-weight: 500
+    border: 0
+    background: $green
+    color: $white
+    opacity: 0.9
+    text-decoration: none
+    text-align: center
+
+    &:hover
+      color: $white
+      background-color: $green
+      opacity: 1
+
+  &.enthusiastic
+    &:hover
+      background: $red
+      color: $white
+
+    &.button-green
+      &:hover
+        background-color: $forest
+        color: $white
+
+    &.button-parrot-green
+      &:hover
+        background-color: $parrot-green
+        color: $white
+        border: 2px solid $parrot-green
+
+    &.button-orange
+      &:hover
+        background-color: $orange
+        color: $white
+
+    &.button-purple
+      &:hover
+        background-color: $violet
+        color: $white
+
+    &.button-blue
+      &:hover
+        background-color: $azure
+        color: $white

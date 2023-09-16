@@ -1,0 +1,74 @@
+.wrapper-small{role: 'layout'}
+  .onboard-content
+    - if ((Time.zone.now - @user.created_at) > 1.week)
+      %header.onboard-header
+        %h1 New icons and blockers
+
+      .onboard-primer
+        %div.onboard-primer_status-types
+          %section.onboard-primer_status-type
+            %div.onboard-primer_status-type-icon.onboard-primer_status-type-icon_done{style: "background-image: url('#{ asset_path 'icon-done-white.svg' }')"}
+            %h3 Done
+            :markdown
+              Something you've completed
+
+          %section.onboard-primer_status-type
+            %div.onboard-primer_status-type-icon.onboard-primer_status-type-icon_goal{style: "background-image: url('#{ asset_path 'icon-goal-white.svg' }')"}
+            %h3 Goal
+            :markdown
+              Something you plan to get do
+
+          %section.onboard-primer_status-type
+            %div.onboard-primer_status-type-icon.onboard-primer_status-type-icon_blocked{style: "background-image: url('#{ asset_path 'icon-blocked-white.svg' }')"}
+            %h3 Blocked
+            :markdown
+              Something you can't get done
+
+        %article.onboard-primer_article
+          :markdown
+            ## Get to know the new entry icons
+
+            Also — check it out: we've introduced blocked entries. A blocked entry is something that you can't get done, usually for an external reason (like it's dependent on something somebody else is working on).
+
+          %nav.onboard-primer_nav
+            .actions
+              = form_for @user, url: '/migrate/two' do |f|
+                = f.hidden_field :onboarded_at
+                = f.submit "Got it — get started", class: 'button'
+
+    - else
+
+      %header.onboard-header
+        %h1 Welcome to <strong>I Done This</strong>
+
+      .onboard-primer
+        %div.onboard-primer_status-types
+          %section.onboard-primer_status-type
+            %div.onboard-primer_status-type-icon.onboard-primer_status-type-icon_done{style: "background-image: url('#{ asset_path 'icon-done-white.svg' }')"}
+            %h3 Done
+            :markdown
+              Something you've completed
+
+          %section.onboard-primer_status-type
+            %div.onboard-primer_status-type-icon.onboard-primer_status-type-icon_goal{style: "background-image: url('#{ asset_path 'icon-goal-white.svg' }')"}
+            %h3 Goal
+            :markdown
+              Something you plan to get do
+
+          %section.onboard-primer_status-type
+            %div.onboard-primer_status-type-icon.onboard-primer_status-type-icon_blocked{style: "background-image: url('#{ asset_path 'icon-blocked-white.svg' }')"}
+            %h3 Blocked
+            :markdown
+              Something you can't get done
+
+        %article.onboard-primer_article
+          :markdown
+            ## Get to know the entry types
+
+            Everything you enter in your daily check-in is either something you've gotten done, something you plan to get done, or something you can't get done — usually for an external reason (like it's dependent on something somebody else is working on).
+
+          %nav.onboard-primer_nav
+            .actions
+              = form_for @user, url: '/migrate/two' do |f|
+                = f.hidden_field :onboarded_at
+                = f.submit "Got it — get started", class: 'button'

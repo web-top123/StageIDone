@@ -1,0 +1,11 @@
+- alternate_email ||= AlternateEmail.new
+
+- if alternate_email.errors.any?
+  %ul.list-errors
+    - alternate_email.errors.full_messages.each do |msg|
+      %li= msg
+
+= form_for alternate_email, html: {class: 'alternate-email-form', id: 'new-alternate-email'} do |f|
+
+  .field
+    = f.email_field :email_address, placeholder: 'benji@idonethis.com'

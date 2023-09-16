@@ -1,0 +1,1 @@
+Emoji.asset_path = '/assets/emoji/'

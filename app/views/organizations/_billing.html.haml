@@ -1,0 +1,9 @@
+%section.section-billing
+  :markdown
+    This account is billed to:
+
+    #{ organization.billing_name ? "**#{ organization.billing_name }**   " :  nil }
+    **#{ organization.billing_card_type || ' ' }** ending in `#{ organization.billing_card_last_four || ' ' }`
+
+  .actions
+    %a.button.utility{'data-action' => 'showTemplate', 'data-template' => billing_form_organization_path(organization)} Update Credit Card

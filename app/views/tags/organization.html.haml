@@ -1,0 +1,30 @@
+- content_for :header do
+  = render partial: 'organizations/header', locals: { organization: @organization }
+
+/ - cache "/o/#{ @organization.hash_id }/tag/#{ @tag.name }/#{ @tag.entries.for_organization(@organization).maximum(:updated_at).try(:utc).try(:to_s, :number) }/#{ Date.current }" do
+%main.application-main
+  %div.wrapper-tiny{role: 'layout'}
+    %header.header-profile
+      %h2 ##{ @tag.name }
+
+    %section.section-standard
+      / - if @entries.for_period((Date.current - 29.days), Date.current).many?
+      /   = render partial: 'charts/activity_time_brief', locals: { entries: @entries, start_date: (Date.current - 29.days), end_date: Date.current }
+
+      -if @entries.present?
+        %ol.list-entries.activity-stream
+          %h4 Entry list
+          - @entries.each do |entry|
+            - next if entry.completed_same_day?
+            %li.list-entries-item= render partial: 'entries/stream', locals: { entry: entry }
+
+        = paginate @entries
+
+      - if @reactions.present?
+        %ol.list-entries.activity-stream
+          %h4 Comment list
+          - @reactions.each do |entry|
+            / - next if entry.completed_same_day?
+            %li.list-entries-item= render partial: 'entries/stream', locals: { entry: entry }
+      
+        = paginate @reactions

@@ -1,0 +1,45 @@
+- content_for :current_page do
+  = link_to "Settings", [:settings, @team]
+
+- content_for :header do
+  = render partial: 'teams/header', locals: { team: @team }
+
+- content_for :sidebar do
+  = render partial: 'teams/sidebar', locals: { team: @team, current_page: 'settings' }
+
+%main.settings-main
+  %div.wrapper-small{role: 'layout'}
+    - if policy(@team).settings?
+      %section.section-settings
+        %header.header-settings
+          %h2 Details
+
+        %div= render partial: 'teams/form', locals: { team: @team }
+
+    - if @team.active_users.include?(current_user)
+      %section.section-settings
+        %header.header-settings
+          %h2 Reminders
+          :markdown
+            Most users turn on reminders for every day of the week they typically work. We'll send a digest of your team's progress, and a daily reminder to add your own entries.
+
+        %div= render partial: 'team_memberships/form', locals: { team_membership: current_user.membership_of(@team) }
+
+    %section.section-settings
+      %header.header-settings
+        %h2 Integrations
+
+      %div= render 'integrations/list'
+
+    / - if policy(@team).destroy?
+    /   %section.section-settings
+    /     %header.header-settings
+    /       %h2 Delete team
+
+    /     %div
+    /       :markdown
+    /         Deleting the **#{ @team.name }** team is not reversible. Once deleted, you will not be able to recover any data from this team.
+
+    /       %hr
+
+    /       = link_to "Delete Team", @team, class: 'button inline', method: 'delete', data: { confirm: 'Are you extremely certain? Doubly certain? Certain to a fault? Immensely certain? This cannot be undone.' }

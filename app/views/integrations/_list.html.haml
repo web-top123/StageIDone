@@ -1,0 +1,19 @@
+- if @integration_links.blank? || @integration_links.empty?
+  :markdown
+    You do not currently have any [integrations configured](/integrations).
+
+- else
+  %ul.list-settings-items
+    - @integration_links.each do |link|
+      %li.list-settings-item
+        .content
+          = link.short_name
+          %span= raw link.summary
+
+        - if link.integration_user.user == current_user
+          .actions
+            = form_tag link.delete_path, method: :delete do
+              = hidden_field_tag 'integration_link_id', link.id
+              = submit_tag 'Remove',
+                class: 'button utility',
+                confirm: 'Are you sure you want to remove this integration?'

@@ -1,0 +1,38 @@
+.list-teams
+
+.list-team-item
+  overflow: hidden
+  clear: both
+  border-bottom: 1px solid $faint
+  padding: 0.75rem 0
+
+  &.inactive
+    opacity: 0.5
+    &:hover
+      opacity: 1
+
+.team-summary
+  overflow: hidden
+  clear: both
+  padding-left: 8rem
+
+.team-summary_options
+  float: left
+  width: 7rem
+  margin-left: -8rem
+
+  h3 a
+    color: $black
+    font-size: ms(0)
+
+  a
+    font-size: ms(-1)
+    display: block
+    color: $grey
+    &:hover
+      color: $red
+
+.team-summary_content
+  padding: 0.25rem 0 0
+  .list-users-portraits
+    clear: none

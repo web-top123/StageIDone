@@ -1,0 +1,32 @@
+.top-note Take 30 seconds to do a quick status update for your team.
+
+.content
+  .header
+    .main-wrap
+      %table
+        %tr
+          %td
+            %h1 You're invited.
+          %td
+            %p.salutation #{ @invitation.organization.name }
+
+  .main
+    .main-wrap
+      .important-text
+        %p Hi #{ @invitation.full_name.present? ? @invitation.first_name : 'there' },
+
+        %p You have been invited to join your colleagues who are using <strong>I Done This</strong> to keep in sync.
+
+      .call-to-action
+        -if User.find_by(email_address: @invitation.email_address).present?
+          =link_to 'Join the team', notifications_url, class: 'call-to-action_button'
+        -else
+          =link_to 'Join the team', register_url(@invitation.invitation_code), class: 'call-to-action_button'
+      %p Once you've joined the team, you'll be able to track your own productivity, and keep on top of your team's progress, without the need for status meetings or stand-ups.
+
+      %p We hope you enjoy using <strong>I Done this</strong>. Definitely get in touch if you need help or have feedback for us.
+
+  .footer
+    %p.centered
+      = link_to root_url do
+        = image_tag "emails/we-love-progress.png", class: 'strapline', alt: 'We love progress'

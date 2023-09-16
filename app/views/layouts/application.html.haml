@@ -1,0 +1,137 @@
+-if current_user.created_at >= "2017-12-17"
+  -if current_user.organizations.present?
+    -if current_user.organizations.last.stripe_subscription_status?
+      !!!
+      %html
+        %head= render 'layouts/head'
+        %body
+        =# render 'tracking/google_tag_manager'
+        %div.application{role: 'layout'}
+          %nav.application-sidebar
+            = render 'layouts/sidebar'
+            %nav.menu-toggle
+              %a{'data-action' => 'menuSwitcher'} >
+
+          %div.application-content
+            - if content_for? :header
+              %div.application-header
+                = yield :header
+                %nav.nav-hamburger
+                  %a{'data-action' => 'menuSwitcher'} Menu
+
+            = render partial: 'layouts/encourage_upgrade'
+            - if flash[:notice]
+              %div.application-flash= flash[:notice]
+            - if flash[:error]
+              %div.application-flash= flash[:error]
+            - if content_for(:notice)
+              %div.application-flash= yield :notice
+
+            = yield
+        =# render partial: 'tracking/snippets'
+    -else
+      %html
+        %head= render 'layouts/head'
+        %body.context-super-faint
+          =# render 'tracking/google_tag_manager'
+          .modal-errors
+            - if flash[:notice]
+              %div.application-flash= flash[:notice]
+            - if flash[:alert]
+              %div.application-flash= flash[:alert]
+            - if flash[:error]
+              %div.application-flash= flash[:error]
+
+
+          %div.centered{role: 'layout'}
+            - if content_for? :header
+              %div.application-header= yield :header
+
+            = yield
+        =# render partial: 'tracking/snippets'
+  -else
+    %html
+      %head= render 'layouts/head'
+      %body
+      =# render 'tracking/google_tag_manager'
+      %div.application{role: 'layout'}
+        %nav.application-sidebar
+          = render 'layouts/sidebar'
+          %nav.menu-toggle
+            %a{'data-action' => 'menuSwitcher'} >
+
+        %div.application-content
+          - if content_for? :header
+            %div.application-header
+              = yield :header
+              %nav.nav-hamburger
+                %a{'data-action' => 'menuSwitcher'} Menu
+
+          = render partial: 'layouts/encourage_upgrade'
+          - if flash[:notice]
+            %div.application-flash= flash[:notice]
+          - if flash[:error]
+            %div.application-flash= flash[:error]
+          - if content_for(:notice)
+            %div.application-flash= yield :notice
+
+          = yield
+      =# render partial: 'tracking/snippets'
+-else
+  %html
+    %head= render 'layouts/head'
+    %body
+    =# render 'tracking/google_tag_manager'
+    %div.application{role: 'layout'}
+      %nav.application-sidebar
+        = render 'layouts/sidebar'
+        %nav.menu-toggle
+          %a{'data-action' => 'menuSwitcher'} >
+
+      %div.application-content
+        - if content_for? :header
+          %div.application-header
+            = yield :header
+            %nav.nav-hamburger
+              %a{'data-action' => 'menuSwitcher'} Menu
+
+        = render partial: 'layouts/encourage_upgrade'
+        - if flash[:notice]
+          %div.application-flash= flash[:notice]
+        - if flash[:error]
+          %div.application-flash= flash[:error]
+        - if content_for(:notice)
+          %div.application-flash= yield :notice
+
+        = yield
+    =# render partial: 'tracking/snippets'
+
+:javascript
+  $(document).ready( function() {
+    $('.modal-link').click(function() {
+      var Id = $(this).attr('id');
+      $("#"+Id+".modal").addClass("in");
+      $("#"+Id+".modal").css("display", "block");
+    });
+    $('.myModal-close').click(function() {
+      var Id = $(this).attr('id');
+      $("#"+Id+".modal").removeClass("in");
+      $("#"+Id+".modal").css("display", "none");
+    });
+
+    $('.modal-link-1').click(function() {
+      var Id = $(this).attr('id');
+      $("#"+Id+".modal").addClass("in");
+      $("#"+Id+".modal").css("display", "block");
+    });
+    $('.myModal-1-close').click(function() {
+      var Id = $(this).attr('id');
+      $("#"+Id+".modal").removeClass("in");
+      $("#"+Id+".modal").css("display", "none");
+    });
+  });
+
+<!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXMHMRV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->

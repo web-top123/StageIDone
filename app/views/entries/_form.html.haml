@@ -1,0 +1,22 @@
+= form_for [team, entry], html: {class: entry.new_record? ? 'entry-form do-not-drag' : 'entry-form do-not-drag persisted', 'data-bind' => 'entry', 'data-id' => entry.hash_id} do |f|
+  = f.hidden_field :occurred_on
+  = f.hidden_field :status
+
+  %div.entry-status
+    %div.status{role: 'input', 'data-bind' => 'entry[status]'}
+      %div.status-current{'data-value' => entry.status}
+        %div.square.small.light.icon{class: entry.status} done
+      %ul.status-options
+        %li{'data-value' => 'done', title: 'Something you got done'}
+          %div.square.small.icon.light.done done
+        %li{'data-value' => 'goal', title: 'Something you plan to do'}
+          %div.square.small.icon.light.goal goal
+        %li{'data-value' => 'blocked', title: 'Something impeding your progress'}
+          %div.square.small.icon.light.blocked blocked
+
+  %div.entry-content{'data-prompt-done' => team.prompt_for('done'), 'data-prompt-goal' => team.prompt_for('goal'), 'data-prompt-blocked' => team.prompt_for('blocked')}
+    %div.entry-body= f.text_area :body, placeholder: team.prompt_for(entry.status), autocomplete: 'off', rows: 1, data: {expandable: team.enable_expandable_entries_box, users: team.active_users.map(&:first_name).uniq.compact, tags: team.tags.map(&:name).uniq.compact}
+    %div.entry-hint
+      Press <span data-bind='browserEnterKey'>Enter</span> to <a data-action='save'>Save</a>
+      - if !entry.new_record?
+        or Esc to <a data-action='cancel'>Cancel</a>

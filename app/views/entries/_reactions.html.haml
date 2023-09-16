@@ -1,0 +1,14 @@
+%div.entry-reactions
+  - if likes.any?
+    %div.entry-likes
+      Liked by
+      = likes.map { |l| link_to(l.user.first_name_or_something_else_identifying, [l.reactable.team.organization, l.user]) }.join(', ').html_safe
+
+  %div.entry-comments{style: comments.any? ? 'display:block' : 'display:none'}
+    %ol.list-comments
+      - comments.each do |comment|
+        %li.list-comments-item= render partial: 'reactions/comment', locals: {comment: comment, entry_org: entry_org}
+
+      - reaction = Reaction.new(user: current_user, reactable: entry)
+      - if policy(reaction).create?
+        %li.list-comments-item= render partial: 'reactions/form', locals: {comment: reaction}

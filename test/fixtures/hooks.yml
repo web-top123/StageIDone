@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+hook_one:
+  user: user_one
+  team: team_one
+  target_url: http://fakeweb.com
+
+hook_two:
+  user: user_one
+  team: team_two
+  target_url: https://example.com/some_token/abcdef
+
+hook_three:
+  user: user_two
+  team: team_two
+  target_url: https://example.com/some_token/abcdef

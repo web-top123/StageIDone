@@ -1,0 +1,93 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Organizations", [:admin, :organizations]
+
+    - if params[:filter_field].present? && params[:filter_value]
+      = link_to "#{ params[:filter_field] }: #{ params[:filter_value] }", admin_users_path(filter_field: params[:filter_field], filter_value: params[:filter_value])
+
+    = link_to @organization.name, [:admin, @organization]
+
+.wrapper-small{role: 'layout'}
+  .admin-pane
+    %header.admin-show_header
+      %h1= @organization.name
+
+    %nav.admin-nav
+      - if @organization.owners.any?
+        = link_to "Log in as an owner", log_in_as_user_admin_user_path(@organization.owners.first), method: 'post', class: 'button utility'
+      - if @organization.stripe_customer_token.present?
+        = link_to "View in Stripe", "https://dashboard.stripe.com/customers/#{ @organization.stripe_customer_token }", class: 'button utility'
+      = link_to "Permanently Delete", [:admin, @organization], method: 'delete', class: 'button utility', data: { confirm: 'This is permanent, irreversible, and potentially catostrophic. You should probably click cancel.' }
+
+    %main.admin-show_main
+      = form_for [:admin, @organization] do |f|
+        %table.admin-table
+          %tr
+            %th= f.label :id
+            %td= f.text_field :id, readonly: true
+          %tr
+            %th= f.label :name
+            %td= f.text_field :name
+          %tr
+            %th= f.label :saml_meta_url
+            %td= f.text_field :saml_meta_url
+          %tr
+            %th= f.label :autojoin_domain
+            %td= f.text_field :autojoin_domain
+          %tr
+            %th= f.label :billing_name
+            %td= f.text_field :billing_name
+          %tr
+            %th= f.label :billing_email_address
+            %td= f.text_field :billing_email_address
+          %tr
+            %th
+              %label Subscription quantity
+            %td
+              %input{readonly: true, type: 'text', value: @organization.active_users.count}
+          %tr
+            %th= f.label :plan_level
+            %td= f.text_field :plan_level, readonly: true
+          %tr
+            %th= f.label :plan_interval
+            %td= f.text_field :plan_interval, readonly: true
+          %tr
+            %th= f.label :trial_ends_at
+            %td
+              = f.date_field :trial_ends_at, min: Date.tomorrow,
+                readonly: @organization.stripe_subscription_status.present? && @organization.stripe_subscription_status != 'trialing'
+              %p.help-text Can only be updated to a date in the future, sorry.
+          %tr
+            %th= f.label :stripe_subscription_status
+            %td= f.text_field :stripe_subscription_status, readonly: true
+          %tr
+            %th
+              %label Total entries
+            %td
+              %input{readonly: true, type: 'text', value: @organization.entries.count}
+          %tr
+            %th
+              %label Teams
+            %td= @organization.teams.map { |t| link_to(t.name, [:admin,t]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Owners
+            %td= @organization.owners.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Admins
+            %td= @organization.admins.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Active Members
+            %td= @organization.active_users.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Removed Members
+            %td= @organization.removed_users.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+          %tr
+            %th
+              %label Deleted Members
+            %td= @organization.users.only_deleted.map { |u| link_to(u.full_name_or_something_else_identifying, [:admin,u]) }.join(', ').html_safe
+        %nav.actions
+          = f.submit 'Save changes', class: 'button'

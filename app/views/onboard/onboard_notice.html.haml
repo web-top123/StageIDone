@@ -1,0 +1,46 @@
+:coffeescript
+  $ ->
+    $('.uploader').on 'click', '.portrait-placeholder', (e) ->
+      $(e.currentTarget).siblings('[type="file"]:first').click()
+
+    $('[data-bind="goBySuggestion"]').on 'click', '[data-action="yes"]', (e) ->
+      $('.fieldlet.go-by').css('opacity','0')
+
+    $('[data-bind="goBySuggestion"]').on 'click', '[data-action="no"]', (e) ->
+      $('[data-bind="goBySuggestion"]:first').css('opacity','0')
+      $('[data-bind="goByOverride"]:first').css('opacity','1')
+
+    $('.uploader [type="file"]').on 'change', (e) ->
+      reader = new FileReader
+
+      reader.onload = (re) ->
+        $('.uploader:first .portrait-placeholder:first').attr('style', "background-image: url('" + re.target.result + "'); background-size: cover;")
+
+      reader.readAsDataURL @files[0]
+
+    $('[name="user[full_name]"]').on 'blur', (e) ->
+      fullNameVal = $(e.currentTarget).val()
+      $.post ('#{ go_by_for_full_name_user_path }'), {full_name: fullNameVal}, (data) ->
+        if data.length > 0
+          $('.fieldlet.go-by').css('opacity','1')
+          $('[data-bind="user[go_by_name]"]:first').text data
+          $('[name="user[go_by_name]"]:first').val data
+        else
+          $('.fieldlet.go-by').css('opacity','0')
+
+.wrapper-small{role: 'layout'}
+  .onboard-content
+    %header.onboard-header
+      %h1 Welcome to <strong>I Done This</strong>
+
+    .onboard-warning{ :style=>"background:white;padding: 25px;text-align: justify;"}
+      %strong{:class => "code", :id => "message"} As we continue to focus our resources on product development, we will no longer offer our free plan as of April 21st, 2019. To continue enjoying the benefits of IDoneThis, all free users will need to sign up for a paid subscription plan option by this date. Please note that we’ve recently added a “Small” plan for only $12.50 per month.
+      %br/ 
+      %br/ 
+      %br/ 
+      %br/ 
+      
+      =button_to 'Subscribe Now',{:controller => 'onboard', :action => 'onboard_one'}, {:class => 'your button class', :method => 'get', :style => 'cursor:pointer;float: right;margin-top: -50px;'}
+      %br/ 
+      = link_to 'Skip for now', root_path,style: 'cursor:pointer;float: right;margin-top: -15px;'
+      =# button_to 'Subscribe Now',{:controller => 'onboard', :action => 'onboard_one'}, {:class => 'your button class', :method => 'get', :style => 'cursor:pointer;float: right;margin-top: -50px;'}

@@ -1,0 +1,93 @@
+.calendar[role='input']
+  position: relative
+  padding: 0
+  overflow: hidden
+  background: $white
+  margin: 3px
+  border-radius: 2px
+
+.calendar_header
+  position: relative
+  display: block
+  overflow: hidden
+  background: $blue
+  color: $white
+
+  a
+    color: rgba($white,0.51)
+    &:hover
+      color: rgba($white,0.71)
+
+  .calendar_header_current
+    text-align: center
+    font-weight: 500
+    padding: 0.15rem 0
+
+  .calendar_header_previous, .calendar_header_next
+    font-family: $mono
+    top: 0.075rem
+    font-size: 0.8em
+    position: absolute
+    a
+      display: block
+      padding: 0.25rem 0.75rem
+      text-decoration: none
+      &:hover
+        cursor: pointer
+
+  .calendar_header_previous
+    left: 0
+
+  .calendar_header_next
+    right: 0
+
+.calendar_body
+  overflow: hidden
+  .day
+    float: left
+    width: 2rem
+    text-align: center
+
+.calendar_body_header
+  overflow: hidden
+  padding: 0.15rem 0
+  border-bottom: 1px solid $very-faint
+  .day
+    font-weight: 500
+    color: rgba($black,0.81)
+
+.calendar_body_main
+  padding: 0
+  width: 2 * 7rem
+  .day
+    height: 2rem
+    font-weight: 300
+
+    &.weekend
+      a
+        color: rgba($black,0.31)
+
+    a
+      text-decoration: none
+      display: block
+      height: 2rem
+      width: 2rem
+      color: rgba($black, 0.81)
+
+      .card
+        height: 2rem
+        padding-top: 0.25rem
+
+      .today
+        color: $blue
+
+      .current
+        background: rgba($blue,0.075)
+
+      label:hover
+        cursor: pointer
+
+      &:hover
+        cursor: pointer
+        .card
+          background: rgba($blue,0.075)

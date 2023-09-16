@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+user_one_team_one:
+  user: user_one
+  team: team_one
+  created_at: 1900-01-01
+  updated_at: 1900-01-01
+
+user_one_team_three:
+  user: user_one
+  team: team_three
+  created_at: 1900-01-01
+  updated_at: 1900-01-01
+
+user_two_team_two:
+  user: user_two
+  team: team_two
+  created_at: 1900-01-01
+  updated_at: 1900-01-01
+
+user_one_team_four:
+  user: user_one
+  team: team_four
+  created_at: 1900-01-01
+  updated_at: 1900-01-01
+
+user_two_team_four:
+  user: user_two
+  team: team_four
+  created_at: 1900-01-01
+  updated_at: 1900-01-01
+
+user_one_personal_team:
+  user: user_one
+  team: user_one_personal
+  created_at: 1900-01-01
+  updated_at: 1900-01-01
+
+user_two_personal_team:
+  user: user_two
+  team: user_two_personal
+  created_at: 1900-01-01
+  updated_at: 1900-01-01
+
+user_three_team_one:
+  user: user_three
+  team: team_one
+  created_at: 1900-01-01
+  updated_at: 1900-01-01

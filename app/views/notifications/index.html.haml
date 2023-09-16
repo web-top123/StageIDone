@@ -1,0 +1,46 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Notifications", [:notifications]
+
+%main.application-main
+  %div.wrapper-small{role: 'layout'}
+    %header.header-standard
+      %h2.left Your pending invitations
+
+    %section.section-standard
+      - if @pending_invitations.any?      
+        %ul.invitation-list
+          - @pending_invitations.each do |invitation|
+            %li.invitation-item
+              %p= invitation.text
+              .actions
+                = link_to 'Accept',  accept_invitation_url(invitation.invitation_code), method: :patch, class: 'button simple inline'
+                = link_to 'Decline', decline_invitation_url(invitation.invitation_code), method: :patch, class: 'button utility inline', data: { confirm: "Are you sure?" }
+      - else
+        %p You have no pending invites
+    %header.header-standard
+      .row
+        .col{style: "width:49%; display:inline-block"}
+          %h2 Unread notifications
+        .col{style: 'width:50%; text-align:right; display:inline-block;'}
+          - if @notifications.any?
+            %span= link_to "Check All", notifications_path, class: 'inline', style: 'color: blue; margin-left: 50px;', method: "post"
+    %section.section-standard.notifications-section
+      %p.no-notifications{style: 'display:none;'} You have no notifications
+      - if @notifications.any?      
+        %table{ style:"width:100%"}
+          - @notifications.each do |notification|            
+            %tr
+              - if notification.entry.present? && notification.entry.team.present? && notification.author.present?
+                %td                
+                  %p= "#{notification.entry.team.name}"
+                %td
+                  = link_to "#{notification.message}", team_path(notification.entry.team, date:notification.entry.occurred_on), class: 'inline', style: 'color: blue;'
+                %td
+                  = check_box_tag "", notification.id
+      - else
+        %p You have no notifications
+    %header.header-standard
+      %h2.right Archived notifications
+    %section.section-standard#archived-notifications-section
+      = render 'archived_notifications'

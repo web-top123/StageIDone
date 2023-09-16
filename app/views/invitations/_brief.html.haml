@@ -1,0 +1,7 @@
+%div.content.unredeemed
+  %strong= invitation.email_address
+  %span (invited on #{ invitation.sent_at.strftime('%B %e at %H:%M') })
+%nav.actions
+  - if (Time.zone.now - invitation.sent_at) > 10.minutes
+    %a.button.utility{'data-action' => 'resendInvitation', 'data-id' => invitation.invitation_code}
+      Resend

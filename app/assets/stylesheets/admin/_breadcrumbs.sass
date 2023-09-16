@@ -1,0 +1,15 @@
+.breadcrumbs
+  a
+    color: rgba($blue,0.71)
+    display: inline-block
+
+    &:hover
+      color: $blue
+
+    &:after
+      content: ' >'
+      color: rgba($blue,0.325)
+
+    &:last-child
+      &:after
+        content: none

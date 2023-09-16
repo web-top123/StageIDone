@@ -1,0 +1,36 @@
+- content_for :current_page do
+  = link_to "#{ @date.strftime('%B %e %Y') }", team_path(@team, date: @date)
+
+- content_for :header do
+  = render partial: 'teams/header', locals: { team: @team }
+
+- content_for :sidebar do
+  = render partial: 'teams/sidebar', locals: { team: @team, current_page: 'day' }
+
+#datepicker{:style => "display:none"}
+  %div.calendar{role: 'input'}= render partial: 'teams/calendar', locals: { team: @team, date: @date }
+
+#export{:style => "display:none"}
+  %div.modal-export= render partial: 'teams/export', locals: { team: @team, start_date: @date, end_date: @date }
+
+
+%main.application-main
+  %div.wrapper-small{role: 'layout'}
+    %header.header-standard
+      %h2.left= @date.strftime('%A, %B %e')
+
+      %nav.header-search
+        %form{method: 'get', action: search_team_path(@team)}
+          %input{type: 'text', name: 'q', placeholder: raw('Search entries&hellip;')}
+          %input{type: 'submit', value: 'Go'}
+
+      %nav.date-switcher
+        %a.date-switcher_calendar{'data-bind' => 'datePicker', "data-tipped-options" => "inline: 'datepicker'", 'data-current_date' => calendar_month_team_path(@team, date: @date)} cal
+        = link_to "<", team_path(@team, date: @date - 1), class: 'date-switcher_previous'
+        = link_to ">", team_path(@team, date: @date + 1), class: 'date-switcher_next'
+
+      %nav.header-misc-nav
+        %a{'data-bind' => 'exportToggle', "data-tipped-options" => "inline: 'export'"} Export
+
+    %div{'data-bind' => 'teamDay', 'data-id' => @team.slug}
+      = render partial: 'personal_day', locals: { team: @team, date: @date }

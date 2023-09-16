@@ -1,0 +1,27 @@
+= link_to team, class: ((current_page == 'day') && (@date == Date.current)) ? 'current' : nil do
+  .icon= render partial: 'layouts/sidebar/icon_day'
+  .text Today
+
+= link_to [:calendar, team], class: (current_page == 'calendar') ? 'current' : nil do
+  .icon= render partial: 'layouts/sidebar/icon_calendar'
+  .text Calendar
+
+- if !team.personal?
+  - if team.entries.many?
+    = link_to [:stats, team], class: (current_page == 'stats') ? 'current' : nil  do
+      .icon= render partial: 'layouts/sidebar/icon_reports'
+      .text Reports
+
+  - if policy(team).settings?
+    = link_to [team, :team_memberships], class: (current_page == 'team_memberships') ? 'current' : nil  do
+      .icon= render partial: 'layouts/sidebar/icon_team'
+      .text Members
+
+    = link_to [:settings, team], class: (current_page == 'settings') ? 'current' : nil  do
+      .icon= render partial: 'layouts/sidebar/icon_settings'
+      .text Team settings
+- else
+  - if policy(team).settings?
+    = link_to [:settings, team], class: (current_page == 'settings') ? 'current' : nil  do
+      .icon= render partial: 'layouts/sidebar/icon_settings'
+      .text Settings

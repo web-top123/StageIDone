@@ -1,0 +1,35 @@
+.top-note New comment from #{ @commenter.first_name_or_something_else_identifying } on your entry.
+
+.content
+  .header
+    .main-wrap
+      %h1 New comment on your entry
+
+  .main
+    .main-wrap
+      .important-text
+        %table.entries
+          %tr.entry-row
+            %td= image_tag "emails/icon-#{ @entry.status.downcase }-24x24.png", alt: @entry.status
+            %td
+              #{ simple_format @entry.body }
+              - unless @entry.occurred_on == Date.current
+                %em= @entry.occurred_on
+
+      %div.content-block.padded-block.delineate-top
+        %table.comments
+          - @entry.reactions.is_comment.chronologically.each do |comment|
+            %tr.comment-row{class: (comment == @comment) ? 'comment-row-active' : nil}
+              %td
+                <strong>#{ comment.user.full_name_or_something_else_identifying }</strong>:
+                #{ comment.body }
+
+        .call-to-action
+          =link_to 'Go to comment', @comment_page_url, class: 'call-to-action_button'
+
+  .footer
+    %p.centered You&rsquo;re receiving this because you have notifications enabled. Turn it #{ link_to 'off', @email_presenter.unsubscribe_comments_notification_url }.
+
+    %p.centered
+      = link_to root_url do
+        = image_tag "emails/we-love-progress.png", class: 'strapline', alt: 'We love progress'

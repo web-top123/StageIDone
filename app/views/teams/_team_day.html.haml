@@ -1,0 +1,32 @@
+%section.section-standard.day-users
+  - if users_with_entries.any?
+    %section.section-standard.day-users.section-standard-heard-margin
+      %header.header-standard.header-standard-heard-margin
+        %h2 We have heard from&hellip;
+      %ul.list-users-portraits.heard
+        - users_with_entries.each do |user|
+          %li.list-users-portraits-item.heard
+            = render partial: 'users/entry_portrait', locals: { user: user, team: team, date: date, user_team_entries_count: user_team_entries_count, portrait_size: 'large' }
+%section.section-standard.section-entries
+  %section.section-standard.day-users
+    %header.header-standard-border
+  - if team_active_users.include?(current_user)
+    - user_entries = current_user.entries.includes(:user, :team, :prompting_goal).for_team(team)
+    = render partial: 'user_day', locals: { user: current_user, cur_date: date, team: team, user_entries: user_entries, team_organization: team_organization}
+
+- if team_active_users.include?(current_user) or team_entries.for_day(date).any? != 0
+
+  - if users_without_entries.any?
+    %section.section-standard.day-users
+      %header.header-standard
+        %h2 We haven't heard from&hellip;
+      %ul.list-users-portraits
+        - users_without_entries.each do |user|
+          %li.list-users-portraits-item
+            = link_to [team.organization, user] do
+              = render partial: 'users/portrait', locals: { user: user, portrait_size: 'large' }
+
+- else
+  %div.empty-state
+    :markdown
+      No entries for this date &hellip; yet.

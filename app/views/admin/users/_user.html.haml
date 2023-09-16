@@ -1,0 +1,10 @@
+%li.admin-list_item.admin-list-users_item
+  = link_to admin_user_path(user, @filter_params) do
+    %big= user.full_name_or_something_else_identifying
+    %dl
+      %dt Last seen
+      %dd= user.last_seen_at.present? ? user.last_seen_at.strftime("%b %d '%y") : "MMM DD 'YY"
+      %dt Joined
+      %dd= user.created_at.strftime("%b %d '%y")
+      %dt Orgs
+      %dd= user.active_organizations.count

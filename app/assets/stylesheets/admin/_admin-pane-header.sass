@@ -1,0 +1,82 @@
+.admin-pane-header
+  background: $white
+
+.admin-pane-filter
+  background: $super-faint
+  overflow: hidden
+  clear: both
+  padding: 0.25rem 0.5rem 0.425rem
+
+.admin-pane-results
+  background-color: $white
+  overflow: hidden
+  clear: both
+  padding: 0.425rem 0.5rem 0.25rem
+
+  .total-results
+    float: left
+    color: $grey
+    font-family: $mono
+    font-size: 0.8em
+
+  .pagination
+    float: right
+    color: $grey
+    font-family: $mono
+    font-size: 0.8em
+
+.admin-pane-filter
+  form
+    float: right
+    select, input, label
+      padding: 0
+      margin: 0
+      display: inline-block
+    label
+      display: none
+    input
+      width: 6rem
+      border: 0
+      padding: 0 0.125rem
+      border: 1px solid $faint
+      background: rgba($white,0.75)
+      font-size: ms(-1)
+      font-family: $mono
+      color: $black
+      &:focus
+        background: rgba($white,0.875)
+        border-color: $blue
+
+nav.pagination
+  display: inline-block
+
+  .next, .prev
+    a
+      vertical-align: middle
+      display: inline-block
+      text-indent: -9999px
+      background-color: rgba($blue,0.71)
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 0.3rem auto
+      margin-top: -3px
+      width: 0.875rem
+      height: 0.875rem
+      border-radius: 100%
+
+      &:hover
+        background-color: $blue
+
+  .prev
+    a
+      background-image: url(asset-path('icon-left-white.svg'))
+
+  .next
+    a
+      background-image: url(asset-path('icon-right-white.svg'))
+
+  .last, .first, .page
+    display: none
+
+    &.current
+      display: inline-block

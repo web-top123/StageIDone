@@ -1,0 +1,12 @@
+.comment{'data-bind' => 'reaction', 'data-id' => comment.id}
+  - comment_user = comment.user
+  .user= render partial: 'users/portrait', locals: { user: comment_user, portrait_size: 'small' }
+  .content{class: policy(comment).edit? ? 'editable' : nil}
+    %strong= link_to comment_user.first_name_or_something_else_identifying, [entry_org, comment_user]
+    .body
+      = raw EntryParser.auto_link_comment(comment)
+      - if policy(comment).destroy?
+        = link_to 'Delete', '#', class: 'trash', 'data-id': comment.id, 'data-entry_id': comment.reactable.hash_id, 'data-action': 'delete'
+        
+
+      

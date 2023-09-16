@@ -1,0 +1,21 @@
+.top-note Verify the email address associated with your I Done This account
+
+.content
+  .header
+    .main-wrap
+      %h1 Verify your email address
+
+  .main
+    .main-wrap
+      .important-text
+        %p To verify the email associated with your <strong>I Done This</strong> account, we need you to click this button:
+
+      .call-to-action
+        =link_to 'Verify', verify_users_url(@user.verification_token), class: 'call-to-action_button'
+
+  .footer
+    %p.centered If you have no idea why you're receiving this email, you should reply to support@idonethis.com and let us know that somebody who isn't you is using your email address.
+
+    %p.centered
+      = link_to root_url do
+        = image_tag "emails/we-love-progress.png", class: 'strapline', alt: 'We love progress'

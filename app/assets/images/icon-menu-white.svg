@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Switches-2" fill="#fff">
+      <g id="_x2E_png_432_">
+        <path d="M3,6 L21,6 C22.6543,6 24,4.6543 24,3 C24,1.3457 22.6543,0 21,0 L3,0 C1.3457,0 0,1.3457 0,3 C0,4.6543 1.3457,6 3,6 L3,6 Z" id="Shape"></path>
+        <path d="M21,8 L3,8 C1.3457,8 0,9.3457 0,11 C0,12.6543 1.3457,14 3,14 L21,14 C22.6543,14 24,12.6543 24,11 C24,9.3457 22.6543,8 21,8 L21,8 Z" id="Shape"></path>
+        <path d="M21,16 L3,16 C1.3457,16 0,17.3457 0,19 C0,20.6543 1.3457,22 3,22 L21,22 C22.6543,22 24,20.6543 24,19 C24,17.3457 22.6543,16 21,16 L21,16 Z" id="Shape"></path>
+      </g>
+    </g>
+  </g>
+</svg>

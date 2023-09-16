@@ -1,0 +1,90 @@
+:coffeescript
+  $ ->
+    $('.onboard-one-button').on 'click', (e) ->
+      e.stopPropagation()
+      e.preventDefault()
+      btn = $(e.currentTarget)
+      btn.val('···')
+      btn.attr('disabled', true)
+      setTimeout (->
+        $('.onboard-one-form').submit()
+      ), 500
+
+    $('.uploader').on 'click', '.portrait-placeholder', (e) ->
+      $(e.currentTarget).siblings('[type="file"]:first').click()
+
+    $('[data-bind="goBySuggestion"]').on 'click', '[data-action="yes"]', (e) ->
+      $('.fieldlet.go-by').css('opacity','0')
+
+    $('[data-bind="goBySuggestion"]').on 'click', '[data-action="no"]', (e) ->
+      $('[data-bind="goBySuggestion"]:first').css('opacity','0')
+      $('[data-bind="goByOverride"]:first').css('opacity','1')
+
+    $('.uploader [type="file"]').on 'change', (e) ->
+      reader = new FileReader
+
+      reader.onload = (re) ->
+        $('.uploader:first .portrait-placeholder:first').attr('style', "background-image: url('" + re.target.result + "'); background-size: cover;")
+
+      reader.readAsDataURL @files[0]
+
+    $('[name="user[full_name]"]').on 'blur', (e) ->
+      fullNameVal = $(e.currentTarget).val()
+      $.post ('#{ go_by_for_full_name_user_path }'), {full_name: fullNameVal}, (data) ->
+        if data.length > 0
+          $('.fieldlet.go-by').css('opacity','1')
+          $('[data-bind="user[go_by_name]"]:first').text data
+          $('[name="user[go_by_name]"]:first').val data
+        else
+          $('.fieldlet.go-by').css('opacity','0')
+
+.wrapper-small{role: 'layout'}
+  .onboard-content
+    %header.onboard-header
+      %h1 Welcome to <strong>I Done This</strong>
+
+    .onboard-panel
+      = form_for @user, url: '/onboard/one', html: { class: 'onboard-form onboard-one-form' } do |f|
+        %main
+          - if @user.errors.any?
+            %ul.list-errors
+              - @user.errors.full_messages.each do |msg|
+                %li= msg
+
+          .field
+            - if @user.full_name.present?
+              = f.label :full_name, 'Is this your full name?'
+            - else
+              = f.label :full_name, 'What is your full name?'
+            = f.text_field :full_name, placeholder: "Jane Smith"
+
+            .fieldlet.go-by{style: @user.go_by_name.present? ? nil : 'display:none'}
+              %p{'data-bind' => 'goBySuggestion'}
+                = f.hidden_field :go_by_name
+                %span{'data-bind' => 'goByQuestion'} Can we call you <strong data-bind='user[go_by_name]'>#{ @user.go_by_name }</strong>?
+                %a{'data-action' => 'yes'} Yes
+                %a{'data-action' => 'no'} No
+
+              %p{'data-bind' => 'goByOverride', style: 'display:none'}
+                = f.label :go_by_name, 'I prefer to go by'
+                = f.text_field :go_by_name, placeholder: "Jane"
+
+          .field
+            = f.label :first_team_name, 'What is your team called?'
+            = f.text_field :first_team_name, placeholder: "e.g. #{ %w(Dev Marketing Product).sample } Team"
+
+        %aside
+          .uploader
+            - if @user.portrait.present?
+              %div.portrait-placeholder{style: "background-image:url(#{ asset_url(@user.portrait.url) }); background-size: cover;"}
+            - else
+              %div.portrait-placeholder
+
+            %label Upload a portrait. Smile!
+            = f.hidden_field(:portrait_cache)
+            = f.file_field(:portrait)
+
+        %nav
+          / .other-option= link_to raw("I don't plan to use <strong>I Done This</strong> with a team"), '/onboard/exit', method: 'patch'
+
+          .actions= f.submit 'Continue', class: 'button onboard-one-button'

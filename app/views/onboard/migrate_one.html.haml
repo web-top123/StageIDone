@@ -1,0 +1,77 @@
+:coffeescript
+  $ ->
+    $('.uploader').on 'click', '.portrait-placeholder', (e) ->
+      $(e.currentTarget).siblings('[type="file"]:first').click()
+
+    $('[data-bind="goBySuggestion"]').on 'click', '[data-action="yes"]', (e) ->
+      $('.fieldlet.go-by').hide()
+
+    $('[data-bind="goBySuggestion"]').on 'click', '[data-action="no"]', (e) ->
+      $('[data-bind="goBySuggestion"]:first').hide()
+      $('[data-bind="goByOverride"]:first').show()
+
+    $('.uploader [type="file"]').on 'change', (e) ->
+      reader = new FileReader
+
+      reader.onload = (re) ->
+        $('.uploader:first .portrait-placeholder:first').attr('style', "background-image: url('" + re.target.result + "'); background-size: cover;")
+
+      reader.readAsDataURL @files[0]
+
+    $('[name="user[full_name]"]').on 'blur', (e) ->
+      fullNameVal = $(e.currentTarget).val()
+      $.post ('#{ go_by_for_full_name_user_path }'), {full_name: fullNameVal}, (data) ->
+        if data.length > 0
+          $('.fieldlet.go-by').show()
+          $('[data-bind="user[go_by_name]"]:first').text data
+          $('[name="user[go_by_name]"]:first').val data
+        else
+          $('.fieldlet.go-by').hide()
+
+.wrapper-small{role: 'layout'}
+  .onboard-content
+    %header.onboard-header
+      %h1 Welcome to <strong>I Done This</strong>
+
+    .onboard-panel
+      = form_for @user, url: '/migrate/one', html: { class: 'onboard-form' } do |f|
+        %main
+          :markdown
+            Welome to this brand-new version of **I Done This**. Really quick &mdash; can you confirm a few details?
+
+          - if @user.errors.any?
+            %ul.list-errors
+              - @user.errors.full_messages.each do |msg|
+                %li= msg
+
+          .field
+            - if @user.full_name.present?
+              = f.label :full_name, 'Is this your full name?'
+            - else
+              = f.label :full_name, 'What is your full name?'
+            = f.text_field :full_name, placeholder: "Jane Smith"
+
+            .fieldlet.go-by{style: @user.go_by_name.present? ? nil : 'display:none'}
+              %p{'data-bind' => 'goBySuggestion'}
+                = f.hidden_field :go_by_name
+                %span{'data-bind' => 'goByQuestion'} Can we call you <strong data-bind='user[go_by_name]'>#{ @user.go_by_name }</strong>?
+                %a{'data-action' => 'yes'} Yes
+                %a{'data-action' => 'no'} No
+
+              %p{'data-bind' => 'goByOverride', style: 'display:none'}
+                = f.label :go_by_name, 'I prefer to go by'
+                = f.text_field :go_by_name, placeholder: "Jane"
+
+        %aside
+          .uploader
+            - if @user.portrait.present?
+              %div.portrait-placeholder{style: "background-image: #{ asset_url(@user.portrait.url) }; background-size: fill;"}
+            - else
+              %div.portrait-placeholder
+
+            %label Upload a portrait. Smile!
+            = f.hidden_field(:portrait_cache)
+            = f.file_field(:portrait)
+
+        %nav
+          .actions= f.submit 'Continue', class: 'button'

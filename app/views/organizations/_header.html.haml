@@ -1,0 +1,5 @@
+%div.breadcrumbs
+  = link_to organization.name_or_something_else_identifying, organization
+
+  - if content_for? :current_page
+    = yield :current_page

@@ -1,0 +1,24 @@
+:coffeescript
+  $ ->
+    Tipped.create '[name="email_address"]', 'Make sure you sign in with your email address rather than username.',
+      position: 'bottom'
+      hide: false
+      size: 'x-small'
+
+= form_tag login_path, class: 'modal-form', method: :post do
+  .field
+    = label_tag :email_address, 'Email'
+    = text_field_tag :email_address, nil, placeholder: 'benji@idonethis.com'
+  .field
+    = label_tag :password
+    = password_field_tag :password, nil
+  - if !Rails.env.development?
+    .field
+      = recaptcha_tags
+
+  .actions.actions-modal= submit_tag "Login", class: 'button'
+
+%footer.modal-footer
+  %div.or-other-option
+    :markdown
+      or [log in with your Google Account](/auth/google).

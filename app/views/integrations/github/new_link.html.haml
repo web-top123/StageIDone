@@ -1,0 +1,49 @@
+- content_for :header do
+  - if current_user.active_teams.any?
+    %nav.nav-exit
+      = link_to :integrations, title: 'back' do
+        %div.square.icon.light.close.small close
+
+.modal-content-small
+  %header.modal-header
+    %h1 Add Github integration
+
+  .modal-card
+    = form_tag integrations_github_link_path, class: 'modal-form' do
+      .field
+        %label Choose a Github repository:
+        = select_tag 'github[org]', options_for_select(@repo_data.keys), include_blank: 'Organization'
+        = select_tag 'github[repo]', options_for_select([]), include_blank: 'Repository'
+
+      .field
+        %label Choose an <strong>I Done This</strong> team:
+        = select_tag 'integration_link[team_id]', options_for_select(current_user.teams.collect{|t| [t.name, t.id]}), include_blank: 'Select Team'
+      = hidden_field_tag 'integration_link[integration_user_id]', @github_user.id
+
+      .field.inline-checks
+        %label.big What activity should become <strong>I Done This</strong> entries?<br>
+        %label
+          All commits
+          = check_box_tag 'github[commits]'
+        %label
+          All pull requests
+          = check_box_tag 'github[prs]'
+
+      .actions= submit_tag 'Connect', class: 'button'
+
+:javascript
+  var repos = #{@repo_data.to_json};
+  $(function() {
+    $('#github_org').change(function() {
+      var selected_org = $(this).val();
+      if (selected_org === 'Select Organization') {
+        $('#github_repo').html('');
+        return;
+      }
+      var items = [];
+      $(repos[selected_org]).each(function(i, repo) {
+        items.push($("<option></option>").attr("value", repo).text(repo));
+      });
+      $('#github_repo').html(items);
+    });
+  });1

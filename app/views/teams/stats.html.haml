@@ -1,0 +1,97 @@
+- content_for :current_page do
+  = link_to "Reports", [:stats, @team]
+
+- content_for :header do
+  = render partial: 'teams/header', locals: { team: @team }
+
+- content_for :sidebar do
+  = render partial: 'teams/sidebar', locals: { team: @team, current_page: 'stats' }
+
+- content_for :notice do
+  - if !@team.active_users.include?(current_user)
+    :markdown
+      You're not a member of **#{ @team.name }** so you can't add entries here unless you join.
+
+    %nav
+      = link_to raw("Join <strong>#{ @team.name }</strong>"), [:join, @team], method: 'post'
+
+#datepicker{:style => "display:none"}
+  %div.calendar{role: 'input'}
+
+#export{:style => "display:none"}
+  %div.modal-export= render partial: 'teams/export', locals: { team: @team, start_date: @start_date, end_date: @end_date }
+
+- cache "/t/#{ @team.hash_id }/#{ @team.entries.maximum(:updated_at).try(:utc).try(:to_s, :number) }/stats/#{ @start_date }/#{ @end_date }" do
+  %main.application-main
+    %div.wrapper-small{role: 'layout'}
+      %header.header-standard
+        %h2.left #{ @team.name } Reports, #{ @start_date.strftime('%B %e') }&mdash;#{ @end_date.strftime('%B %e') }
+
+        %nav.date-switcher
+          %a.date-switcher_calendar{'data-bind' => 'datePicker', "data-tipped-options" => "inline: 'datepicker'", 'data-current_date' => calendar_month_team_path(@team, date: @end_date)} cal
+          = link_to "30", stats_team_path(@team, date: @end_date, range: 30), class: "date-switcher_range #{ @range == 30 ? 'current' : nil }"
+          = link_to "60", stats_team_path(@team, date: @end_date, range: 60), class: "date-switcher_range #{ @range == 60 ? 'current' : nil }"
+          = link_to "90", stats_team_path(@team, date: @end_date, range: 90), class: "date-switcher_range #{ @range == 90 ? 'current' : nil }"
+
+        %nav.header-misc-nav
+          %a{'data-bind' => 'exportToggle', "data-tipped-options" => "inline: 'export'"} Export
+
+      %section.section-stats
+        %header.header-stats
+          %h3 Team activity
+
+        = render partial: 'charts/activity_time', locals: { entries: @team.entries, start_date: @start_date, end_date: @end_date }
+
+      - if @team.entries.for_period(@start_date, @end_date).count > 10
+        %section.section-stats
+          %header.header-stats
+            %h3 Most active users
+
+          %ol.top-users{role: 'chart'}
+            - @most_active_users.first(5).each do |user|
+              %li.top-users_item
+                .top-users_item_header
+                  = link_to [@team.organization, user] do
+                    = render partial: 'users/portrait', locals: { user: user, portrait_size: nil }
+                    %strong= user.first_name_or_something_else_identifying
+
+                .top-users_item_content
+                  %div.number{role: 'chart'}
+                    %big= user.entry_count
+                    %label entries
+                  %div.number{role: 'chart'}
+                    %big= user.like_count
+                    %label likes
+                  %div.number{role: 'chart'}
+                    %big= user.comment_count
+                    %label comments
+
+      %section.section-stats
+        %header.header-stats
+          %h3 Wall of Fame
+
+        %div.wall-of-fame{role: 'chart'}
+          %ul.wall-of-fame_items
+            %li.wall-of-fame_item
+              %div
+                %label Beautiful Dreamer
+                %big
+                  = render partial: 'users/portrait', locals: { user: @dreamer, portrait_size: 'huge' }
+                  = @dreamer.full_name_or_something_else_identifying
+                %small sets the most goals
+
+            %li.wall-of-fame_item
+              %div
+                %label Loquacious
+                %big
+                  = render partial: 'users/portrait', locals: { user: @loquacious, portrait_size: 'huge' }
+                  = @loquacious.full_name_or_something_else_identifying
+                %small most verbose entries
+
+            %li.wall-of-fame_item
+              %div
+                %label On the Hop
+                %big
+                  = render partial: 'users/portrait', locals: { user: @busiest, portrait_size: 'huge' }
+                  = @busiest.full_name_or_something_else_identifying
+                %small most completed entries

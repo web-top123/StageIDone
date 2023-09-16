@@ -1,0 +1,63 @@
+.onboard-form
+  clear: both
+
+  p
+    margin: 0 0 1rem
+
+  .uploader
+    label
+      display: block
+      text-align: center
+      font-size: ms(-1)
+      font-weight: 400
+      color: $grey
+
+    .portrait-placeholder
+      display: block
+      width: 9rem
+      height: 9rem
+      overflow: hidden
+      background-color: $faint
+      background-position: center bottom
+      background-repeat: no-repeat
+      background-size: auto 8rem
+      background-image: url(asset-path('portrait-placeholder.svg'))
+      &:hover
+        background: $green url(asset-path('icon-upload-dark.svg')) center center no-repeat
+        background-size: 4rem auto
+        cursor: pointer
+
+    input
+      display: none
+
+  .field
+    width: 100%
+    margin-bottom: 0.5rem
+
+    label
+      font-weight: 500
+      font-size: ms(0)
+      line-height: 1.5
+
+    input
+      width: 100%
+
+  .go-by
+    font-size: ms(-1)
+    line-height: 1.625
+    color: $grey
+    text-align: right
+
+    a
+      color: $black
+      text-decoration: underline
+      &:hover
+        cursor: pointer
+        color: $red
+
+    label, input
+      display: inline
+      font-size: ms(-1)
+      line-height: 1.625
+      padding: 0
+      width: 4rem

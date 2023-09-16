@@ -1,0 +1,18 @@
+%html
+  %head= render 'layouts/head'
+
+  %body
+    =# render 'tracking/google_tag_manager'
+    %div.register{role: 'layout'}
+      %main
+        - if flash[:notice]
+          %div.application-flash= flash[:notice]
+        - if flash[:error]
+          %div.application-flash= flash[:error]
+        %div.centered{role: 'layout'}
+          = yield
+      %aside
+        %div.centered{role: 'layout'}
+          = yield :aside
+
+    =# render partial: 'tracking/snippets'

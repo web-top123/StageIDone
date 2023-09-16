@@ -1,0 +1,34 @@
+- content_for :header do
+  %div.breadcrumbs
+    = link_to "Dashboard", '/admin'
+    = link_to "Acquisition metrics", '/admin'
+
+.wrapper{role: 'layout'}
+  %nav.admin-subnav
+    = link_to "Acquisition", "/admin/dashboard/acquisition"
+    = link_to "Usage", "/admin/dashboard/usage"
+    = link_to "Migration", "/admin/dashboard/migration"
+
+  %table.admin-data
+    %tr
+      %td &nbsp;
+      %th{title: 'Users who signed up during the week'} Acquisition
+      %th{title: '% who created three entries'} Activation
+      %th{title: '% who returned on a later occasion and created an entry'} Retention
+      %th{title: '% who created an org and invited people'} Referral
+      %th{title: '$MRR attributable to users who signed up during the week'} Revenue
+    - @weeks.each do |week|
+      %tr
+        %th #{ week[:monday].strftime("%m/%d/%Y") }
+        %td #{ week[:acquisition] }
+        - if week[:acquisition] > 0
+          %td{title: week[:activation]} #{ (week[:activation] * 100.0 / week[:acquisition]).round(2) }%
+          %td{title: week[:retention]} #{ (week[:retention] * 100.0 / week[:acquisition]).round(2) }%
+          %td{title: week[:referral]} #{ (week[:referral] * 100.0 / week[:acquisition]).round(2) }%
+          %td{title: "#{ format_cents(week[:revenue] / week[:acquisition]) } per signup"}= format_cents week[:revenue]
+
+        - else
+          %td -
+          %td -
+          %td -
+          %td -

@@ -1,0 +1,100 @@
+.application-sidebar
+  border-right: 2px solid $faint
+  background-color: $very-faint
+  color: $grey
+
+  .sidebar-nav
+
+  section
+    width: 100%
+    border-top: 1px solid darken($faint,2%)
+    padding: 1rem
+
+    &:first-child
+      border: none
+
+    &.subnavigation
+      background: rgba(darken($faint,2%),0.5)
+      border-bottom: 1px solid darken($faint,2%)
+
+      a
+        opacity: 0.81
+        &:hover
+          opacity: 0.91
+
+        &.active, &.current
+          opacity: 0.91
+
+          &:hover
+            opacity: 1
+
+  section.account, section.subnavigation
+    a
+      &.active, &.current
+        background-color: rgba($white,0.75)
+        color: $black
+
+        .icon
+          svg
+            g.icon
+              fill: $grey !important
+              
+    .collapse
+      padding-left: 25px
+
+  a
+    color: $grey
+    display: block
+    overflow: hidden
+    font-weight: 300
+    padding: 0.425rem 0.5rem 0.5rem 2.25rem
+    border-radius: 3px
+
+    &.new-record
+      opacity: 0.5
+      &:hover
+        opacity: 0.825
+
+    .icon
+      width: 1.25rem
+      height: 1.25rem
+      float: left
+      margin-top: 0.125rem
+      margin-left: -1.755rem
+
+      svg
+        width: 95%
+        margin: 0 auto
+        height: auto
+        g.icon
+          fill: lighten($grey,10%)
+
+    .text
+      display: inline-block
+
+    .notify
+      float: right
+      color: $white
+      font-weight: 600
+      background-color: $red
+      padding: 0rem 0.425rem 0rem 0.425rem
+      border-radius: 2px
+
+    &:hover
+      background-color: rgba($white,0.75)
+      color: $black
+
+      svg
+        g.icon
+          fill: $grey
+
+    &.active, &.current
+      background-color: $red
+      color: $white
+
+      svg
+        g.icon
+          fill: #ffffff !important
+
+  @media screen and (min-width: $large)
+  @media screen and (min-width: $giant)
